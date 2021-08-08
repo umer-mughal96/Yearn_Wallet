@@ -31,7 +31,7 @@ const App = () => {
     })
 
 
-    //Import Wallet By Private Key
+    //Import Wallet By Private Keyyyyyyyyyyy
 
     // const provider =
     //   "https://speedy-nodes-nyc.moralis.io/2d962af326b1df2c1d77c8bc/eth/mainnet"
