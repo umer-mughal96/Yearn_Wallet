@@ -106,7 +106,7 @@ export default function Landing({ navigation }) {
             name="Login"
             onPress={createWallett}
           />
-          <TouchableOpacity
+          <TouchableOpacity 
             style={styles.signup}
             onPress={() => navigation.navigate('proceedScreen')}>
             <Text style={styles.signupText}>Signup</Text>

@@ -48,38 +48,38 @@ const App = () => {
     // console.log("🚀 ~ file: App.js ~ line 50 ~ useEffect ~ acc", acc)
     //Import Wallet By Private Key
 
-    // const provider =
-    //   "https://speedy-nodes-nyc.moralis.io/2d962af326b1df2c1d77c8bc/eth/mainnet"
-    // const Web3Client = new Web3(new Web3.providers.HttpProvider(provider));
+  //   // const provider =
+  //   //   "https://speedy-nodes-nyc.moralis.io/2d962af326b1df2c1d77c8bc/eth/mainnet"
+  //   // const Web3Client = new Web3(new Web3.providers.HttpProvider(provider));
 
-    // const web3 = new Web3(
-    //   new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9')
-    // );
-    //   const wallett =  web3.eth.accounts.privateKeyToAccount('681a31d3b509b6e09ef9c81056757ca06f8f5da5195db1bc12cb01dfd7fe616b');
-    //   console.log("🚀 ~ wwwwwwwwwwwwwwwwwwwwwwwwwwwallett", wallett)
-
-
-    // GET YFIC TOKEN BALANCE
+  //   // const web3 = new Web3(
+  //   //   new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9')
+  //   // );
+  //   //   const wallett =  web3.eth.accounts.privateKeyToAccount('681a31d3b509b6e09ef9c81056757ca06f8f5da5195db1bc12cb01dfd7fe616b');
+  //   //   console.log("🚀 ~ wwwwwwwwwwwwwwwwwwwwwwwwwwwallett", wallett)
 
 
-    // const abi = [
-    //   {
-    //     constant: true,
-    //     inputs: [{ name: "_owner", type: "address" }],
-    //     name: "balanceOf",
-    //     outputs: [{ name: "balance", type: "uint256" }],
-    //     type: "function",
-    //   }
-    // ]
-    // const contractAddress = "0x9CF4679c67BEE8dA2D6F58c64592fFf6beE79330"
-    // const contract = new Web3Client.eth.Contract(abi, contractAddress);
-    // async function getBalance() {
-    //   const result = await contract.methods.balanceOf("0x1b41106ee818859421C16d63b123C31753A3f10C").call(); // 29803630997051883414242659
-    //   const format = Web3Client.utils.fromWei(result); // 29803630.997051883414242659
-    //   console.log(format);
-    // }
-    // const b = await getBalance();
-    // console.log("🚀 ~ file: App.js ~ line 43 ~ useEffect ~ b", b)
+  //   // GET YFIC TOKEN BALANCE
+
+
+  //   // const abi = [
+  //   //   {
+  //   //     constant: true,
+  //   //     inputs: [{ name: "_owner", type: "address" }],
+  //   //     name: "balanceOf",
+  //   //     outputs: [{ name: "balance", type: "uint256" }],
+  //   //     type: "function",
+  //   //   }
+  //   // ]
+  //   // const contractAddress = "0x9CF4679c67BEE8dA2D6F58c64592fFf6beE79330"
+  //   // const contract = new Web3Client.eth.Contract(abi, contractAddress);
+  //   // async function getBalance() {
+  //   //   const result = await contract.methods.balanceOf("0x1b41106ee818859421C16d63b123C31753A3f10C").call(); // 29803630997051883414242659
+  //   //   const format = Web3Client.utils.fromWei(result); // 29803630.997051883414242659
+  //   //   console.log(format);
+  //   // }
+  //   // const b = await getBalance();
+  //   // console.log("🚀 ~ file: App.js ~ line 43 ~ useEffect ~ b", b)
 
 
   }, [])
