@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   Button,
   StatusBar,
@@ -7,20 +7,68 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import {colors} from '../config/colors';
+import { colors } from '../config/colors';
 import LightButton from '../components/reusable/Button/LightButton';
-import {useDispatch, useSelector} from 'react-redux';
-import {userLogout} from '../redux/actions/auth/auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../redux/actions/auth/auth';
 import LinearGradient from 'react-native-linear-gradient';
-import {LandingLogo} from '../svgs/LandingLogo';
+import { LandingLogo } from '../svgs/LandingLogo';
+import "../../global"
+const Web3 = require('web3');
+import * as bitcoin from "bitcoinjs-lib"
 
-export default function Landing({navigation}) {
-  const {token} = useSelector(state => state.Auth);
+
+export default function Landing({ navigation }) {
+  const { token } = useSelector(state => state.Auth);
   const dispatch = useDispatch();
 
-  useEffect(() => {   
+  useEffect(() => {
     dispatch(userLogout());
   }, []);
+
+
+
+  const createWallett = async () => {
+
+    try {
+
+
+      //GENERATE BITCOIN ADDRESS
+
+
+
+      const keyPair = await bitcoin.ECPair.makeRandom();
+      console.log("🚀 ~ file: App.js ~ line 28 ~ useEffect ~ keyPair", keyPair)
+      const { address } = await bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
+      console.log("🚀 ~ file: App.js ~ line 27 ~ useEffect ~ address", address)
+
+
+
+
+      // GET ETHERIUMM BALANCE BY PUBLIC KEY
+
+      const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
+
+      web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(web3.utils.fromWei(result, "ether") + " ETHHHHH")
+        }
+      })
+
+
+      let acc = web3.eth.accounts.create("00000000000000000000000000000000");
+      console.log("🚀 ~ file: App.js ~ line 50 ~ useEffect ~ acc", acc)
+
+      navigation.navigate("walletHome")
+
+
+    } catch (error) {
+      console.log("🚀 ~ file: Landing.js ~ line 31 ~ createWallett ~ error", error)
+
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -38,7 +86,7 @@ export default function Landing({navigation}) {
           <LandingLogo />
           {/* <Text   id='Yearn_Cash' data-name="Yearn Cash" transform="translate(121.5 511)" fill='#EEF0FF' font-size="39" font-family="Poppins-Semibold, Poppins" font-weight="600" >Yearn Cash</Text> */}
 
-          <Text style={{color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins'}}>
+          <Text style={{ color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins' }}>
             YEARN CASH
           </Text>
         </View>
@@ -53,8 +101,7 @@ export default function Landing({navigation}) {
           </View>
           <LightButton
             name="Login"
-            onPress={() => {navigation.navigate('defi');
-            }}
+            onPress={createWallett}
           />
           <TouchableOpacity
             style={styles.signup}

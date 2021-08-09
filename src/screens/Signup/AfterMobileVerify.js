@@ -8,7 +8,6 @@ import {
   AppRegistry,
 } from 'react-native';
 import { colors } from '../../config/colors';
-import '../../../shim' ////// make sure to use es6 import and not require()
 import Bitcoin from 'react-native-bitcoinjs-lib'
 import 'react-native-get-random-values'
 import "@ethersproject/shims"  //for ethers.js

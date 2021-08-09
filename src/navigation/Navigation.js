@@ -25,6 +25,7 @@ import PlasmaTopUp8 from '../screens/Signup/PlasaTopUp8';
 import PlasmaPay1 from "../screens/Signup/PlasmaPay"
 import PlasmaTopup2 from '../screens/Signup/PlasmaTopUp2';
 import ProfileScreen from '../screens/Signup/ProfileScreen';
+import Camera from '../screens/Wallet/Capture';
 
 
 export default function Navigation() {
@@ -334,7 +335,25 @@ export default function Navigation() {
         name="Profile"
         component={ProfileScreen}
       />
+       <Stack.Screen
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Capture"
+        component={Camera}
+      />
     </Stack.Navigator>
+    
   );
 }
 

@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "postinstall": "rn-nodeify --install stream,buffer,events,assert --hack"
+    "postinstall": "./node_modules/.bin/rn-nodeify --hack --install",
+    "dev": "react-native run-android && react-native start"
   },
   "dependencies": {
     "@ethersproject/shims": "^5.4.0",
@@ -21,6 +22,7 @@
     "@tradle/react-native-http": "^2.0.1",
     "assert": "^2.0.0",
     "axios": "^0.21.1",
+    "bitcoinjs-lib": "^5.2.0",
     "browserify-zlib": "^0.1.4",
     "buffer": "^4.9.2",
     "crypto-browserify": "^3.12.0",
@@ -41,9 +43,11 @@
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-bitcoinjs-lib": "^2.3.9",
+    "react-native-camera": "^4.0.1",
     "react-native-crypto": "^2.2.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-get-random-values": "^1.7.0",
+    "react-native-http": "github:tradle/react-native-http#834492d",
     "react-native-level-fs": "^3.0.1",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-os": "^1.2.6",
@@ -86,7 +90,7 @@
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
     "react-test-renderer": "17.0.1",
-    "rn-nodeify": "github:tradle/rn-nodeify"
+    "rn-nodeify": "tradle/rn-nodeify"
   },
   "jest": {
     "preset": "react-native"

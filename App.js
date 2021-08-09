@@ -5,10 +5,9 @@ import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
 import { persistor } from './src/redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
-import './global';
 import { useEffect } from 'react';
-import BottomNavigation from './src/navigation/Bottom';
-const Web3 = require('web3');
+import './global';
+import "./shim"
 //Umer Branch
 // const Moralis = require('moralis');
 // Moralis.initialize("qR0dYYsalIsmo00S0TMYLB7YAMR5si4JIHf8MuDI");
@@ -19,19 +18,34 @@ const Web3 = require('web3');
 const App = () => {
 
   useEffect(async () => {
-      // GET ETHERIUMM BALANCE BY PUBLIC KEY
 
-    const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
-
-    web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log(web3.utils.fromWei(result, "ether") + " ETH")
-      }
-    })
+    //GENERATE BITCOIN ADDRESS
 
 
+
+    // const keyPair = await bitcoin.ECPair.makeRandom();
+    // console.log("🚀 ~ file: App.js ~ line 28 ~ useEffect ~ keyPair", keyPair)
+    // const { address } = await bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
+    // console.log("🚀 ~ file: App.js ~ line 27 ~ useEffect ~ address", address)
+
+
+
+
+    // GET ETHERIUMM BALANCE BY PUBLIC KEY
+
+    // const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
+
+    // web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
+    //   if (err) {
+    //     console.log(err)
+    //   } else {
+    //     console.log(web3.utils.fromWei(result, "ether") + " ETHHHHH")
+    //   }
+    // })
+
+
+    // let acc = web3.eth.accounts.create("00000000000000000000000000000000");
+    // console.log("🚀 ~ file: App.js ~ line 50 ~ useEffect ~ acc", acc)
     //Import Wallet By Private Key
 
     // const provider =
