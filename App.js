@@ -20,15 +20,15 @@ const App = () => {
   useEffect(async () => {
       // GET ETHERIUMM BALANCE BY PUBLIC KEY
 
-    const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
+    // const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
 
-    web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log(web3.utils.fromWei(result, "ether") + " ETH")
-      }
-    })
+    // web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
+    //   if (err) {
+    //     console.log(err)
+    //   } else {
+    //     console.log(web3.utils.fromWei(result, "ether") + " ETH")
+    //   }
+    // })
 
 
     //Import Wallet By Private Key by haseeb

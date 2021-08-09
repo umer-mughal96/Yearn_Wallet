@@ -51,12 +51,12 @@ export default function Landing({navigation}) {
               Invited? Add Referral Code
             </Text>
           </View>
-          <LightButton
-            name="Login"
-            onPress={() => {navigation.navigate('defi');
+          <LightButton 
+            name="Login" 
+            onPress={() => {navigation.navigate("ProfileSetting");
             }}
           />
-          <TouchableOpacity
+          <TouchableOpacity 
             style={styles.signup}
             onPress={() => navigation.navigate('proceedScreen')}>
             <Text style={styles.signupText}>Signup</Text>

@@ -24,7 +24,19 @@ import PlasmaTopUp from '../screens/Signup/PlasmaTopUp5';
 import PlasmaTopUp8 from '../screens/Signup/PlasaTopUp8';
 import PlasmaPay1 from "../screens/Signup/PlasmaPay"
 import PlasmaTopup2 from '../screens/Signup/PlasmaTopUp2';
-import ProfileScreen from '../screens/Signup/ProfileScreen';
+import ProfileScreen from '../screens/Signup/SettingScreen';
+import AppSetting from '../screens/Signup/AppSetting';
+import AccountDetails from '../screens/Signup/AccountDetails';
+import Home2 from '../screens/Signup/Home2';
+import TopUP from '../screens/Signup/TopUp';
+import AccountDetails2 from '../screens/Signup/AccountDetails2';
+import Currency from '../screens/Signup/Currency';
+import Security from '../screens/Signup/Security';
+import CustodianInfo from '../screens/Signup/CustodianInfo';
+import Confirmation from '../screens/Signup/Confirmation';
+import Activity from '../screens/Signup/Activity';
+import ProfileSetting from '../screens/Signup/ProfileSetting1';
+
 
 
 export default function Navigation() {
@@ -333,6 +345,197 @@ export default function Navigation() {
         }}
         name="Profile"
         component={ProfileScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'App settings',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="AppSetting"
+        component={AppSetting} 
+      />
+     
+      <Stack.Screen
+        options={{
+          title:'Account Details',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="accountDetails"
+        component={AccountDetails}
+      />
+      <Stack.Screen
+        options={{
+          title:'Account Details',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="home2"
+        component={Home2}
+      />
+      <Stack.Screen
+        options={{
+          title:'Account Details',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Topup"
+        component={TopUP}
+      />
+      <Stack.Screen
+        options={{
+          title:'Account Details',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="AccountDetails2"
+        component={AccountDetails2}
+      />
+      <Stack.Screen
+        options={{
+          title:'Currency',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Currency"
+        component={Currency}
+      />
+      <Stack.Screen
+        options={{
+          title:'Currency',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Security"
+        component={Security}
+      />
+      <Stack.Screen
+        options={{
+          title:'Custodian Information',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="CustodianInfo"
+        component={CustodianInfo}
+      />
+      <Stack.Screen
+        options={{
+          title:'Custodian Information',
+          title:'Custodian Information',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Confirmation"
+        component={Confirmation}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Activity"
+        component={Activity}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="ProfileSetting"
+        component={ProfileSetting}
       />
     </Stack.Navigator>
   );

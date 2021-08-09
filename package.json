@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "postinstall": "rn-nodeify --install stream,buffer,events,assert --hack"
+    "postinstall": "./node_modules/.bin/rn-nodeify --hack --install"
   },
   "dependencies": {
     "@ethersproject/shims": "^5.4.0",
@@ -42,6 +42,7 @@
     "react-native": "0.64.2",
     "react-native-bitcoinjs-lib": "^2.3.9",
     "react-native-crypto": "^2.2.0",
+    "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-get-random-values": "^1.7.0",
     "react-native-level-fs": "^3.0.1",
