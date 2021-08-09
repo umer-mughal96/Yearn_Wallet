@@ -40,7 +40,7 @@ export default function MobileVerifyToken({navigation}) {
   const validateConfirmationCodeHandler = () => {
     if (confirmationCode == existingConfirmationCode) {
       setMatchConfirmationCode(true);
-      navigation.navigate('afterMobileVerify');
+      navigation.navigate('recoverySeed');
     } else {
       alert('Confirmation Code Dont Match');
       setCodeValidate(false);
@@ -79,7 +79,7 @@ export default function MobileVerifyToken({navigation}) {
                   elevation: 5,
                 }
           }
-          onChangeText={text => validate(text)}
+          onChangeText={onCodeChangeHandler}
           value={confirmationCode}
           placeholder="000-0000-00"
           

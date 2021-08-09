@@ -16,7 +16,7 @@ export default function Activity({navigation}) {
         <Card cornerRadius={12} style={styles.card}>
           <View style={{flexDirection: 'row'}}>
             <TouchableOpacity
-              onPress={() => alert('asdasd')}
+              // onPress={() => alert('asdasd')}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -25,7 +25,7 @@ export default function Activity({navigation}) {
               <Text style={styles.svgText}>All</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => alert('asdasd')}
+              // onPress={() => alert('asdasd')}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -34,7 +34,7 @@ export default function Activity({navigation}) {
               <Text style={styles.svgText}>Send</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => alert('asdasd')}
+              // onPress={() => alert('asdasd')}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',

@@ -18,7 +18,7 @@ import {Card} from 'react-native-shadow-cards';
 export default function TopUP() {
   return (
     <View style={{flex: 1, alignContent: 'center', alignItems: 'center'}}>
-      <Card
+      {/* <Card
         style={{
           top: 15,
           height: 60,
@@ -35,7 +35,7 @@ export default function TopUP() {
           }}>
           Credit Card
         </Text>
-      </Card>
+      </Card> */}
 
       <Card
         style={{

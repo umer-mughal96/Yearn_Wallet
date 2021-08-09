@@ -49,7 +49,7 @@ export default function RecoverySeed({navigation}) {
         </Text>
         <DarkButton
           name="Login"
-          onPress={() => navigation.navigate('restoreScreen')}
+          onPress={() => navigation.navigate('Signin')}
         />
       </View>
     </View>

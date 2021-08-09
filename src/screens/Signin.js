@@ -36,7 +36,6 @@ export default function Signin({navigation}) {
     } else {
       alert('Wrong Passcode');
       return;
-      navigation.navigate('walletHome');
     }
   };
   return (

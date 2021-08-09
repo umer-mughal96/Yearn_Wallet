@@ -79,7 +79,7 @@ export default function Security({navigation}) {
       <View style={styles.view1}>
         <Card cornerRadius={12} style={styles.card}>
           <TouchableOpacity
-            onPress={() => alert('asdasd')}
+            onPress={() => navigation.navigate('recoverySeed')}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
@@ -153,7 +153,7 @@ export default function Security({navigation}) {
         </Card>
         <Card cornerRadius={12} style={styles.card}>
           <TouchableOpacity
-            onPress={() => alert('asdasd')}
+            onPress={() => navigation.navigate('CustodianInfo')}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',

@@ -89,7 +89,7 @@ export default function EmailVerifyToken({ navigation }) {
                     elevation: 5,
                   }
             }
-            onChangeText={text => validate(text)}
+            onChangeText={onCodeChangeHandler}
             value={confirmationCode}
             placeholder="Confirmation Code Here"
           />

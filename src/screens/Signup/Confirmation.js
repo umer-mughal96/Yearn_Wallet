@@ -66,7 +66,7 @@ export default function Confirmation({navigation}) {
       </View>
       
       <View style={styles.view3}>
-        <DarkButton name="Next" />
+        <DarkButton name="Next" onPress={() => navigation.navigate("Security")} />
       </View>
     </View>
   );

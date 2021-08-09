@@ -104,11 +104,11 @@ export default function Landing({ navigation }) {
           </View>
           <LightButton
             name="Login"
-            onPress={createWallett}
+            onPress={() => navigation.navigate("Signin")}
           />
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.signup}
-            onPress={() => navigation.navigate('proceedScreen')}>
+            onPress={() => navigation.navigate('createPasscode')} >
             <Text style={styles.signupText}>Signup</Text>
           </TouchableOpacity>
         </View>

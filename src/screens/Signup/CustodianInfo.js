@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {Card} from 'react-native-shadow-cards';
-import {Switch} from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Card } from 'react-native-shadow-cards';
+import { Switch } from 'react-native-elements';
 import DarkButton from '../../components/reusable/Button/DarkButton';
 
-export default function CustodianInfo({navigation}) {
+export default function CustodianInfo({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.view1}>
@@ -29,16 +29,16 @@ export default function CustodianInfo({navigation}) {
             Platform.OS === 'ios'
               ? styles.input
               : {
-                  width: 320,
-                  padding: 15,
-                  backgroundColor: 'white',
-                  borderRadius: 10,
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.5,
+                width: 320,
+                padding: 15,
+                backgroundColor: 'white',
+                borderRadius: 10,
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.5,
 
-                  elevation: 5,
-                }
+                elevation: 5,
+              }
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -49,16 +49,16 @@ export default function CustodianInfo({navigation}) {
             Platform.OS === 'ios'
               ? styles.input
               : {
-                  width: 320,
-                  padding: 15,
-                  backgroundColor: 'white',
-                  borderRadius: 10,
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.5,
+                width: 320,
+                padding: 15,
+                backgroundColor: 'white',
+                borderRadius: 10,
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.5,
 
-                  elevation: 5,
-                }
+                elevation: 5,
+              }
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -69,16 +69,16 @@ export default function CustodianInfo({navigation}) {
             Platform.OS === 'ios'
               ? styles.input
               : {
-                  width: 320,
-                  padding: 15,
-                  backgroundColor: 'white',
-                  borderRadius: 10,
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.5,
+                width: 320,
+                padding: 15,
+                backgroundColor: 'white',
+                borderRadius: 10,
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.5,
 
-                  elevation: 5,
-                }
+                elevation: 5,
+              }
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -95,7 +95,7 @@ export default function CustodianInfo({navigation}) {
         A verification code will be sent to email and phone number to verify
       </Text>
       <View style={styles.view3}>
-        <DarkButton name="Next" />
+        <DarkButton name="Next" onPress={() => navigation.navigate("Confirmation")} />
       </View>
     </View>
   );
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 1},
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.3,
     elevation: 5,
   },

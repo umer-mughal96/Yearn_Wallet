@@ -76,66 +76,68 @@ const DefiSvg = ({ navigation }) => {
   );
 };
 
-const UsersSvg = () => {
+const UsersSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%") }}>
-      <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="26.495"
-        height="22.261"
-        viewBox="0 0 26.495 22.261"
-        style={{ alignSelf: 'center' }}>
-        <G
-          id="Icon_feather-users"
-          data-name="Icon feather-users"
-          transform="translate(-0.25 -3.121)">
-          <Path
-            id="Path_37"
-            data-name="Path 37"
-            d="M18.951,29.044V26.863A4.363,4.363,0,0,0,14.588,22.5H5.863A4.363,4.363,0,0,0,1.5,26.863v2.181"
-            transform="translate(0 -4.912)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.5"
-          />
-          <Path
-            id="Path_38"
-            data-name="Path 38"
-            d="M16.225,8.863A4.363,4.363,0,1,1,11.863,4.5,4.363,4.363,0,0,1,16.225,8.863Z"
-            transform="translate(-1.637 0)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.5"
-          />
-          <Path
-            id="Path_39"
-            data-name="Path 39"
-            d="M33.272,29.1V26.916A4.363,4.363,0,0,0,30,22.7"
-            transform="translate(-7.777 -4.965)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.5"
-          />
-          <Path
-            id="Path_40"
-            data-name="Path 40"
-            d="M24,4.695a4.363,4.363,0,0,1,0,8.453"
-            transform="translate(-6.14 -0.053)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.5"
-          />
-        </G>
-      </Svg>
-      <Text style={styles.bottomNavText}>Contacts</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("ProfileSetting")}>
+        <Svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26.495"
+          height="22.261"
+          viewBox="0 0 26.495 22.261"
+          style={{ alignSelf: 'center' }}>
+          <G
+            id="Icon_feather-users"
+            data-name="Icon feather-users"
+            transform="translate(-0.25 -3.121)">
+            <Path
+              id="Path_37"
+              data-name="Path 37"
+              d="M18.951,29.044V26.863A4.363,4.363,0,0,0,14.588,22.5H5.863A4.363,4.363,0,0,0,1.5,26.863v2.181"
+              transform="translate(0 -4.912)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+            <Path
+              id="Path_38"
+              data-name="Path 38"
+              d="M16.225,8.863A4.363,4.363,0,1,1,11.863,4.5,4.363,4.363,0,0,1,16.225,8.863Z"
+              transform="translate(-1.637 0)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+            <Path
+              id="Path_39"
+              data-name="Path 39"
+              d="M33.272,29.1V26.916A4.363,4.363,0,0,0,30,22.7"
+              transform="translate(-7.777 -4.965)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+            <Path
+              id="Path_40"
+              data-name="Path 40"
+              d="M24,4.695a4.363,4.363,0,0,1,0,8.453"
+              transform="translate(-6.14 -0.053)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+            />
+          </G>
+        </Svg>
+        <Text style={styles.bottomNavText}>Contacts</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -162,48 +164,51 @@ const WalletSvg = () => {
   );
 };
 
-const ProfileSvg = () => {
+const ProfileSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%") }}>
-      <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="25.33"
-        height="25.404"
-        viewBox="0 0 25.33 25.404"
-        style={{ alignSelf: 'center' }}>
-        <G
-          id="Group_71"
-          data-name="Group 71"
-          transform="translate(823.166 -478.335)">
-          <Path
-            id="Path_44"
-            data-name="Path 44"
-            d="M-810.531,478.46a12.559,12.559,0,0,1,12.57,12.661,12.492,12.492,0,0,1-12.365,12.492,12.506,12.506,0,0,1-12.715-12.533A12.548,12.548,0,0,1-810.531,478.46Zm10.907,12.6c-.082-.671-.125-1.316-.247-1.946a10.656,10.656,0,0,0-.511-1.9,13.992,13.992,0,0,0-1-1.969,9.91,9.91,0,0,0-3-3.134,11.3,11.3,0,0,0-1.382-.791,11.956,11.956,0,0,0-1.45-.593,6.911,6.911,0,0,0-1.291-.313,16.54,16.54,0,0,0-2.319-.2,9.99,9.99,0,0,0-3.366.646,10.85,10.85,0,0,0-2.046,1,10.906,10.906,0,0,0-2.668,2.36,10.684,10.684,0,0,0-1.859,3.382,11.3,11.3,0,0,0-.512,2.429,10.785,10.785,0,0,0,.382,4.072,10.475,10.475,0,0,0,1,2.336,11.3,11.3,0,0,0,2.275,2.793c.125.113.223.082.3-.063a7.523,7.523,0,0,1,1.786-2.186,6.967,6.967,0,0,1,2.43-1.388,8.729,8.729,0,0,1,1.678-.4,7.734,7.734,0,0,1,3.98.567A8.251,8.251,0,0,1-805.2,497.2a7.442,7.442,0,0,1,1.541,1.99c.072.133.157.117.253.054a1.333,1.333,0,0,0,.144-.137,10.684,10.684,0,0,0,3.345-5.755C-799.752,492.6-799.717,491.812-799.625,491.06Zm-10.9,10.815a8.94,8.94,0,0,0,2.875-.352,10.082,10.082,0,0,0,2.5-1.056.288.288,0,0,0,.077-.272,8.28,8.28,0,0,0-.659-1.023,6.015,6.015,0,0,0-3.542-2.2,5.891,5.891,0,0,0-3.973.527,6.086,6.086,0,0,0-2.662,2.646c-.066.122-.092.247.07.341a10.456,10.456,0,0,0,2.49,1.036A8.9,8.9,0,0,0-810.528,501.876Z"
-            transform="translate(0 0)"
-            fill="#fff"
-            stroke="#fff"
-            stroke-width="0.25"
-          />
-          <Path
-            id="Path_45"
-            data-name="Path 45"
-            d="M-644.616,623.8a4.774,4.774,0,0,1,4.731,4.84,4.777,4.777,0,0,1-4.915,4.781,4.776,4.776,0,0,1-4.7-4.929A4.764,4.764,0,0,1-644.616,623.8Zm-.046,1.722a3.072,3.072,0,0,0-3.116,3.012,3.071,3.071,0,0,0,3.062,3.175,3.09,3.09,0,0,0,3.113-3.077A3.085,3.085,0,0,0-644.662,625.522Z"
-            transform="translate(-165.809 -138.864)"
-            fill="#fff"
-            stroke="#fff"
-            stroke-width="0.25"
-          />
-        </G>
-      </Svg>
-      <Text style={styles.bottomNavText}>Profile</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("userProfile")}>
+        <Svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25.33"
+          height="25.404"
+          viewBox="0 0 25.33 25.404"
+          style={{ alignSelf: 'center' }}>
+          <G
+            id="Group_71"
+            data-name="Group 71"
+            transform="translate(823.166 -478.335)">
+            <Path
+              id="Path_44"
+              data-name="Path 44"
+              d="M-810.531,478.46a12.559,12.559,0,0,1,12.57,12.661,12.492,12.492,0,0,1-12.365,12.492,12.506,12.506,0,0,1-12.715-12.533A12.548,12.548,0,0,1-810.531,478.46Zm10.907,12.6c-.082-.671-.125-1.316-.247-1.946a10.656,10.656,0,0,0-.511-1.9,13.992,13.992,0,0,0-1-1.969,9.91,9.91,0,0,0-3-3.134,11.3,11.3,0,0,0-1.382-.791,11.956,11.956,0,0,0-1.45-.593,6.911,6.911,0,0,0-1.291-.313,16.54,16.54,0,0,0-2.319-.2,9.99,9.99,0,0,0-3.366.646,10.85,10.85,0,0,0-2.046,1,10.906,10.906,0,0,0-2.668,2.36,10.684,10.684,0,0,0-1.859,3.382,11.3,11.3,0,0,0-.512,2.429,10.785,10.785,0,0,0,.382,4.072,10.475,10.475,0,0,0,1,2.336,11.3,11.3,0,0,0,2.275,2.793c.125.113.223.082.3-.063a7.523,7.523,0,0,1,1.786-2.186,6.967,6.967,0,0,1,2.43-1.388,8.729,8.729,0,0,1,1.678-.4,7.734,7.734,0,0,1,3.98.567A8.251,8.251,0,0,1-805.2,497.2a7.442,7.442,0,0,1,1.541,1.99c.072.133.157.117.253.054a1.333,1.333,0,0,0,.144-.137,10.684,10.684,0,0,0,3.345-5.755C-799.752,492.6-799.717,491.812-799.625,491.06Zm-10.9,10.815a8.94,8.94,0,0,0,2.875-.352,10.082,10.082,0,0,0,2.5-1.056.288.288,0,0,0,.077-.272,8.28,8.28,0,0,0-.659-1.023,6.015,6.015,0,0,0-3.542-2.2,5.891,5.891,0,0,0-3.973.527,6.086,6.086,0,0,0-2.662,2.646c-.066.122-.092.247.07.341a10.456,10.456,0,0,0,2.49,1.036A8.9,8.9,0,0,0-810.528,501.876Z"
+              transform="translate(0 0)"
+              fill="#fff"
+              stroke="#fff"
+              stroke-width="0.25"
+            />
+            <Path
+              id="Path_45"
+              data-name="Path 45"
+              d="M-644.616,623.8a4.774,4.774,0,0,1,4.731,4.84,4.777,4.777,0,0,1-4.915,4.781,4.776,4.776,0,0,1-4.7-4.929A4.764,4.764,0,0,1-644.616,623.8Zm-.046,1.722a3.072,3.072,0,0,0-3.116,3.012,3.071,3.071,0,0,0,3.062,3.175,3.09,3.09,0,0,0,3.113-3.077A3.085,3.085,0,0,0-644.662,625.522Z"
+              transform="translate(-165.809 -138.864)"
+              fill="#fff"
+              stroke="#fff"
+              stroke-width="0.25"
+            />
+          </G>
+        </Svg>
+        <Text style={styles.bottomNavText}>Profile</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
 
-const MenuSvg = () => {
+const MenuSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%"), alignItems: 'center' }}>
-      <TouchableOpacity onPress={() => alert("Activity Page!")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Activity")}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width="26.31"
@@ -330,17 +335,19 @@ export default function WalletHome({ navigation }) {
         </View>
       </View>
       <View style={styles.information}>
-        <UpSvg />
+        <TouchableOpacity onPress={() => navigation.navigate("Topup")}>
+          <UpSvg />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Topup")}>
         <Text
           style={{ fontSize: 18, marginBottom: 3, fontFamily: 'Poppins-Medium' }}>
           Top up your Account now
         </Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.balanceCard}>
         <ScrollView style={{ width: wp("100%") }} >
           <View style={{ alignItems: "center" }}>
-
-
             <Card style={styles.card}>
               <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
                 <Yearn_logo width={63} height={63} />
@@ -442,13 +449,13 @@ export default function WalletHome({ navigation }) {
         <PathSvg />
         <View style={{ flexDirection: "row" }} >
           <WalletSvg />
-          <MenuSvg />
+          <MenuSvg navigation={navigation} />
           <Text style={{ width: wp("20%"), textAlign: "center", color: "white" }}
           >
             DEX
           </Text>
-          <UsersSvg />
-          <ProfileSvg />
+          <UsersSvg navigation={navigation} />
+          <ProfileSvg navigation={navigation} />
         </View>
 
       </View>

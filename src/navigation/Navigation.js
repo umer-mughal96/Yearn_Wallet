@@ -38,6 +38,7 @@ import Confirmation from '../screens/Signup/Confirmation';
 import Activity from '../screens/Signup/Activity';
 import ProfileSetting from '../screens/Signup/ProfileSetting1';
 import Sendbtc from '../screens/Signup/Sendbtc';
+import SettingScreen from '../screens/Signup/SettingScreen';
 
 
 
@@ -538,6 +539,24 @@ export default function Navigation() {
         }}
         name="ProfileSetting"
         component={ProfileSetting}
+      />
+         <Stack.Screen
+        options={{
+          title:'Profile',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="userProfile"
+        component={SettingScreen}
       />
       <Stack.Screen
         options={{
