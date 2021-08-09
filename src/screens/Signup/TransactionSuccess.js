@@ -13,7 +13,7 @@ import {
   
 } from 'react-native';
 import { Yearn_logo } from '../../svgs/Yearn_logo';
-import TextInputMask from 'react-native-text-input-mask';
+
 import { Card } from 'react-native-shadow-cards';
 import { Send_logo } from '../../svgs/send';
 

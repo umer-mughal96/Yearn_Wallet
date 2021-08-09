@@ -10,7 +10,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Card} from 'react-native-shadow-cards';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-export default function ProfileSetting() {
+export default function ProfileSetting({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.view1}>

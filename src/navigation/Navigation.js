@@ -36,6 +36,7 @@ import CustodianInfo from '../screens/Signup/CustodianInfo';
 import Confirmation from '../screens/Signup/Confirmation';
 import Activity from '../screens/Signup/Activity';
 import ProfileSetting from '../screens/Signup/ProfileSetting1';
+import Sendbtc from '../screens/Signup/Sendbtc';
 
 
 
@@ -536,6 +537,24 @@ export default function Navigation() {
         }}
         name="ProfileSetting"
         component={ProfileSetting}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Sendbtc"
+        component={Sendbtc}
       />
     </Stack.Navigator>
   );
