@@ -443,7 +443,7 @@ export default function WalletHome({ navigation }) {
         <View style={{ flexDirection: "row" }} >
           <WalletSvg />
           <MenuSvg />
-          <Text style={{ width: wp("20%"), textAlign: "center" , color : "white" }}
+          <Text style={{ width: wp("20%"), textAlign: "center", color: "white" }}
           >
             DEX
           </Text>

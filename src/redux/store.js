@@ -14,7 +14,7 @@ const persistConfig = {
   key: 'root',
   version: 0,
   storage: AsyncStorage,
-  whitelist: ['Auth','User'],
+  whitelist: ['Auth','User','Btc','Eth'],
   debug: __DEV__,
 };
 

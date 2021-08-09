@@ -14,8 +14,10 @@ import { userLogout } from '../redux/actions/auth/auth';
 import LinearGradient from 'react-native-linear-gradient';
 import { LandingLogo } from '../svgs/LandingLogo';
 import "../../global"
-const Web3 = require('web3');
+import Web3 from 'web3'
 import * as bitcoin from "bitcoinjs-lib"
+import { createBTCWallet } from '../redux/actions/btc/btc';
+import { createETHWallet } from '../redux/actions/eth/eth';
 
 
 export default function Landing({ navigation }) {
@@ -39,9 +41,9 @@ export default function Landing({ navigation }) {
 
       const keyPair = await bitcoin.ECPair.makeRandom();
       console.log("🚀 ~ file: App.js ~ line 28 ~ useEffect ~ keyPair", keyPair)
-      const { address } = await bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
-      console.log("🚀 ~ file: App.js ~ line 27 ~ useEffect ~ address", address)
-
+      const wallet = await bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
+      console.log("🚀 ~ file: App.js ~ line 27 ~ useEffect ~ address", wallet)
+      dispatch(createBTCWallet(wallet))
 
 
 
@@ -49,17 +51,18 @@ export default function Landing({ navigation }) {
 
       const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
 
-      web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log(web3.utils.fromWei(result, "ether") + " ETHHHHH")
-        }
-      })
+      // web3.eth.getBalance("0x5455F4F3C807a09ab032e21a27B6A202B2f582D7", function (err, result) {
+      //   if (err) {
+      //     console.log(err)
+      //   } else {
+      //     console.log(web3.utils.fromWei(result, "ether") + " ETHHHHH")
+      //   }
+      // })
 
 
       let acc = web3.eth.accounts.create("00000000000000000000000000000000");
-      console.log("🚀 ~ file: App.js ~ line 50 ~ useEffect ~ acc", acc)
+      console.log("🚀 ~ file: Landing.js ~ line 64 ~ createWallett ~ acc", acc)
+      dispatch(createETHWallet(acc))
 
       navigation.navigate("walletHome")
 
