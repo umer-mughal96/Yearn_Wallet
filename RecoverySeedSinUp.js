@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import {StatusBar, StyleSheet, Text, View, TextInput} from 'react-native';
 import {colors} from '../../config/colors';
-import DarkButton from '../../components/reusable/Button/DarkButton';
+
 import {useDispatch} from 'react-redux';
 import {registerUser} from '../../redux/actions/user/user';
+import DarkButton from './src/components/reusable/Button/DarkButton';
 
-export default function RecoverySeed({navigation}) {
+export default function RecoverySeedSinUp({navigation}) {
   const [recoverySeed] = useState('');
   const dispatch = useDispatch();
 
@@ -52,7 +53,7 @@ export default function RecoverySeed({navigation}) {
         </Text>
         <DarkButton
           name="Update"
-          onPress={() => navigation.navigate('Security')}
+          onPress={() => navigation.navigate('Landing')}
         />
       </View>
     </View>

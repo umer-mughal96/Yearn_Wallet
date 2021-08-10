@@ -11,6 +11,7 @@ import DarkButton from '../../components/reusable/Button/DarkButton';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSelector} from 'react-redux';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 export default function ConfirmPasscode({navigation}) {
   const [codeCreated, setCodeCreated] = useState(false);
@@ -87,8 +88,21 @@ export default function ConfirmPasscode({navigation}) {
           onPress={() => navigation.navigate('createEmail')}
           disabled={!passwordMatch}
         />
-        <TouchableOpacity>
+        <TouchableOpacity style={{
+            marginTop: 20,
+            paddingVertical: 15,
+            paddingHorizontal: 10,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          onPress={() => navigation.navigate('Signin')}>
+          
+        <View style={{flexDirection:"row"}} >
+        
           <Text style={styles.loginText}>Login</Text>
+          <Icon name="right" color="#000000" size={18} />
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -112,7 +126,7 @@ const styles = StyleSheet.create({
   },
   loginText: {
     textAlign: 'center',
-    marginTop: 50,
+    
     fontFamily: 'Poppins-Medium',
   },
   passcodeHeading: {

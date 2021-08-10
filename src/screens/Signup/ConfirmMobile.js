@@ -70,7 +70,9 @@ export default function CreateMobile({navigation}) {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('Signin')}
+          >
         <View style={{flexDirection:"row"}}>
           <Text style={styles.loginText}>Login</Text>
           <Icon name="right" color="#000000" size={18} />

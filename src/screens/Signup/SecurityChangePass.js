@@ -36,18 +36,6 @@ export default function SecurityChangePass({navigation}) {
           onPress={() => navigation.navigate('SecurityConfirmPass')} 
           disabled={!codeCreated}
         />
-        <TouchableOpacity
-        style={{
-            marginTop: 10,
-            paddingVertical: 15,
-            paddingHorizontal: 10,
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => navigation.navigate('Signin')}>
-           
-        </TouchableOpacity>
       </View>
     </View>
   );

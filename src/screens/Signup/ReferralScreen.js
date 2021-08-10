@@ -67,14 +67,14 @@ export default function ReferralScreen({navigation}) {
                   elevation: 5,
                 }
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           value={refdata}
           placeholder="Referral Code"
         />
         <View style={{marginTop: '52%', width: '68%'}}>
           <Text style={styles.textcenter}>
             *You will only be eligible to receive your signup bonus after
-            completing       {"\n"}                your account setup.
+            completing  your account setup.
           </Text>
         </View>
       </View>
@@ -83,7 +83,7 @@ export default function ReferralScreen({navigation}) {
           <DarkButton
             name="Contine"
             onPress={() => navigation.navigate('walletHome')}
-              disabled={!refcorrect}
+              // disabled={!refcorrect}
           />
         </View>
       </View>
@@ -132,5 +132,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontFamily: 'Poppins-SemiBold',
     marginTop: 20,
+    textAlign:"center"
   },
 });

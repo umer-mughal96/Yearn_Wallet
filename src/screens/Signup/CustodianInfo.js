@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
   view2: {
     flex: 1,
     width: wp('100%'),
+    color:'black',
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
@@ -113,6 +114,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: '#000',
+    color:'black',
+    
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.3,
     elevation: 5,
@@ -123,6 +126,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: '#000',
+    color:'black',
+    
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
     marginBottom:hp("1%"),

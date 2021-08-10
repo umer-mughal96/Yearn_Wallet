@@ -28,7 +28,7 @@ export default function Confirmation({navigation}) {
               ? styles.TextInput1
               : styles.TextInput2
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Email verification code"
         />
@@ -39,7 +39,7 @@ export default function Confirmation({navigation}) {
               ? styles.TextInput1
               : styles.TextInput2
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Phone number verification code"
         />

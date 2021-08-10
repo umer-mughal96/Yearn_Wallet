@@ -17,7 +17,7 @@ export default function AppSetting({navigation}) {
     <View style={styles.container}>
       <View style={styles.view1}>
         <Card cornerRadius={12} style={styles.card}>
-          <TouchableOpacity
+          <TouchableOpacity onPress={() => navigation.navigate("Currency")}
             
             style={{
               flexDirection: 'row',
@@ -28,13 +28,13 @@ export default function AppSetting({navigation}) {
 
             <Text style={styles.TextView}>Currency</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("Currency")}>
+          <TouchableOpacity >
             <Icon name="chevron-forward-sharp" color="#000000" size={18} />
           </TouchableOpacity>
         </Card>
         <Card cornerRadius={12} style={styles.card}>
           <TouchableOpacity
-           
+           onPress={() => navigation.navigate("Activity")}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
@@ -58,7 +58,7 @@ export default function AppSetting({navigation}) {
             <TokenVisibilitySvg/>
             <Text style={styles.TextView}>Token visibility</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('asdasd')}>
+          <TouchableOpacity onPress={() => alert('Token')}>
             <Icon name="chevron-forward-sharp" color="#000000" size={18} />
           </TouchableOpacity>
         </Card>

@@ -100,7 +100,9 @@ export default function MobileVerifyToken({navigation}) {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('RecoverySeedSinUp')}
+          >
         <View style={{flexDirection:"row"}}>
           <Text style={styles.loginText}>Login</Text>
           <Icon name="right" color="#000000" size={18} />
