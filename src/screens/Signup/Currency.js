@@ -45,7 +45,7 @@ export default function Currency({navigation}) {
       
 
       <View style={styles.view3}>
-        <DarkButton name="Update" />
+        <DarkButton name="Update" onPress={() => navigation.navigate("AppSetting")}/>
       </View>
     </View>
   );

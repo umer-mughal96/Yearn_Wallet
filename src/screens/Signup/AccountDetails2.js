@@ -24,20 +24,19 @@ export default function AccountDetails2({navigation}) {
         <Text style={styles.svgText}>All details of your Account</Text>
       </View>
       <View style={styles.view2}>
-        
         <TextInput
           style={
             Platform.OS === 'ios'
               ? styles.input
               : {
-                  width: 320,
+                  width: wp('85%'),
                   padding: 15,
                   backgroundColor: 'white',
                   borderRadius: 10,
                   shadowColor: '#000',
                   shadowOffset: {width: 0, height: 2},
                   shadowOpacity: 0.5,
-
+                  marginBottom: hp('2%'),
                   elevation: 5,
                 }
           }
@@ -50,7 +49,7 @@ export default function AccountDetails2({navigation}) {
             Platform.OS === 'ios'
               ? styles.input
               : {
-                  width: 320,
+                  width: wp('85%'),
                   padding: 15,
                   backgroundColor: 'white',
                   borderRadius: 10,
@@ -65,12 +64,10 @@ export default function AccountDetails2({navigation}) {
           //   value={email}
           placeholder="Change Phone number"
         />
-            
-     
       </View>
 
       <View style={styles.view3}>
-        <DarkButton name="Change Details" />
+        <DarkButton name="Confirm Changes" />
       </View>
     </View>
   );
@@ -92,10 +89,8 @@ const styles = StyleSheet.create({
   view2: {
     flex: 1,
     width: wp('100%'),
-    justifyContent: "center",
+    justifyContent: 'center',
     alignItems: 'center',
-   
-
   },
   card: {
     padding: 10,
@@ -117,7 +112,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 320,
-    margin:5,
+    margin: 5,
     padding: 15,
     backgroundColor: 'white',
     borderRadius: 10,

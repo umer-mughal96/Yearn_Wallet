@@ -27,18 +27,8 @@ export default function CustodianInfo({ navigation }) {
         <TextInput
           style={
             Platform.OS === 'ios'
-              ? styles.input
-              : {
-                width: 320,
-                padding: 15,
-                backgroundColor: 'white',
-                borderRadius: 10,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 2 },
-                shadowOpacity: 0.5,
-
-                elevation: 5,
-              }
+              ? styles.TextInput1
+              : styles.TextInput2
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -47,18 +37,8 @@ export default function CustodianInfo({ navigation }) {
         <TextInput
           style={
             Platform.OS === 'ios'
-              ? styles.input
-              : {
-                width: 320,
-                padding: 15,
-                backgroundColor: 'white',
-                borderRadius: 10,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 2 },
-                shadowOpacity: 0.5,
-
-                elevation: 5,
-              }
+              ? styles.TextInput1
+              : styles.TextInput2
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -67,34 +47,26 @@ export default function CustodianInfo({ navigation }) {
         <TextInput
           style={
             Platform.OS === 'ios'
-              ? styles.input
-              : {
-                width: 320,
-                padding: 15,
-                backgroundColor: 'white',
-                borderRadius: 10,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 2 },
-                shadowOpacity: 0.5,
-
-                elevation: 5,
-              }
+              ? styles.TextInput1
+              : styles.TextInput2
           }
           onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Custodian Email"
         />
       </View>
+      
+      <View style={styles.view3}>
       <Text
         style={{
           fontFamily: 'Poppins-Regular',
           fontSize: hp('2%'),
           textAlign: 'center',
           width: wp('70%'),
+          marginBottom:hp("5%")
         }}>
         A verification code will be sent to email and phone number to verify
       </Text>
-      <View style={styles.view3}>
         <DarkButton name="Next" onPress={() => navigation.navigate("Confirmation")} />
       </View>
     </View>
@@ -129,16 +101,12 @@ const styles = StyleSheet.create({
     width: wp('95%'),
     height: hp('7%'),
   },
-  svgText: {
-    fontSize: hp('2%'),
-    fontFamily: 'Poppins-Regular',
-  },
   view3: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  input: {
+  TextInput1: {
     width: 330,
     margin: 5,
     padding: 20,
@@ -147,6 +115,17 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.3,
+    elevation: 5,
+  },
+  TextInput2:{
+    width:wp("85%"),
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    marginBottom:hp("1%"),
     elevation: 5,
   },
 });

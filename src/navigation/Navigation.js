@@ -39,6 +39,9 @@ import Activity from '../screens/Signup/Activity';
 import ProfileSetting from '../screens/Signup/ProfileSetting1';
 import Sendbtc from '../screens/Signup/Sendbtc';
 import SettingScreen from '../screens/Signup/SettingScreen';
+import SecurityChangePass from '../screens/Signup/SecurityChangePass';
+import SecurityConfirmPass from '../screens/Signup/SecurityConfirmPass';
+import Referral from '../screens/Signup/Referral';
 
 
 
@@ -454,7 +457,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Currency',
+          title:'Security',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -489,7 +492,7 @@ export default function Navigation() {
       <Stack.Screen
         options={{
           title:'Custodian Information',
-          title:'Custodian Information',
+         
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -576,9 +579,65 @@ export default function Navigation() {
         name="Sendbtc"
         component={Sendbtc}
       />
+       <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="SecurityChangePass"
+        component={SecurityChangePass}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="SecurityConfirmPass"
+        component={SecurityConfirmPass}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Referral"
+        component={Referral}
+      />
     </Stack.Navigator>
+    
     
   );
 }
+
 
 const styles = StyleSheet.create({});

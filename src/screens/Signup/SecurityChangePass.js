@@ -11,7 +11,7 @@ import DarkButton from '../../components/reusable/Button/DarkButton';
 import Input from '../../components/reusable/PasscodeInput/Input';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-export default function CreatePasscode({navigation}) {
+export default function SecurityChangePass({navigation}) {
   const [codeCreated, setCodeCreated] = useState(false);
 
   const isSucessfullyCreate = boolean => {
@@ -33,7 +33,7 @@ export default function CreatePasscode({navigation}) {
       <View style={styles.buttonsWrapper}>
         <DarkButton
           name="Next"
-          onPress={() => navigation.navigate('confrimPasscode')} 
+          onPress={() => navigation.navigate('SecurityConfirmPass')} 
           disabled={!codeCreated}
         />
         <TouchableOpacity
@@ -46,10 +46,7 @@ export default function CreatePasscode({navigation}) {
             alignItems: 'center',
           }}
           onPress={() => navigation.navigate('Signin')}>
-           <View style={{flexDirection:"row"}}>
-           <Text style={styles.loginText}>Signup</Text>
-          <Icon name="right" color="#000000" size={18} />
-          </View>
+           
         </TouchableOpacity>
       </View>
     </View>

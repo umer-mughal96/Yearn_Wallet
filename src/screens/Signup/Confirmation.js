@@ -25,18 +25,8 @@ export default function Confirmation({navigation}) {
         <TextInput
           style={
             Platform.OS === 'ios'
-              ? styles.input
-              : {
-                  width: 320,
-                  padding: 15,
-                  backgroundColor: 'white',
-                  borderRadius: 10,
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.5,
-
-                  elevation: 5,
-                }
+              ? styles.TextInput1
+              : styles.TextInput2
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -45,18 +35,9 @@ export default function Confirmation({navigation}) {
         <TextInput
           style={
             Platform.OS === 'ios'
-              ? styles.input
-              : {
-                  width: 320,
-                  padding: 15,
-                  backgroundColor: 'white',
-                  borderRadius: 10,
-                  shadowColor: '#000',
-                  shadowOffset: {width: 0, height: 2},
-                  shadowOpacity: 0.5,
-
-                  elevation: 5,
-                }
+              
+              ? styles.TextInput1
+              : styles.TextInput2
           }
           onChangeText={text => validate(text)}
           //   value={email}
@@ -66,7 +47,7 @@ export default function Confirmation({navigation}) {
       </View>
       
       <View style={styles.view3}>
-        <DarkButton name="Next" onPress={() => navigation.navigate("Security")} />
+        <DarkButton name="Confirm" onPress={() => navigation.navigate("Security")} />
       </View>
     </View>
   );
@@ -109,15 +90,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  input: {
+  TextInput1: {
     width: 330,
     margin: 5,
     padding: 20,
     backgroundColor: 'white',
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 1},
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.3,
+    elevation: 5,
+  },
+  TextInput2:{
+    width:wp("85%"),
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    marginBottom:hp("1%"),
     elevation: 5,
   },
 });
