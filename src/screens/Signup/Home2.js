@@ -8,17 +8,18 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import {Yearn_logo} from '../../svgs/Yearn_logo';
+import { Yearn_logo } from '../../svgs/Yearn_logo';
 
-import {Card} from 'react-native-shadow-cards';
-import {Send_logo} from '../../svgs/send';
+import { Card } from 'react-native-shadow-cards';
+import { Send_logo } from '../../svgs/send';
 
 import LinearGradient from 'react-native-linear-gradient';
+import { RecieveDownSvg, SendUpSvg } from '../../svgs/BtcDetail';
 
 export default function Home2() {
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}}>
-      <SafeAreaView style={{flex: 5, backgroundColor: 'white'}}>
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <SafeAreaView style={{ flex: 5, backgroundColor: 'white' }}>
         <ScrollView style={styles.scrollView}>
           <View
             style={{
@@ -28,14 +29,12 @@ export default function Home2() {
               marginRight: 32,
             }}>
             <Text>Total Balance</Text>
-            <Text style={{fontSize: 34, color: '#0B7F42', fontWeight: 'bold'}}>
+            <Text style={{ fontSize: 34, color: '#0B7F42', fontWeight: 'bold' }}>
               0.7544 BTC
             </Text>
             <Text>$26,648.60</Text>
           </View>
-          <View style={{flex: 3, backgroundColor: 'white'}}>
-            {/* <SafeAreaView style={{flex:3, backgroundColor:'white'}}>
-      <ScrollView style={styles.scrollView}> */}
+          <View style={{ flex: 3, backgroundColor: 'white' }}>
 
             <Card
               style={{
@@ -50,16 +49,13 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
               {/* <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}> */}
 
               <Yearn_logo width={63} height={63} />
-
-              {/* <Send_logo></Send_logo> */}
-              {/* <Yearn_logo width={63} height={63} /> */}
               <View
                 style={{
                   flex: 3,
@@ -67,10 +63,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -79,10 +75,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -102,7 +98,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -119,10 +115,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -131,10 +127,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -154,7 +150,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -171,10 +167,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -183,10 +179,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -206,7 +202,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -223,10 +219,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -235,10 +231,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -258,7 +254,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -275,10 +271,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -287,10 +283,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -310,7 +306,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -327,10 +323,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -339,10 +335,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -361,7 +357,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -378,10 +374,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -390,62 +386,10 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
-                  13 June 2021
-                </Text>
-              </View>
-
-              {/* </LinearGradient> */}
-            </Card>
-
-            <Card
-              style={{
-                alignContent: 'center',
-                alignItems: 'center',
-                width: '94%',
-                height: 88,
-                marginLeft: 10,
-                marginRight: 10,
-                marginBottom: 8,
-                flexDirection: 'row',
-                borderRadius: 12,
-                shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
-                shadowOpacity: 1,
-                elevation: 15,
-              }}>
-              {/* <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}> */}
-
-              <Yearn_logo width={63} height={63} />
-
-              {/* <Send_logo></Send_logo> */}
-              {/* <Yearn_logo width={63} height={63} /> */}
-              <View
-                style={{
-                  flex: 3,
-                  alignContent: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
-                  Sent Bitcoin
-                </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
-              </View>
-
-              <View
-                style={{
-                  flex: 1.5,
-                  alignContent: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
-                  -0.75 BTC
-                </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -465,7 +409,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 borderRadius: 12,
                 shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
+                shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 1,
                 elevation: 15,
               }}>
@@ -482,10 +426,10 @@ export default function Home2() {
                   justifyContent: 'center',
                 }}>
                 <Text
-                  style={{color: '#0A7C40', fontWeight: 'bold', fontSize: 16}}>
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
                   Sent Bitcoin
                 </Text>
-                <Text style={{color: '#202020', marginLeft: 15}}>0.7 BTC</Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
 
               <View
@@ -494,10 +438,62 @@ export default function Home2() {
                   alignContent: 'center',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: 'red', fontWeight: 'bold'}}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
                   -0.75 BTC
                 </Text>
-                <Text style={{color: 'black', fontWeight: 'normal'}}>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
+                  13 June 2021
+                </Text>
+              </View>
+
+              {/* </LinearGradient> */}
+            </Card>
+
+            <Card
+              style={{
+                alignContent: 'center',
+                alignItems: 'center',
+                width: '94%',
+                height: 88,
+                marginLeft: 10,
+                marginRight: 10,
+                marginBottom: 8,
+                flexDirection: 'row',
+                borderRadius: 12,
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 1,
+                elevation: 15,
+              }}>
+              {/* <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}> */}
+
+              <Yearn_logo width={63} height={63} />
+
+              {/* <Send_logo></Send_logo> */}
+              {/* <Yearn_logo width={63} height={63} /> */}
+              <View
+                style={{
+                  flex: 3,
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text
+                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16 }}>
+                  Sent Bitcoin
+                </Text>
+                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
+              </View>
+
+              <View
+                style={{
+                  flex: 1.5,
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                }}>
+                <Text style={{ color: 'red', fontWeight: 'bold' }}>
+                  -0.75 BTC
+                </Text>
+                <Text style={{ color: 'black', fontWeight: 'normal' }}>
                   13 June 2021
                 </Text>
               </View>
@@ -528,8 +524,8 @@ export default function Home2() {
               alignContent: 'center',
               alignItems: 'center',
             }}>
-            <Yearn_logo width={39} height={39} />
-            <Text style={{fontWeight: 'bold', fontSize: 18}}>Send</Text>
+            <SendUpSvg width={39} height={39} />
+            <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Send</Text>
           </Card>
 
           <Card
@@ -554,7 +550,7 @@ export default function Home2() {
                 flexDirection: 'row',
                 alignItems: 'center',
               }}>
-              <Yearn_logo width={39} height={39} />
+              <RecieveDownSvg width={39} height={39} />
               <Text
                 style={{
                   fontWeight: 'bold',

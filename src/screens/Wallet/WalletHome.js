@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -21,54 +22,22 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Yearn_logo } from '../../svgs/Yearn_logo';
 import { colors } from '../../config/colors';
 import PathSvg from '../../svgs/Path';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Web3 from 'web3'
+import BalanceCarousel from '../../components/reusable/Carousel/Carousel';
 
 const DefiSvg = ({ navigation }) => {
   return (
-    <View style={{ width: wp("20%") }}>
-      <Svg
-        onPress={() => navigation.navigate('defi')}
-        xmlns="http://www.w3.org/2000/svg"
-        width="55.237"
-        height="55.237"
-        viewBox="0 0 55.237 55.237">
-        <G
-          id="Group_206"
-          data-name="Group 206"
-          transform="translate(-179.382 -776)">
-          <Circle
-            id="Ellipse_10"
-            data-name="Ellipse 10"
-            cx="27.618"
-            cy="27.618"
-            r="27.618"
-            transform="translate(179.382 776)"
-            fill="#111b4f"
-          />
-          <G
-            id="Group_173"
-            data-name="Group 173"
-            transform="translate(192.641 791.078)">
-            <Path
-              id="Path_77"
-              data-name="Path 77"
-              d="M1724.861,184.982a8.575,8.575,0,0,0,4.679-1.322.4.4,0,0,1,.324-.068.916.916,0,0,0,.641.046.838.838,0,0,0,.538-.421.919.919,0,0,0,.127-.466.94.94,0,0,0-.012-.143.622.622,0,0,1,.21-.4,9.628,9.628,0,0,0,2.01-2.857,9.169,9.169,0,0,0,.809-3.156c.035-.489.1-.539.591-.536.368,0,.737,0,1.105,0,.437,0,.507-.061.5-.492a11.46,11.46,0,0,0-.728-3.984,11.832,11.832,0,0,0-3.573-4.909,10.68,10.68,0,0,0-6.563-2.645c-1.519-.067-3.038-.039-4.558-.056q-2.436,0-4.871,0c-.483,0-.572.093-.572.557q0,3.369,0,6.738c0,.472.1.559.571.548.564-.013,1.128-.018,1.692-.025.518-.007.567-.056.567-.581,0-1.336,0-2.672,0-4.008,0-.271.089-.406.378-.4q.95.013,1.9,0a.313.313,0,0,1,.3.14c.008.014.017.028.026.041l.005.009a.739.739,0,0,0,.475.35.923.923,0,0,0,1.1-.454.425.425,0,0,1,.313-.089c.6.007,1.2.013,1.8,0a7.687,7.687,0,0,1,4.018.918,10.117,10.117,0,0,1,4.286,4.5.624.624,0,0,1,.062.532.924.924,0,1,0,.819-.264.723.723,0,0,1-.274-.339,10.2,10.2,0,0,0-3.118-4.016,8.688,8.688,0,0,0-4.5-1.894c-1.01-.1-2.024-.079-3.036-.08a.486.486,0,0,1-.368-.125.925.925,0,0,0-.6-.463.88.88,0,0,0-.767.16c-.017.013-.033.025-.049.039l-.01.009a.926.926,0,0,0-.166.193.4.4,0,0,1-.377.179c-.76-.008-1.52-.007-2.28-.006-.519,0-.606.086-.6.6,0,1.128.022,2.257.015,3.385-.005.942.034,1.062-.967,1.047-.011,0-.023,0-.034,0-.516.031-.549,0-.55-.52q0-2.678,0-5.356c0-.614.032-.644.643-.645q3.282,0,6.564-.006a18.416,18.416,0,0,1,3.172.111,11.184,11.184,0,0,1,7.19,4.5,9.975,9.975,0,0,1,2.045,5.692c.017.4-.074.5-.463.5q-.656,0-1.313,0c-.259,0-.393.107-.389.394a9.681,9.681,0,0,1-.046,1.207,8.474,8.474,0,0,1-2.632,5.11.353.353,0,0,1-.386.111.921.921,0,0,0-.138-.031l-.021,0-.046,0a.863.863,0,0,0-.9.519.917.917,0,0,0-.093.4.908.908,0,0,0,.01.132.372.372,0,0,1-.208.292,7.87,7.87,0,0,1-3.96,1.168c-2.071.033-4.144-.038-6.216.009-.546.013-.624-.074-.614-.615.028-1.531.024-3.063,0-4.594a.764.764,0,0,1,.233-.725l.008-.006.008-.006a.863.863,0,0,0,.226-1.119.922.922,0,0,0-1.746.382v.005c0,.01,0,.019,0,.029s0,.021,0,.032,0,.038,0,.056v.013a.862.862,0,0,0,.152.415.928.928,0,0,0,.275.265.7.7,0,0,1,.2.571c-.012,2.177-.013,4.353-.024,6.53-.005,1.07.152.953-.952.959-.564,0-.582-.016-.581-.579q0-3.991.01-7.982c0-.092,0-.184,0-.276a.318.318,0,0,0-.355-.335c-.851,0-1.7,0-2.552,0a.9.9,0,0,1-.6-.176.924.924,0,1,0-.89,1.43l.013,0,.029,0a.822.822,0,0,0,.592-.15.927.927,0,0,0,.292-.312.921.921,0,0,1,.7-.189c.541.013,1.082.021,1.622.015.439,0,.536.074.537.506q0,1.918,0,3.836,0,2.194-.012,4.388c0,.249.048.433.353.432q1.053-.005,2.107,0c.253,0,.35-.127.352-.363,0-.4.024-.806.013-1.208-.015-.542.028-.594.57-.594C1720.9,184.992,1722.88,185.012,1724.861,184.982Zm8.835-12.412a.437.437,0,1,1-.437.437A.437.437,0,0,1,1733.7,172.57Zm-12-6.942a.437.437,0,1,1-.437.437A.437.437,0,0,1,1721.694,165.628Zm8.568,16.692a.437.437,0,1,1-.437.437A.437.437,0,0,1,1730.262,182.32Zm-18.4-4.187a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1711.857,178.133Zm6.143.015a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1718,178.148Z"
-              transform="translate(-1708.067 -163.576)"
-              fill="#fff"
-            />
-            <Path
-              id="Path_78"
-              data-name="Path 78"
-              d="M1675.959,232.359v0h4.458c.471,0,.489.018.489.485q0,3.093,0,6.186c0,.55.066.618.613.617,1.531,0,3.063,0,4.594-.013a6.52,6.52,0,0,0,3.7-1.1,7.445,7.445,0,0,0,3.416-8.325,7.639,7.639,0,0,0-4.243-5.117,5.235,5.235,0,0,0-2.221-.564c-1.8-.094-3.592-.019-5.388-.032-.426,0-.473.044-.474.477q0,1.918,0,3.836c0,.556-.056.614-.611.611-1.923-.008-3.846-.02-5.769-.024a.836.836,0,0,1-.63-.2.926.926,0,0,0-.289-.3.827.827,0,0,0-.38-.14l-.057-.006h0c-.021,0-.042,0-.064,0a.923.923,0,0,0-.687,1.54l0,0,0,0c.018.019.036.037.055.055l.015.014c.016.014.033.028.05.041l.027.02.039.026.046.028.017.009a.87.87,0,0,0,.928-.039.926.926,0,0,0,.235-.216,1.011,1.011,0,0,1,.674-.183q3.23.007,6.461.012c.493,0,.547-.058.549-.56q.006-1.935.013-3.87c0-.452.089-.546.539-.548,1.14,0,2.281,0,3.421.009a7.561,7.561,0,0,1,2.09.2,6.981,6.981,0,0,1,5.258,7.24,7.056,7.056,0,0,1-6.335,6.479c-1.5.053-2.993.032-4.489.046-.444,0-.5-.053-.5-.5q0-3.11,0-6.22c0-.553-.058-.613-.612-.613q-4.647,0-9.3,0a.778.778,0,0,1-.608-.208.93.93,0,0,0-.218-.242.794.794,0,0,0-.287-.152l-.01,0-.043-.011a.923.923,0,1,0,.537,1.413.818.818,0,0,1,.585-.174C1673.033,232.362,1674.5,232.359,1675.959,232.359Zm-2.837-2.241a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1673.122,230.118Zm-2.9,2.326a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1670.221,232.444Z"
-              transform="translate(-1669.297 -220.273)"
-              fill="#fff"
-            />
-            <Path
-              id="Path_79"
-              data-name="Path 79"
-              d="M1847.406,354.327a.923.923,0,0,0-.641,1.588.931.931,0,0,1-.032.731,11.422,11.422,0,0,1-3.512,4.9,10.014,10.014,0,0,1-6.081,2.482c-1.358.076-2.716.022-4.073.054a.759.759,0,0,1-.592-.205.925.925,0,0,0-.367-.327l-.015-.007-.058-.025-.032-.012-.055-.017-.024-.006a.923.923,0,1,0,.544,1.408.9.9,0,0,1,.626-.193c.645,0,1.289,0,1.934,0v.007h1.244a11.358,11.358,0,0,0,9.124-4.451,10.718,10.718,0,0,0,1.936-3.516,1.259,1.259,0,0,1,.386-.622.923.923,0,0,0-.309-1.793Zm-15.7,10.51a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1831.7,364.837Zm15.7-9.178a.437.437,0,1,1,.437-.437A.437.437,0,0,1,1847.409,355.659Z"
-              transform="translate(-1819.612 -341.141)"
-              fill="#fff"
-            />
+    <View style={{ position: "absolute", top: Platform.OS == "ios" ? -74 : -65, right: 0, left: 168, width: wp("20%") }}>
+      <Svg xmlns="http://www.w3.org/2000/svg" width="55.237" height="55.237" viewBox="0 0 55.237 55.237">
+        <G id="Group_295" data-name="Group 295" transform="translate(-179.382 -776)">
+          <Circle id="Ellipse_10" data-name="Ellipse 10" cx="27.618" cy="27.618" r="27.618" transform="translate(179.382 776)" fill="#0b7f42" />
+          <G id="Group_225" data-name="Group 225" transform="translate(39.314 467.036)">
+            <G id="Group_221" data-name="Group 221" transform="translate(154.618 320.701)">
+              <Path id="Path_87" data-name="Path 87" d="M-3924.438-171.559c-.029-.012-.057-.026-.087-.036a.682.682,0,0,1-.407-.357q-.18-.368-.354-.738-.288-.612-.573-1.226c-.065-.139-.13-.279-.192-.42a.652.652,0,0,1-.014-.482,4.186,4.186,0,0,1,.183-.424c.191-.413.424-.8.652-1.2q.8-1.385,1.6-2.769.593-1.021,1.188-2.041l1.877-3.23q.652-1.12,1.3-2.24l1.82-3.13c.095-.163.191-.326.284-.49a.742.742,0,0,0,.038-.742.7.7,0,0,0-.6-.4c-.129-.01-.259,0-.388,0l-1.522,0a1.022,1.022,0,0,0-.666.214,1.2,1.2,0,0,0-.227.245c-.32.46-.6.945-.884,1.427q-1.064,1.809-2.125,3.62a.787.787,0,0,1-.572.418.759.759,0,0,1-.723-.269,2.442,2.442,0,0,1-.249-.4q-.739-1.288-1.475-2.578c-.349-.614-.691-1.233-1.035-1.85a2.325,2.325,0,0,0-.388-.557,1.222,1.222,0,0,0-.718-.337,2.575,2.575,0,0,0-.429,0c-.266.009-.532.006-.8.009-.234,0-.468.009-.7.014a.727.727,0,0,0-.653,1.059c.072.159.166.308.251.46q.677,1.2,1.356,2.4.782,1.378,1.571,2.753t1.585,2.756a1.19,1.19,0,0,1-.014,1.3c-.32.514-.63,1.033-.938,1.554a.856.856,0,0,1-.419.367.767.767,0,0,1-.894-.253,1.18,1.18,0,0,1-.1-.157l-2.252-3.947q-.967-1.7-1.933-3.392-.941-1.65-1.884-3.3-.8-1.395-1.589-2.791-.262-.461-.526-.92a1.39,1.39,0,0,1-.172-.392.346.346,0,0,0-.031-.066v-.189a.455.455,0,0,0,.054-.136.761.761,0,0,1,.583-.519,1.2,1.2,0,0,1,.271-.021c1.056.008,2.112,0,3.168.016,1.385.02,2.77,0,4.155.021,1.483.02,2.966,0,4.448.021,1.434.019,2.868,0,4.3.021,1.451.02,2.9,0,4.354.021,1.27.016,2.539.008,3.809.01a2.589,2.589,0,0,1,.314.018.8.8,0,0,1,.377.146.762.762,0,0,1,.3.465v.294a.962.962,0,0,1-.086.246c-.081.147-.157.3-.24.443q-.406.717-.815,1.431-.88,1.546-1.759,3.091-.924,1.623-1.849,3.245-.975,1.714-1.949,3.429-.755,1.327-1.511,2.653-1.029,1.81-2.057,3.622t-2.051,3.6c-.017.03-.037.06-.053.091a.885.885,0,0,1-.581.506Zm.108-21.831a1.064,1.064,0,0,0-1.085,1.051,1.06,1.06,0,0,0,1.06,1.107,1.086,1.086,0,0,0,1.091-1.05A1.086,1.086,0,0,0-3924.33-193.39Z" transform="translate(3937.264 203.322)" fill="#fff" />
+              <Path id="Path_88" data-name="Path 88" d="M-3785.168-992.222a1.359,1.359,0,0,0,.29.034,4.606,4.606,0,0,1,2.433,1.022,4.681,4.681,0,0,1,1.712,3.066,4.2,4.2,0,0,1,.039.46c0,.112.006.115.123.115l.986,0a1.554,1.554,0,0,1,.662.14,1.283,1.283,0,0,1,.748.986,1.726,1.726,0,0,1,.02.314q0,.525,0,1.05a1.044,1.044,0,0,1-.031.249.1.1,0,0,1-.085.08,1.074,1.074,0,0,1-.219.017c-1.612-.022-3.225-.007-4.837-.025-1.507-.016-3.015,0-4.522-.021-1.413-.019-2.826,0-4.239-.02-1.49-.02-2.98,0-4.47-.022-1.427-.019-2.854-.008-4.281-.019-.182,0-.364-.007-.545-.013-.084,0-.1-.013-.1-.1,0-.385-.026-.769-.014-1.154,0-.143.008-.287.024-.429a1.22,1.22,0,0,1,.769-1.02,1.474,1.474,0,0,1,.614-.115c.378,0,.756-.006,1.133,0,1.144.025,2.288.008,3.431.018.312,0,.623,0,.934,0,1.43.028,2.861.01,4.292.02.19,0,.188,0,.2-.192a4.445,4.445,0,0,1,.4-1.673,4.636,4.636,0,0,1,.9-1.331,4.629,4.629,0,0,1,1.078-.829,4.7,4.7,0,0,1,1.535-.545,3.676,3.676,0,0,1,.469-.055.212.212,0,0,0,.092-.017Zm-.7,4.648a.243.243,0,0,0-.061-.08,1.614,1.614,0,0,1-.147-.191.927.927,0,0,1,.489-1.386,1.371,1.371,0,0,1,.372-.055c.1,0,.1,0,.143-.1s.068-.176.1-.263.043-.082.119-.053c.176.068.352.138.526.209.068.028.072.038.048.113s-.05.146-.073.219c-.033.1-.032.106.056.163a3.729,3.729,0,0,1,.427.339c.055.048.054.055.01.112q-.181.231-.364.461c-.053.066-.062.068-.138.016-.142-.1-.283-.194-.424-.29a.864.864,0,0,0-.235-.114.432.432,0,0,0-.082-.018.152.152,0,0,0-.151.075.126.126,0,0,0,.01.156,2.57,2.57,0,0,0,.214.245,4.023,4.023,0,0,1,.364.391.2.2,0,0,0,.187.085c.521,0,1.042,0,1.563,0,.226,0,.236.04.208-.232a2.645,2.645,0,0,0-.93-1.787,2.732,2.732,0,0,0-1.772-.659,2.539,2.539,0,0,0-1.015.186,2.616,2.616,0,0,0-1.042.739,2.736,2.736,0,0,0-.653,1.594c-.013.161.021.137.131.137l1.993,0A.241.241,0,0,0-3785.865-987.574Zm.487-3.93a4.409,4.409,0,0,0-.539.039,3.892,3.892,0,0,0-1.363.432,3.984,3.984,0,0,0-1.154.913,3.949,3.949,0,0,0-.594.911,3.933,3.933,0,0,0-.37,1.551c0,.079,0,.089.088.091.116,0,.231,0,.346,0s.125-.007.133-.124a3.051,3.051,0,0,1,.033-.334,3.385,3.385,0,0,1,1.881-2.563,3.259,3.259,0,0,1,2.113-.294,3.386,3.386,0,0,1,1.762.894,3.374,3.374,0,0,1,1.069,2.346c0,.09.013.1.108.1.115,0,.231,0,.346.007.1.01.108,0,.107-.1a3.28,3.28,0,0,0-.066-.6,3.976,3.976,0,0,0-1.4-2.363A3.943,3.943,0,0,0-3785.378-991.5Z" transform="translate(3802.927 992.222)" fill="#fff" />
+            </G>
           </G>
         </G>
       </Svg>
@@ -144,7 +113,7 @@ const UsersSvg = ({ navigation }) => {
 
 const WalletSvg = () => {
   return (
-    <View style={{ width: wp("20%"), }}>
+    <View style={{ width: wp("20%") }}>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width="24.316"
@@ -314,6 +283,62 @@ const EyeSvg = () => {
   );
 };
 export default function WalletHome({ navigation }) {
+
+
+  const { btc } = useSelector(s => s.Btc)
+  const { eth } = useSelector(s => s.Eth)
+
+  const [ethBalance, setEthereumBalance] = useState("")
+  const [yficBalance, setYficBalance] = useState("")
+  console.log("🚀 ~ file: WalletHome.js ~ line 292 ~ WalletHome ~ yficBalance", yficBalance)
+  const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
+
+
+  useEffect(async () => {
+
+    if (eth) {
+      // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ eth", eth)
+      // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ btc", btc)
+      web3.eth.getBalance(eth.address, function (err, result) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(web3.utils.fromWei(result, "ether") + " E")
+          setEthereumBalance(result)
+        }
+      })
+    }
+
+
+    const abi = [
+      {
+        constant: true,
+        inputs: [{ name: "_owner", type: "address" }],
+        name: "balanceOf",
+        outputs: [{ name: "balance", type: "uint256" }],
+        type: "function",
+      }
+    ]
+    const contractAddress = "0x9CF4679c67BEE8dA2D6F58c64592fFf6beE79330"
+    const contract = new web3.eth.Contract(abi, contractAddress);
+    async function getBalance() {
+      const result = await contract.methods.balanceOf(eth.address).call(); // 29803630997051883414242659
+      const format = web3.utils.fromWei(result); // 29803630.997051883414242659
+      setYficBalance(format)
+
+    }
+    const b = await getBalance();
+
+
+
+
+  }, [eth])
+
+
+
+
+
+
   return (
     <View style={styles.container}>
       <View style={styles.carousel}>
@@ -324,14 +349,18 @@ export default function WalletHome({ navigation }) {
             <Text style={styles.totalBalance}>Total Balance</Text>
             <EyeSvg />
           </View>
-          <Text style={styles.blurryText1}>Currency USD</Text>
-          <Text style={styles.blurryText2}>$1,529.00</Text>
+          <View style={{ flex: 3 }}>
+            <BalanceCarousel yficBalance={yficBalance} />
+          </View>
+
+          {/* <Text style={styles.blurryText1}>Currency USD</Text>
+          <Text style={styles.blurryText2}>$ {yficBalance}</Text>
           <View style={{ flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", }}>
             <View>
               <Yearn_logo width={hp("3%")} height={wp("5%")} />
             </View>
             <Text style={styles.blurryText3}>YFIC</Text>
-          </View>
+          </View> */}
         </View>
       </View>
       <View style={styles.information}>
@@ -339,15 +368,15 @@ export default function WalletHome({ navigation }) {
           <UpSvg />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Topup")}>
-        <Text
-          style={{ fontSize: 18, marginBottom: 3, fontFamily: 'Poppins-Medium' }}>
-          Top up your Account now
-        </Text>
+          <Text
+            style={{ fontSize: 18, marginBottom: 3, fontFamily: 'Poppins-Medium' }}>
+            Top up your Account now
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.balanceCard}>
-        <ScrollView style={{ width: wp("100%") }} >
-          <View style={{ alignItems: "center" }}>
+        <ScrollView style={{ width: wp("100%"), }} >
+          <View style={{ alignItems: "center", }}  >
             <Card style={styles.card}>
               <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
                 <Yearn_logo width={63} height={63} />
@@ -356,97 +385,51 @@ export default function WalletHome({ navigation }) {
                   <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
                 </View>
                 <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$ {yficBalance}</Text>
                   <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
                 </View>
               </LinearGradient>
             </Card>
             <Card style={styles.card}>
               <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Yearn_logo width={63} height={63} />
+                <Image
+                  style={{ width: 63, height: 63 }}
+                  source={require('../../../assets/eth.png')}
+                />
                 <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
+                  <Text style={styles.cardText}>Ethereum</Text>
+                  <Text style={{ color: 'white', marginLeft: 15 }} >ETH</Text>
                 </View>
                 <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$ {ethBalance}</Text>
                   <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
                 </View>
               </LinearGradient>
             </Card>
-            <Card style={styles.card}>
-              <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Yearn_logo width={63} height={63} />
-                <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
-                </View>
-                <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
-                </View>
-              </LinearGradient>
-            </Card>
-            <Card style={styles.card}>
-              <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Yearn_logo width={63} height={63} />
-                <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
-                </View>
-                <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
-                </View>
-              </LinearGradient>
-            </Card>
-
-            <Card style={styles.card}>
-              <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Yearn_logo width={63} height={63} />
-                <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
-                </View>
-                <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
-                </View>
-              </LinearGradient>
-            </Card>
-            <Card style={styles.card}>
-              <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-
-                <Yearn_logo width={63} height={63} />
-                <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
-
-                </View>
-                <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
-                </View>
-              </LinearGradient>
-            </Card>
-            <Card style={styles.card}>
-              <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Yearn_logo width={63} height={63} />
-                <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={styles.cardText}>Yearn Cash</Text>
-                  <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
-                </View>
-                <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$5.35</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
-                </View>
-              </LinearGradient>
-            </Card>
+            <TouchableOpacity onPress={() => navigation.navigate("home2")}>
+              <Card style={styles.card}>
+                <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
+                  <Image
+                    style={{ width: 63, height: 63 }}
+                    source={require('../../../assets/btc.png')}
+                  />
+                  <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
+                    <Text style={styles.cardText}>Bitcoin</Text>
+                    <Text style={{ color: 'white', marginLeft: 15 }} >BTC</Text>
+                  </View>
+                  <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
+                    <Text style={{ color: 'white', fontWeight: 'bold' }}>$ 0</Text>
+                    <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
+                  </View>
+                </LinearGradient>
+              </Card>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
       <View style={styles.bottomNavigation}>
         <PathSvg />
+        <DefiSvg />
         <View style={{ flexDirection: "row" }} >
           <WalletSvg />
           <MenuSvg navigation={navigation} />
@@ -481,10 +464,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   balanceCard: {
-    flex: 3,
-    justifyContent: "center",
+    flex: 4,
     alignItems: "center",
-
   },
   card: { borderRadius: 12, marginBottom: 9 },
   information: {
@@ -495,7 +476,7 @@ const styles = StyleSheet.create({
   bottomNavigation: {
     // backgroundColor: 'red'
     justifyContent: "flex-end",
-    backgroundColor: 'transparent'
+
 
   },
   image: {
@@ -534,7 +515,8 @@ const styles = StyleSheet.create({
   totalBalance: {
     color: "black",
     fontFamily: "Poppins-Medium",
-    // marginRight: 15.8
+    // marginRight: 15.8,
+
   },
   bottomNavText: { textAlign: "center", color: "white" }
 });

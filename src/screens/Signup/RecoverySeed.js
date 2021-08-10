@@ -9,6 +9,9 @@ export default function RecoverySeed({navigation}) {
   const [recoverySeed] = useState('');
   const dispatch = useDispatch();
 
+
+  
+
   return (
     <View style={styles.container}>
       <StatusBar
