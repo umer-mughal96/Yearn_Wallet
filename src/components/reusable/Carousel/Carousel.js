@@ -23,15 +23,15 @@ export default class BalanceCarousel extends React.Component {
             activeIndex: 0,
             carouselItems: [
                 {
-                    balance: `$ ${props.yficBalance}`,
+                    balance: `$ 0`,
                     text: "YFIC",
                 },
                 {
-                    balance: `$ ${props.yficBalance}`,
+                    balance: `$ 0`,
                     text: "ETH",
                 },
                 {
-                    balance: `$ ${props.yficBalance}`,
+                    balance: `$ 0`,
                     text: "BTC",
                 },
 
@@ -51,7 +51,7 @@ export default class BalanceCarousel extends React.Component {
                     <Yearn_logo width={hp("3%")} height={wp("5%")} />
                     <Text style={styles.blurryText3}>{item.text}</Text>
                 </View>
-                <Pagination dotsLength={3}  activeDotIndex={index} />
+                <Pagination dotsLength={3} activeDotIndex={index} />
             </View>
 
         )
