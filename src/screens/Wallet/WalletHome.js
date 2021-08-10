@@ -17,9 +17,10 @@ import Svg, {
   Circle,
 } from 'react-native-svg';
 import { Card } from 'react-native-shadow-cards';
+import Footer from '../../components/reusable/Footer/Footer'
 
 import LinearGradient from 'react-native-linear-gradient';
-import { Yearn_logo } from '../../svgs/Yearn_logo';
+import { Yearn_logo, BitcoinSvg, EthSvg } from '../../svgs/Yearn_logo';
 import { colors } from '../../config/colors';
 import PathSvg from '../../svgs/Path';
 import { useSelector } from 'react-redux';
@@ -27,9 +28,9 @@ import { useEffect } from 'react';
 import Web3 from 'web3'
 import BalanceCarousel from '../../components/reusable/Carousel/Carousel';
 
-const DefiSvg = ({ navigation }) => {
+export const DefiSvg = ({ navigation }) => {
   return (
-    <View style={{ position: "absolute", top: Platform.OS == "ios" ? -74 : -65, right: 0, left: 168, width: wp("20%") }}>
+    <View style={{ position: "absolute", top: Platform.OS == "ios" ? hp("-13.5") : hp("-14"), right: 0, left: Platform.OS == "ios" ? hp("19.9") : hp("22.4"), width: wp("20%") }}>
       <Svg xmlns="http://www.w3.org/2000/svg" width="55.237" height="55.237" viewBox="0 0 55.237 55.237">
         <G id="Group_295" data-name="Group 295" transform="translate(-179.382 -776)">
           <Circle id="Ellipse_10" data-name="Ellipse 10" cx="27.618" cy="27.618" r="27.618" transform="translate(179.382 776)" fill="#0b7f42" />
@@ -45,7 +46,7 @@ const DefiSvg = ({ navigation }) => {
   );
 };
 
-const UsersSvg = ({ navigation }) => {
+export const UsersSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%") }}>
       <TouchableOpacity onPress={() => navigation.navigate("ProfileSetting")}>
@@ -111,7 +112,7 @@ const UsersSvg = ({ navigation }) => {
   );
 };
 
-const WalletSvg = () => {
+export const WalletSvg = () => {
   return (
     <View style={{ width: wp("20%") }}>
       <Svg
@@ -133,7 +134,7 @@ const WalletSvg = () => {
   );
 };
 
-const ProfileSvg = ({ navigation }) => {
+export const ProfileSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%") }}>
       <TouchableOpacity onPress={() => navigation.navigate("userProfile")}>
@@ -174,7 +175,7 @@ const ProfileSvg = ({ navigation }) => {
   );
 };
 
-const MenuSvg = ({ navigation }) => {
+export const MenuSvg = ({ navigation }) => {
   return (
     <View style={{ width: wp("20%"), alignItems: 'center' }}>
       <TouchableOpacity onPress={() => navigation.navigate("Activity")}>
@@ -243,7 +244,7 @@ const MenuSvg = ({ navigation }) => {
   );
 };
 
-const UpSvg = () => {
+export const UpSvg = () => {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -264,9 +265,10 @@ const UpSvg = () => {
 
 
 
-const EyeSvg = () => {
+export const EyeSvg = () => {
   return (
-    <Svg
+    <TouchableOpacity>
+         <Svg
       width="20"
       height="20"
       viewBox="0 0 42.296 28.197"
@@ -279,7 +281,9 @@ const EyeSvg = () => {
         transform="translate(0 -4.5)"
         fill="black"
       />
-    </Svg>
+    </Svg>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    </TouchableOpacity>
+   
   );
 };
 export default function WalletHome({ navigation }) {
@@ -390,12 +394,10 @@ export default function WalletHome({ navigation }) {
                 </View>
               </LinearGradient>
             </Card>
+            <TouchableOpacity onPress={() => navigation.navigate("ethDetail")}>
             <Card style={styles.card}>
               <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                <Image
-                  style={{ width: 63, height: 63 }}
-                  source={require('../../../assets/eth.png')}
-                />
+                <EthSvg width={63} height={63} />
                 <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
                   <Text style={styles.cardText}>Ethereum</Text>
                   <Text style={{ color: 'white', marginLeft: 15 }} >ETH</Text>
@@ -406,13 +408,11 @@ export default function WalletHome({ navigation }) {
                 </View>
               </LinearGradient>
             </Card>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate("home2")}>
               <Card style={styles.card}>
                 <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}>
-                  <Image
-                    style={{ width: 63, height: 63 }}
-                    source={require('../../../assets/btc.png')}
-                  />
+                  <BitcoinSvg width={63} height={63} />
                   <View style={{ flex: 3, alignContent: 'center', justifyContent: 'center' }}>
                     <Text style={styles.cardText}>Bitcoin</Text>
                     <Text style={{ color: 'white', marginLeft: 15 }} >BTC</Text>
@@ -427,21 +427,7 @@ export default function WalletHome({ navigation }) {
           </View>
         </ScrollView>
       </View>
-      <View style={styles.bottomNavigation}>
-        <PathSvg />
-        <DefiSvg />
-        <View style={{ flexDirection: "row" }} >
-          <WalletSvg />
-          <MenuSvg navigation={navigation} />
-          <Text style={{ width: wp("20%"), textAlign: "center", color: "white" }}
-          >
-            DEX
-          </Text>
-          <UsersSvg navigation={navigation} />
-          <ProfileSvg navigation={navigation} />
-        </View>
-
-      </View>
+      <Footer navigation={navigation}/>
     </View>
   );
 }
@@ -473,12 +459,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  bottomNavigation: {
-    // backgroundColor: 'red'
-    justifyContent: "flex-end",
-
-
-  },
+ 
   image: {
     flex: 2,
     margin: (1, 10, 1, 10),

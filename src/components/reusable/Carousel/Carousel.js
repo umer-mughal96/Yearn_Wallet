@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { Yearn_logo } from '../../../svgs/Yearn_logo';
+import { BitcoinSvg, EthSvg, Yearn_logo } from '../../../svgs/Yearn_logo';
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -48,7 +48,10 @@ export default class BalanceCarousel extends React.Component {
             }}>
                 <Text style={styles.blurryText2}>{item.balance}</Text>
                 <View style={{ flexDirection: "row" }}>
-                    <Yearn_logo width={hp("3%")} height={wp("5%")} />
+                    {index == 0 && <Yearn_logo width={hp("3%")} height={wp("5%")} /> }
+                    {index == 1 && <EthSvg width={hp("3%")} height={wp("5%")} /> }
+                    {index == 2 && <BitcoinSvg width={hp("3%")} height={wp("5%")} /> }
+                  
                     <Text style={styles.blurryText3}>{item.text}</Text>
                 </View>
                 <Pagination dotsLength={3} activeDotIndex={index} />

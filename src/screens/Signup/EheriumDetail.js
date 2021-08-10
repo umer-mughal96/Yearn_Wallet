@@ -18,7 +18,7 @@ import { RecieveDownSvg, SendUpSvg } from '../../svgs/BtcDetail';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 
-export default function Home2({ navigation }) {
+export default function EtheriumDetail({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <SafeAreaView style={{ flex: 5, backgroundColor: 'white' }}>
@@ -32,7 +32,7 @@ export default function Home2({ navigation }) {
             }}>
             <Text>Total Balance</Text>
             <Text style={{ fontSize: 34, color: '#0B7F42', fontWeight: 'bold' }}>
-              0.7544 BTC
+              0.7544 ETH
             </Text>
             <Text>$26,648.60</Text>
           </View>
@@ -65,7 +65,7 @@ export default function Home2({ navigation }) {
                 }}>
                 <Text
                   style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16, marginLeft: 7 }}>
-                  Sent Bitcoin
+                  Sent Ethereum
                 </Text>
                 <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
@@ -118,7 +118,7 @@ export default function Home2({ navigation }) {
                 }}>
                 <Text
                   style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16, marginLeft: 7 }}>
-                  Recieve Bitcoin
+                  Recieve Ethereum
                 </Text>
                 <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
               </View>
@@ -154,7 +154,7 @@ export default function Home2({ navigation }) {
             justifyContent: 'center',
             marginBottom: 45,
           }}>
-            <TouchableOpacity onPress={() => navigation.navigate("sendBtc")}>
+            <TouchableOpacity onPress={() => navigation.navigate("sendEth")}>
           <Card
             style={{
               width: heightPercentageToDP(20),
@@ -171,7 +171,7 @@ export default function Home2({ navigation }) {
           </TouchableOpacity>
 
           
-          <TouchableOpacity onPress={() => navigation.navigate("recieveBtc")}>
+          <TouchableOpacity onPress={() => navigation.navigate("recieveEth")}>
           <Card
             style={{
               width: heightPercentageToDP(20),

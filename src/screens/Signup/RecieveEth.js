@@ -22,7 +22,7 @@ import { Send_logo } from '../../svgs/send';
 import LinearGradient from 'react-native-linear-gradient';
 import QrCodeScanner from '../../components/reusable/Qrcodde/Qrcode';
 
-export default function RecieveBtc() {
+export default function RecieveEth() {
     return (
         <View style={{ flex: 1 }}>
 

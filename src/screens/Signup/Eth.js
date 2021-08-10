@@ -15,8 +15,6 @@ import Footer from '../../components/reusable/Footer/Footer'
 
 import LinearGradient from 'react-native-linear-gradient';
 import { RecieveDownSvg, SendUpSvg } from '../../svgs/BtcDetail';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
 
 export default function Home2({ navigation }) {
   return (
@@ -86,8 +84,8 @@ export default function Home2({ navigation }) {
 
               {/* </LinearGradient> */}
             </Card>
-                <TouchableOpacity onPress={() => navigation.navigate("sendBtc")}>
-                 <Card
+
+            <Card
               style={{
                 alignContent: 'center',
                 alignItems: 'center',
@@ -137,8 +135,6 @@ export default function Home2({ navigation }) {
                 </Text>
               </View>
             </Card>
-                </TouchableOpacity>
-           
 
 
           </View>
@@ -154,10 +150,9 @@ export default function Home2({ navigation }) {
             justifyContent: 'center',
             marginBottom: 45,
           }}>
-            <TouchableOpacity onPress={() => navigation.navigate("sendBtc")}>
           <Card
             style={{
-              width: heightPercentageToDP(20),
+              width: '40%',
               height: 65,
               borderRadius: 12,
               backgroundColor: 'white',
@@ -168,13 +163,10 @@ export default function Home2({ navigation }) {
             <SendUpSvg width={39} height={39} />
             <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 10 }}>Send</Text>
           </Card>
-          </TouchableOpacity>
 
-          
-          <TouchableOpacity onPress={() => navigation.navigate("recieveBtc")}>
           <Card
             style={{
-              width: heightPercentageToDP(20),
+              width: '40%',
               height: 65,
               borderRadius: 12,
               backgroundColor: 'white',
@@ -206,8 +198,6 @@ export default function Home2({ navigation }) {
               </Text>
             </LinearGradient>
           </Card>
-
-          </TouchableOpacity>
         </View>
       </SafeAreaView>
       <Footer navigation={navigation} />

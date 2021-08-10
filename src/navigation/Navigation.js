@@ -42,6 +42,10 @@ import SettingScreen from '../screens/Signup/SettingScreen';
 import SecurityChangePass from '../screens/Signup/SecurityChangePass';
 import SecurityConfirmPass from '../screens/Signup/SecurityConfirmPass';
 import Referral from '../screens/Signup/Referral';
+import RecieveBtc from '../screens/Signup/RecieveBtc';
+import EtheriumDetail from '../screens/Signup/EheriumDetail';
+import RecieveEth from '../screens/Signup/RecieveEth';
+import SendEth from '../screens/Signup/SendEth';
 
 
 
@@ -457,7 +461,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Security',
+          title: 'Security',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -491,8 +495,8 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Custodian Information',
-         
+          title: 'Custodian Information',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -575,10 +579,10 @@ export default function Navigation() {
         name="Sendbtc"
         component={Sendbtc}
       />
-       <Stack.Screen
+      <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -595,8 +599,8 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -613,8 +617,8 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -629,11 +633,100 @@ export default function Navigation() {
         name="Referral"
         component={Referral}
       />
+       <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="sendBtc"
+        component={Sendbtc}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Recieve',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="recieveBtc"
+        component={RecieveBtc}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Ethereum',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="ethDetail"
+        component={EtheriumDetail}
+      />
+       <Stack.Screen
+        options={{
+          title: 'Recieve',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="recieveEth"
+        component={RecieveEth}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="sendEth"
+        component={SendEth}
+      />
     </Stack.Navigator>
-    
-    
+
+
   );
 }
 
 
-const styles = StyleSheet.csreate({});

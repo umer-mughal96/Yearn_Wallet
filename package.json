@@ -1,5 +1,5 @@
 {
-  "name": "btc_eth_wallet",
+  "name": "wallet",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -52,6 +52,8 @@
     "react-native-linear-gradient": "^2.5.6",
     "react-native-os": "^1.2.6",
     "react-native-phone-number-input": "^2.1.0",
+    "react-native-qrcode": "^0.2.7",
+    "react-native-qrcode-svg": "^6.1.1",
     "react-native-randombytes": "^3.6.1",
     "react-native-reanimated": "^2.2.0",
     "react-native-responsive-screen": "^1.4.2",

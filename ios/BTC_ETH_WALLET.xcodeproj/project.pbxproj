@@ -51,7 +51,7 @@
 		06E71B06FDE27531412F3EFB /* libPods-BTC_ETH_WALLET-BTC_ETH_WALLETTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BTC_ETH_WALLET-BTC_ETH_WALLETTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105DDCE5C97F47D2A9C7C9C3 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		10D5A62EBF554C35BD953B10 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* BTC_ETH_WALLET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTC_ETH_WALLET.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* yEARN Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yEARN Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BTC_ETH_WALLET/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BTC_ETH_WALLET/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BTC_ETH_WALLET/Images.xcassets; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* BTC_ETH_WALLET.app */,
+				13B07F961A680F5B00A75B9A /* yEARN Wallet.app */,
 				00E356EE1AD99517003FC87E /* BTC_ETH_WALLETTests.xctest */,
 			);
 			name = Products;
@@ -283,7 +283,7 @@
 			);
 			name = BTC_ETH_WALLET;
 			productName = BTC_ETH_WALLET;
-			productReference = 13B07F961A680F5B00A75B9A /* BTC_ETH_WALLET.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* yEARN Wallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -575,7 +575,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BTC_ETH_WALLET;
+				PRODUCT_NAME = "yEARN Wallet";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -601,7 +601,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BTC_ETH_WALLET;
+				PRODUCT_NAME = "yEARN Wallet";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

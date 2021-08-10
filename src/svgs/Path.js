@@ -6,7 +6,7 @@ import { heightPercentageToDP, widthPercentageToDP as wp } from 'react-native-re
 const PathSvg = () => {
     return (
         <View style={{
-            position: "absolute", top: Platform.OS == "ios" ? -50 : -40,
+            position: "absolute", top: Platform.OS == "ios" ? heightPercentageToDP("-10.5") : heightPercentageToDP("-11"),
             left: 0,
             right: 0,
             bottom: 0,

@@ -30,7 +30,7 @@ export default function CustodianInfo({ navigation }) {
               ? styles.TextInput1
               : styles.TextInput2
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="First name & Last name"
         />
@@ -40,7 +40,7 @@ export default function CustodianInfo({ navigation }) {
               ? styles.TextInput1
               : styles.TextInput2
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Custodian Phone number"
         />
@@ -50,7 +50,7 @@ export default function CustodianInfo({ navigation }) {
               ? styles.TextInput1
               : styles.TextInput2
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Custodian Email"
         />
