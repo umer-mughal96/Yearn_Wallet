@@ -42,6 +42,10 @@ import SettingScreen from '../screens/Signup/SettingScreen';
 import SecurityChangePass from '../screens/Signup/SecurityChangePass';
 import SecurityConfirmPass from '../screens/Signup/SecurityConfirmPass';
 import Referral from '../screens/Signup/Referral';
+import Private_Key from '../screens/Signup/Private_Key';
+import ETH_Private_Key from '../screens/Signup/ETH_Private_key';
+import YETH_Private_Key from '../screens/Signup/YFIC_Private_Key';
+import RecoverySeedSinUp from '../../RecoverySeedSinUp';
 
 
 
@@ -629,6 +633,78 @@ export default function Navigation() {
         name="Referral"
         component={Referral}
       />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Private_Key"
+        component={Private_Key}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="ETHPrivate_Key"
+        component={ETH_Private_Key}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="YFICPrivate_Key"
+        component={YETH_Private_Key}
+      />
+      <Stack.Screen
+        options={{
+          title:'Activity',
+          
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="RecoverySeedSinUp"
+        component={RecoverySeedSinUp}
+      />
     </Stack.Navigator>
     
     
@@ -636,4 +712,3 @@ export default function Navigation() {
 }
 
 
-const styles = StyleSheet.csreate({});

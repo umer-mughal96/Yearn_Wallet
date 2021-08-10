@@ -5,7 +5,7 @@ import {
 } from 'react-native-responsive-screen';
 import {Card} from 'react-native-shadow-cards';
 import {Text, TouchableOpacity, View} from 'react-native';
-import { DollerSvg, ReferralCodeSvg, UserSvg } from '../../svgs/Refferral';
+import { DollerSvg, ReferralCodeSvg, ShareSvg, UserSvg } from '../../svgs/Refferral';
 
 export default function Referral() {
   return (
@@ -83,6 +83,7 @@ export default function Referral() {
             elevation: 25,
           }}>
           <UserSvg/>
+          
           <Text
             style={{
               color: 'green',
@@ -150,7 +151,7 @@ export default function Referral() {
             transaction they make
           </Text>
         </View>
-        <ReferralCodeSvg/>
+        
         <View
           style={{
             height: hp(25),
@@ -161,6 +162,7 @@ export default function Referral() {
             justifyContent: 'center',
             top: hp(2),
           }}>
+          
           <Card
             style={{
               borderColor: 'white',
@@ -173,14 +175,12 @@ export default function Referral() {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Text
-              style={{
-                fontFamily: 'Poppins-Bold',
-                fontSize: hp(2),
-                color: 'green',
-              }}>
-              Copy Referral Code
-            </Text>
+             
+            <View style={{flexDirection:"row" ,justifyContent:"center",alignItems:"center"}}>
+            <ReferralCodeSvg/> 
+            <Text style=
+            {{marginLeft:10,fontSize:18,color:"#0B7F42"}}>Copy Referral Code</Text>
+            </View>
           </Card>
 
           <Card
@@ -196,7 +196,9 @@ export default function Referral() {
               marginLeft: hp(1),
               alignItems: 'center',
               justifyContent: 'center',
-            }}></Card>
+            }}>
+                <ShareSvg/>
+            </Card>
         </View>
       </View>
     </View>

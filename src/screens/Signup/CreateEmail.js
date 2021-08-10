@@ -90,7 +90,9 @@ export default function CreateEmail({navigation}) {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('Signin')}
+          >
           <Text style={styles.loginText}>Login</Text>
           <Icon name="right" color="#000000" size={18} />
         </TouchableOpacity>

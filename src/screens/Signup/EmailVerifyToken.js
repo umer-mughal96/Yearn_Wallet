@@ -109,7 +109,9 @@ export default function EmailVerifyToken({ navigation }) {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          
+          >
           <View style={{flexDirection: 'row'}}>
             <Text style={styles.loginText}>Login</Text>
             <Icon name="right" color="#000000" size={18} />

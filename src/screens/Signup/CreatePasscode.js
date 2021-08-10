@@ -47,7 +47,7 @@ export default function CreatePasscode({navigation}) {
           }}
           onPress={() => navigation.navigate('Signin')}>
            <View style={{flexDirection:"row"}}>
-           <Text style={styles.loginText}>Signup</Text>
+           <Text style={styles.loginText}>Login</Text>
           <Icon name="right" color="#000000" size={18} />
           </View>
         </TouchableOpacity>

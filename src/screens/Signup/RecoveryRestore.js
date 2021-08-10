@@ -35,7 +35,7 @@ export default function RecoveryRestore({navigation}) {
                   elevation: 5,
                 }
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           value={RecoveryRestore}
           placeholder=" "
         />

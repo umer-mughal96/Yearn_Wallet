@@ -47,12 +47,14 @@ export default function SettingScreen({navigation}) {
             elevation: 10,
             borderRadius: 20,
           }}>
+          <TouchableOpacity onPress={()=>navigation.navigate("YFICPrivate_Key")}>
           <YficCircleSvg />
+          </TouchableOpacity>
           <Text style={{paddingTop: 10, fontFamily: 'Poppins-Medium',fontSize:17}}>
             YFIC
           </Text>
         </View>
-        <View
+        <View 
           style={{
             justifyContent: 'center',
             alignItems: 'center',
@@ -62,7 +64,9 @@ export default function SettingScreen({navigation}) {
             elevation: 10,
             borderRadius: 20,
           }}>
-          <BtcCircleSvg/>
+          <TouchableOpacity onPress={()=>navigation.navigate("Private_Key")}>
+          <BtcCircleSvg />
+          </TouchableOpacity>
           <Text style={{paddingTop: 10, fontFamily: 'Poppins-Medium',fontSize:17}}>
             BTC
           </Text>
@@ -77,7 +81,9 @@ export default function SettingScreen({navigation}) {
             elevation: 5,
             borderRadius: 20,
           }}>
-          <EthCircleSvg/>
+          <TouchableOpacity onPress={()=>navigation.navigate("ETHPrivate_Key")}>
+          <EthCircleSvg  />
+          </TouchableOpacity>
           <Text style={{paddingTop: 10, fontFamily: 'Poppins-Medium',fontSize:17}}>
             ETH
           </Text>
@@ -196,7 +202,7 @@ export default function SettingScreen({navigation}) {
         </Card>
         <Card cornerRadius={14} style={styles.card}>
           <TouchableOpacity
-            onPress={() => alert('asdasd')}
+            onPress={() => navigation.navigate("Landing")}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
@@ -208,9 +214,9 @@ export default function SettingScreen({navigation}) {
               
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert('asdasd')}>
+          
             <Icon name="chevron-forward-sharp" color="#000000" size={18} />
-          </TouchableOpacity>
+          
         </Card>
       </View>
     </View>

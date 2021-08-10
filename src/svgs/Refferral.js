@@ -10,6 +10,8 @@ import Svg, {
   Path,
   Filter,
   Rect,
+  Text,
+  Tspan,
 } from 'react-native-svg';
 
 export function DollerSvg() {
@@ -32,30 +34,87 @@ export function DollerSvg() {
   );
 }
 export function UserSvg() {
+  return (
+    <View>
+      <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="36"
+        viewBox="0 0 36 36">
+        <Path
+          id="Icon_awesome-user-alt"
+          data-name="Icon awesome-user-alt"
+          d="M18,20.25A10.125,10.125,0,1,0,7.875,10.125,10.128,10.128,0,0,0,18,20.25Zm9,2.25H23.126a12.24,12.24,0,0,1-10.252,0H9a9,9,0,0,0-9,9v1.125A3.376,3.376,0,0,0,3.375,36h29.25A3.376,3.376,0,0,0,36,32.625V31.5A9,9,0,0,0,27,22.5Z"
+          fill="#0b7f42"
+        />
+      </Svg>
+    </View>
+  );
+}
+export function ReferralCodeSvg() {
+  return (
+    <View>
+      <Svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <G id="Icon_feather-copy" data-name="Icon feather-copy" transform="translate(-1.5 -1.5)">
+    <Path id="Path_80" data-name="Path 80" d="M15.9,13.5H26.7a2.4,2.4,0,0,1,2.4,2.4V26.7a2.4,2.4,0,0,1-2.4,2.4H15.9a2.4,2.4,0,0,1-2.4-2.4V15.9A2.4,2.4,0,0,1,15.9,13.5Z" transform="translate(-2.1 -2.1)" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_81" data-name="Path 81" d="M6.6,18.6H5.4A2.4,2.4,0,0,1,3,16.2V5.4A2.4,2.4,0,0,1,5.4,3H16.2a2.4,2.4,0,0,1,2.4,2.4V6.6" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </G>
+</Svg>
+
+
+      
+    </View>
+  );
+}
+
+
+  export function CopySvg() {
     return (
       <View>
-        <Svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-	<Path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt" d="M18,20.25A10.125,10.125,0,1,0,7.875,10.125,10.128,10.128,0,0,0,18,20.25Zm9,2.25H23.126a12.24,12.24,0,0,1-10.252,0H9a9,9,0,0,0-9,9v1.125A3.376,3.376,0,0,0,3.375,36h29.25A3.376,3.376,0,0,0,36,32.625V31.5A9,9,0,0,0,27,22.5Z" fill="#0b7f42" />
+       <Svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <G id="Icon_feather-copy" data-name="Icon feather-copy" transform="translate(-1.5 -1.5)">
+    <Path id="Path_66" data-name="Path 66" d="M16.5,13.5H30a3,3,0,0,1,3,3V30a3,3,0,0,1-3,3H16.5a3,3,0,0,1-3-3V16.5A3,3,0,0,1,16.5,13.5Z" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_67" data-name="Path 67" d="M7.5,22.5H6a3,3,0,0,1-3-3V6A3,3,0,0,1,6,3H19.5a3,3,0,0,1,3,3V7.5" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </G>
 </Svg>
+
+
+
+
       </View>
     );
   }
-  export function ReferralCodeSvg() {
+  export function ShareSvg() {
     return (
       <View>
-        <Svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
-  <G id="Group_297" data-name="Group 297" transform="translate(-49 -685)">
-    <Circle id="Ellipse_105" data-name="Ellipse 105" cx="21.5" cy="21.5" r="21.5" transform="translate(49 685)" fill="#fff"/>
-    <G id="Group_296" data-name="Group 296" transform="translate(-1870.281 426.947)">
-      <Path id="Path_176" data-name="Path 176" d="M2161.181,461.956" transform="translate(-212.753 -184.089)"/>
-      <G id="Group_295" data-name="Group 295" transform="translate(1932.244 263.863)">
-        <Path id="Path_177" data-name="Path 177" d="M2053,263.863v11.344l8.537,4.144Z" transform="translate(-2044.464 -263.863)" fill="#62688f"/>
-        <Path id="Path_178" data-name="Path 178" d="M2053,425.007l8.537-5.549-8.537-4.83Z" transform="translate(-2044.464 -403.97)" fill="#454a75"/>
-        <Path id="Path_179" data-name="Path 179" d="M2053,514.758v7.551l8.537-13.03Z" transform="translate(-2044.464 -491.929)" fill="#62688f"/>
-        <Path id="Path_180" data-name="Path 180" d="M1940.781,514.758v7.551l-8.537-13.03Z" transform="translate(-1932.244 -491.929)" fill="#8a92b2"/>
-        <Path id="Path_181" data-name="Path 181" d="M1940.781,263.863v11.344l-8.537,4.144Z" transform="translate(-1932.244 -263.863)" fill="#8a92b2"/>
-        <Path id="Path_182" data-name="Path 182" d="M1940.781,425.007l-8.537-5.549,8.537-4.83Z" transform="translate(-1932.244 -403.97)" fill="#62688f"/>
-      </G>
+       <Svg xmlns="http://www.w3.org/2000/svg" width="30" height="33" viewBox="0 0 30 33">
+  <G id="Icon_feather-share-2" data-name="Icon feather-share-2" transform="translate(-3 -1.5)">
+    <Path id="Path_68" data-name="Path 68" d="M31.5,7.5A4.5,4.5,0,1,1,27,3,4.5,4.5,0,0,1,31.5,7.5Z" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_69" data-name="Path 69" d="M13.5,18A4.5,4.5,0,1,1,9,13.5,4.5,4.5,0,0,1,13.5,18Z" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_70" data-name="Path 70" d="M31.5,28.5A4.5,4.5,0,1,1,27,24,4.5,4.5,0,0,1,31.5,28.5Z" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_71" data-name="Path 71" d="M12.885,20.265l10.245,5.97" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <Path id="Path_72" data-name="Path 72" d="M23.115,9.765l-10.23,5.97" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </G>
+</Svg>
+
+
+
+
+      </View>
+    );
+  }
+  export function BitSvg() {
+    return (
+      <View>
+       <Svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <G id="Group_210" data-name="Group 210" transform="translate(-113.5 -243.5)">
+    <G id="Icon_feather-plus-circle" data-name="Icon feather-plus-circle" transform="translate(115 245)">
+      <Path id="Path_41" data-name="Path 41" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" transform="translate(-3 -3)" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </G>
+    <G id="Group_138" data-name="Group 138" transform="translate(891.912 21.128)">
+      <Path id="Path_62" data-name="Path 62" d="M-723.191,254.248a24.419,24.419,0,0,1-24.484,24.343,24.438,24.438,0,0,1-24.235-24.536,24.43,24.43,0,0,1,24.588-24.182A24.407,24.407,0,0,1-723.191,254.248Zm-28.081-14.154h-.5c-1.494,0-1.507,0-1.563,1.46-.018.474-.2.7-.681.688-.631-.011-1.262.009-1.893,0-.421-.007-.616.168-.61.6.012.946.009,1.893,0,2.839,0,.378.126.618.542.592.679-.043.861.321.859.936q-.017,7.035,0,14.07c0,.582-.169.946-.821.907-.444-.027-.589.21-.581.621.013.61,0,1.22,0,1.83.016,1.781-.216,1.568,1.58,1.582,1.67.013,1.645-.161,1.594,1.535-.014.474.206.629.65.617.672-.018,1.346,0,2.019,0,1.414,0,1.414,0,1.474-1.428,0-.084.006-.168.014-.252a.477.477,0,0,1,.44-.453c1.31-.268,1.68.02,1.7,1.337,0,.063,0,.126,0,.189-.027.422.157.619.592.609.631-.015,1.262,0,1.893,0,1.629-.005,1.439.129,1.43-1.4,0-.59.262-.831.828-.864a6.314,6.314,0,0,0,4.232-2.127,7.128,7.128,0,0,0,.2-9.289.572.572,0,0,1-.026-.876,6.938,6.938,0,0,0,1.332-6.683,6.771,6.771,0,0,0-5.195-4.724c-1.325-.264-1.336-.2-1.362-1.557,0-.042,0-.084,0-.126.036-.465-.188-.637-.64-.626-.757.018-1.514,0-2.271,0-1.005,0-1.005,0-1.01,1.011,0,1.047-.08,1.13-1.028,1.137-1.1.008-1.121-.011-1.124-1.124a1.407,1.407,0,0,1,0-.189c.081-.617-.15-.906-.806-.842C-750.427,240.128-750.851,240.094-751.272,240.094Z" transform="translate(0 0)" fill="#0b7f42"/>
+      <Path id="Path_63" data-name="Path 63" d="M-603.373,359.831c1.155,0,2.311,0,3.466,0a3.065,3.065,0,0,1,3.008,2.951,3.015,3.015,0,0,1-2.976,2.971q-3.529.014-7.058,0c-.857,0-.938-.087-.939-.938q0-2.08,0-4.159c0-.745.083-.823.843-.826C-605.81,359.827-604.592,359.831-603.373,359.831Z" transform="translate(-143.331 -113.554)" fill="#0b7f42"/>
+      <Path id="Path_64" data-name="Path 64" d="M-603.517,444.821c-1.218,0-2.436-.014-3.654.005-.54.008-.752-.211-.745-.749.018-1.47.022-2.94,0-4.41-.009-.586.257-.777.8-.775,2.457.009,4.914-.011,7.371.01a3,3,0,0,1,2.784,2.564,3.027,3.027,0,0,1-1.751,3.068,3.522,3.522,0,0,1-1.464.295C-601.29,444.8-602.4,444.822-603.517,444.821Z" transform="translate(-143.294 -182.638)" fill="#0b7f42"/>
     </G>
   </G>
 </Svg>
@@ -63,4 +122,43 @@ export function UserSvg() {
       </View>
     );
   }
-  
+  export function YearnSvg() {
+    return (
+      <View>
+       <Svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <G id="Group_294" data-name="Group 294" transform="translate(-50.5 -247.5)">
+    <G id="Group_232" data-name="Group 232" transform="translate(-4154 372)">
+      <G id="Icon_feather-plus-circle" data-name="Icon feather-plus-circle" transform="translate(4206 -123)">
+        <Path id="Path_41" data-name="Path 41" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" transform="translate(-3 -3)" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </G>
+      <Circle id="Ellipse_101" data-name="Ellipse 101" cx="24.5" cy="24.5" r="24.5" transform="translate(4211 -117)" fill="#0b7f42"/>
+      <G id="Group_229" data-name="Group 229" transform="translate(4221.423 -107.871)">
+        <Path id="Path_154" data-name="Path 154" d="M-1026.59,178.337c-.2.288-.391.551-.567.824a12.352,12.352,0,0,0-1.362,2.851c-.159.483-.27.983-.382,1.479a10.762,10.762,0,0,0-.268,2.835,14.914,14.914,0,0,0,.2,1.914,14.317,14.317,0,0,0,.447,1.865,11.56,11.56,0,0,0,1.217,2.627,12.834,12.834,0,0,0,6.081,5.192,11.449,11.449,0,0,0,2.461.728.783.783,0,0,1,.608.961.769.769,0,0,1-.923.508,14.4,14.4,0,0,1-4.965-1.986,14.3,14.3,0,0,1-3.525-3.186,14.114,14.114,0,0,1-1.745-2.812,12.513,12.513,0,0,1-.919-2.611c-.109-.5-.194-1-.288-1.5a12.222,12.222,0,0,1-.116-2.905,14.824,14.824,0,0,1,.262-1.868,13.806,13.806,0,0,1,2.325-5.44c.15-.215.307-.425.472-.628a.17.17,0,0,0,0-.248c-.643-.892-1.276-1.792-1.923-2.681a.755.755,0,0,1,.482-1.184.738.738,0,0,1,.732.314c.373.508.733,1.025,1.1,1.538q1.032,1.443,2.066,2.885,1.3,1.822,2.6,3.645t2.607,3.639q1.319,1.843,2.636,3.687c.45.628.911,1.25,1.36,1.879a.912.912,0,0,1,.172.6c-.015.244-.015.489-.015.733q0,4.279,0,8.557a.847.847,0,0,1-.359.823.751.751,0,0,1-1.141-.6c-.008-.155,0-.31,0-.465q0-4.368-.005-8.736a.658.658,0,0,0-.109-.359q-1.237-1.748-2.487-3.485l-4.047-5.66q-1.255-1.756-2.513-3.511C-1026.461,178.488-1026.516,178.427-1026.59,178.337Z" transform="translate(1030.664 -171.742)" fill="#fff"/>
+        <Path id="Path_155" data-name="Path 155" d="M-987.961,163.925c.359-.2.7-.407,1.042-.592a13.967,13.967,0,0,1,3.788-1.364,14.014,14.014,0,0,1,3.575-.282,14.314,14.314,0,0,1,6.018,1.651,14.481,14.481,0,0,1,3.562,2.67.754.754,0,0,1-.092,1.223.733.733,0,0,1-.89-.1c-.518-.466-1.021-.951-1.569-1.378a12.2,12.2,0,0,0-4.007-2.042,12.616,12.616,0,0,0-3.613-.539,12.824,12.824,0,0,0-2.507.229,12.827,12.827,0,0,0-4.214,1.617c-.218.131-.218.129-.066.342l3.65,5.088,2.682,3.742.331.466c.092-.137.175-.255.253-.376q1.277-1.987,2.552-3.976,1.319-2.055,2.637-4.111a.763.763,0,0,1,1-.327.758.758,0,0,1,.284,1.089q-1.16,1.818-2.329,3.631-1.262,1.965-2.523,3.931c-.363.565-.72,1.133-1.1,1.69a1.473,1.473,0,0,1-.427.46.748.748,0,0,1-1-.326c-.462-.664-.932-1.322-1.4-1.98q-1.317-1.843-2.638-3.683-1.243-1.733-2.49-3.463c-.735-1.024-1.465-2.052-2.2-3.073a.757.757,0,0,1,.474-1.224.7.7,0,0,1,.688.292C-988.31,163.44-988.142,163.678-987.961,163.925Z" transform="translate(994.547 -161.669)" fill="#fff"/>
+        <Path id="Path_156" data-name="Path 156" d="M-884.086,347.31a2.2,2.2,0,0,1-.181.415,14.11,14.11,0,0,1-2.7,2.866,14.31,14.31,0,0,1-3.687,2.154,14.885,14.885,0,0,1-2.76.787.847.847,0,0,1-.861-.23.727.727,0,0,1,.347-1.185c.421-.107.85-.177,1.271-.286a12.532,12.532,0,0,0,3.587-1.563,12.262,12.262,0,0,0,2.509-2.083c.372-.408.71-.848,1.047-1.286a.777.777,0,0,1,.839-.329A.812.812,0,0,1-884.086,347.31Z" transform="translate(910.24 -325.118)" fill="#fff"/>
+      </G>
+    </G>
+  </G>
+</Svg>
+
+
+      </View>
+    );
+  }
+  export function ETHSvg() {
+    return (
+      <View>
+      <Svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <G id="Group_161" data-name="Group 161" transform="translate(-238.819 -243.5)">
+    <G id="Icon_feather-plus-circle" data-name="Icon feather-plus-circle" transform="translate(240.319 245)">
+      <Path id="Path_41" data-name="Path 41" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" transform="translate(-3 -3)" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </G>
+    <Path id="Path_65" data-name="Path 65" d="M-509.6,727.792a24.38,24.38,0,0,1,24.349,24.415,24.384,24.384,0,0,1-24.4,24.3,24.376,24.376,0,0,1-24.318-24.385A24.377,24.377,0,0,1-509.6,727.792Zm-10.625,23.262a.831.831,0,0,0,.124.116q5.1,2.64,10.206,5.266a.8.8,0,0,0,.61-.019c.647-.3,1.274-.638,1.907-.965l8.41-4.349-10.643-17.738Zm21.693,5.866-.075-.082c-.179.087-.361.17-.538.262-3.306,1.714-6.615,3.42-9.911,5.153a1.068,1.068,0,0,1-1.124,0c-3.269-1.7-6.548-3.371-9.826-5.051-.2-.1-.407-.191-.611-.287l-.057.1,11.062,13.932Z" transform="translate(779.928 -477.151)" fill="#0b7f42"/>
+  </G>
+</Svg>
+
+
+
+      </View>
+    );
+  }

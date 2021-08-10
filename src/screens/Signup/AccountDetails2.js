@@ -40,7 +40,7 @@ export default function AccountDetails2({navigation}) {
                   elevation: 5,
                 }
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Change Email"
         />
@@ -60,14 +60,14 @@ export default function AccountDetails2({navigation}) {
                   elevation: 5,
                 }
           }
-          onChangeText={text => validate(text)}
+          // onChangeText={text => validate(text)}
           //   value={email}
           placeholder="Change Phone number"
         />
       </View>
 
       <View style={styles.view3}>
-        <DarkButton name="Confirm Changes" />
+        <DarkButton name="Confirm Changes" onPress={()=>navigation.navigate("userProfile")}/>
       </View>
     </View>
   );
