@@ -1,6 +1,6 @@
 import React from 'react'
 // import LinearGradient from 'react-native-linear-gradient';
-import Svg, { Defs, Stop, G, Path, Circle, LinearGradient } from 'react-native-svg';
+import Svg, { Defs, Stop, G, Path, Circle, LinearGradient,Pattern , Image} from 'react-native-svg';
 
 export const Yearn_logo = ({width , height}) => {
 
@@ -33,6 +33,27 @@ export const Yearn_logo = ({width , height}) => {
         </G>
       </G>
     </Svg>
+
+  );
+
+}
+
+
+
+
+
+
+export const BitcoinSvg = ({width , height}) => {
+
+  return (
+    <Svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+  <Defs>
+    <Pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 200 200">
+      <Image width="200" height="200" />
+    </Pattern>
+  </Defs>
+  <Circle id="Ellipse_100" data-name="Ellipse 100" cx="21.5" cy="21.5" r="21.5" fill="url(#pattern)"/>
+</Svg>
 
   );
 

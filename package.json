@@ -59,6 +59,7 @@
     "react-native-screens": "^3.4.0",
     "react-native-shadow-cards": "^1.0.2",
     "react-native-smooth-pincode-input": "^1.0.9",
+    "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^12.1.1",
     "react-native-tcp": "^3.3.2",
     "react-native-udp": "^2.7.0",

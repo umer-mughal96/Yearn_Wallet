@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Landing from '../screens/Landing';
 import Signin from '../screens/Signin';
 import Signup from '../screens/Signup/Signup';
@@ -47,22 +47,22 @@ export default function Navigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
         name="Landing"
         component={Landing}
       />
       <Stack.Screen
-        options={{headerShown: true, title: ''}}
+        options={{ headerShown: true, title: '' }}
         name="restoreScreen"
         component={RestoreScreen}
       />
       <Stack.Screen
-        options={{headerShown: true, title: ''}}
+        options={{ headerShown: true, title: '' }}
         name="proceedScreen"
         component={ProceedScreen}
       />
       <Stack.Screen
-        options={{headerShown: true, title: ''}}
+        options={{ headerShown: true, title: '' }}
         name="recoveryRestore"
         component={RecoveryRestore}
       />
@@ -82,7 +82,7 @@ export default function Navigation() {
       />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
         name="Signin"
         component={Signin}
       />
@@ -332,7 +332,7 @@ export default function Navigation() {
         name="plasmaPay2"
         component={PlasmaTopup2}
       />
-        <Stack.Screen
+      <Stack.Screen
         options={{
           title: '',
           headerStyle: {
@@ -364,12 +364,12 @@ export default function Navigation() {
           },
         }}
         name="AppSetting"
-        component={AppSetting} 
+        component={AppSetting}
       />
-     
+
       <Stack.Screen
         options={{
-          title:'Account Details',
+          title: 'Account Details',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -386,7 +386,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Account Details',
+          title: 'Account Details',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -403,7 +403,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Account Details',
+          title: 'Account Details',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -420,7 +420,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Account Details',
+          title: 'Account Details',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -437,7 +437,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Currency',
+          title: 'Currency',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -454,7 +454,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Currency',
+          title: 'Currency',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -471,7 +471,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Custodian Information',
+          title: 'Custodian Information',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -488,8 +488,8 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Custodian Information',
-          title:'Custodian Information',
+          title: 'Custodian Information',
+          title: 'Custodian Information',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -506,8 +506,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -524,8 +523,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -540,10 +538,9 @@ export default function Navigation() {
         name="ProfileSetting"
         component={ProfileSetting}
       />
-         <Stack.Screen
+      <Stack.Screen
         options={{
-          title:'Profile',
-          
+          title: 'Profile',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -560,8 +557,7 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -577,7 +573,7 @@ export default function Navigation() {
         component={Sendbtc}
       />
     </Stack.Navigator>
-    
+
   );
 }
 
