@@ -429,7 +429,10 @@ export default function WalletHome({ navigation }) {
       </View>
       <View style={styles.bottomNavigation}>
         <PathSvg />
+
+<TouchableOpacity onPress={()=>navigation.navigate("exchange")}>
         <DefiSvg />
+        </TouchableOpacity>
         <View style={{ flexDirection: "row" }} >
           <WalletSvg />
           <MenuSvg navigation={navigation} />

@@ -46,6 +46,9 @@ import Private_Key from '../screens/Signup/Private_Key';
 import ETH_Private_Key from '../screens/Signup/ETH_Private_key';
 import YETH_Private_Key from '../screens/Signup/YFIC_Private_Key';
 import RecoverySeedSinUp from '../../RecoverySeedSinUp';
+import Exchange from '../screens/Wallet/Exchange';
+import Exhange_Verify from '../screens/Wallet/Exchage_Verify';
+import Exhange_Done from '../screens/Wallet/Exchange_Done';
 
 
 
@@ -288,6 +291,61 @@ export default function Navigation() {
         name="plasma5"
         component={PlasmaTopUp}
       />
+
+<Stack.Screen
+        options={{
+          title: 'Exchange',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="exchange"
+        component={Exchange}
+      />
+
+<Stack.Screen
+        options={{
+          title: 'Exchange Verify',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="exchangeverify"
+        component={Exhange_Verify}
+      />
+<Stack.Screen
+        options={{
+          title: 'Exchange Done',
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="exchangedone"
+        component={Exhange_Done}
+      />
+
+
       <Stack.Screen
         options={{
           title: 'Gift Card Topup',

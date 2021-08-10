@@ -12,7 +12,7 @@ import LightButton from '../components/reusable/Button/LightButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogout } from '../redux/actions/auth/auth';
 import LinearGradient from 'react-native-linear-gradient';
-import { LandingLogo } from '../svgs/LandingLogo';
+import {LandingLogo} from '../svgs/LandingLogo'
 import "../../global"
 import Web3 from 'web3'
 import * as bitcoin from "bitcoinjs-lib"
@@ -20,7 +20,7 @@ import { createBTCWallet } from '../redux/actions/btc/btc';
 import { createETHWallet } from '../redux/actions/eth/eth';
 
 
-export default function Landing({ navigation }) {
+export default function ({ navigation }) {
   const { token } = useSelector(state => state.Auth);
   const dispatch = useDispatch();
 
@@ -86,7 +86,9 @@ export default function Landing({ navigation }) {
         />
 
         <View style={styles.svgWraper}>
-          <LandingLogo />
+
+          <LandingLogo></LandingLogo>
+        
           {/* <Text   id='Yearn_Cash' data-name="Yearn Cash" transform="translate(121.5 511)" fill='#EEF0FF' font-size="39" font-family="Poppins-Semibold, Poppins" font-weight="600" >Yearn Cash</Text> */}
 
           <Text style={{ color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins' }}>
