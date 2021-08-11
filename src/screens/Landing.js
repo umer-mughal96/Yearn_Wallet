@@ -92,7 +92,7 @@ export default function ({ navigation }) {
           {/* <Text   id='Yearn_Cash' data-name="Yearn Cash" transform="translate(121.5 511)" fill='#EEF0FF' font-size="39" font-family="Poppins-Semibold, Poppins" font-weight="600" >Yearn Cash</Text> */}
 
           <Text style={{ color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins' }}>
-            YEARN CASH
+            yEARN Wallet
           </Text>
         </View>
 
@@ -106,7 +106,7 @@ export default function ({ navigation }) {
           </View>
           <LightButton
             name="Login"
-            onPress={() => navigation.navigate("Signin")}
+            onPress={() => navigation.navigate("WalletSats")}
           />
           <TouchableOpacity
             style={styles.signup}

@@ -30,8 +30,8 @@ export default function CreateMobile({navigation}) {
       let data = {
         mobile: existingMobileNumber,
       };
-      dispatch(sendMobileForCode(data,navigation));
-      navigation.navigate('verifyMobile');
+      // dispatch(sendMobileForCode(data,navigation));
+      navigation.navigate('RecoverySeedSinUp');
       
     } else {
       alert('Incorrect number');

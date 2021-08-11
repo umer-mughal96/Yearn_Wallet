@@ -4,7 +4,8 @@ import {
   Text,
   View,
   TextInput,
-  Picker
+  Picker,
+  TouchableOpacity
 } from 'react-native';
 import {Card} from 'react-native-shadow-cards';
 import {
@@ -13,7 +14,7 @@ import {
 } from 'react-native-responsive-screen';
 
 
-export default function Sendbtc() {
+export default function Sendbtc({navigation}) {
   return (
     <View style={styles.container}>
 
@@ -160,6 +161,7 @@ export default function Sendbtc() {
                 height: 54,
                 justifyContent: 'center',
               }}>
+              <TouchableOpacity onPress={()=>navigation.navigate("walletHome")}>
               <Text
                 style={{
                   color: 'white',
@@ -170,6 +172,7 @@ export default function Sendbtc() {
                 }}>
                 NEXT
               </Text>
+              </TouchableOpacity>
             </Card>
           </Card>
         </Card>

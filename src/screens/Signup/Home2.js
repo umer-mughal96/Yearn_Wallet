@@ -154,7 +154,7 @@ export default function Home2({ navigation }) {
             justifyContent: 'center',
             marginBottom: 45,
           }}>
-            <TouchableOpacity onPress={() => navigation.navigate("sendBtc")}>
+            <TouchableOpacity onPress={() => navigation.navigate("Sendbtc")}>
           <Card
             style={{
               width: heightPercentageToDP(20),

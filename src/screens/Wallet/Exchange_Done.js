@@ -6,10 +6,12 @@ import {
 } from 'react-native-responsive-screen';
 import Ticksvgscreen from '../../svgs/ticksvg';
 import DarkButton from '../../components/reusable/Button/DarkButton';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Exhange_Done({navigation}) {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{flex: 1}}>
+    <View style={{flex:4, justifyContent: 'center', alignItems: 'center'}}>
       <View
         style={{
           justifyContent: 'center',
@@ -36,6 +38,10 @@ export default function Exhange_Done({navigation}) {
           name="Go to home"
           onPress={() => navigation.navigate('walletHome')}
         />
+      </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+        <Footer navigation={navigation} />
       </View>
     </View>
   );

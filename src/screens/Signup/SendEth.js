@@ -4,40 +4,46 @@ import {
   Text,
   View,
   TextInput,
-  Picker
+  Picker,
+  TouchableOpacity,
 } from 'react-native';
-import { Card } from 'react-native-shadow-cards';
+import {Card} from 'react-native-shadow-cards';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Footer from '../../components/reusable/Footer/Footer';
 
-
-export default function SendEth() {
+export default function SendEth({navigation}) {
   return (
     <View style={styles.container}>
-
+    <View style={{justifyContent: 'center',
+    alignItems: 'center',flex:4}}>
       <View style={styles.view1}>
-        <Text style={{ fontFamily: "Poppins-Medium" }}>Availale Balance</Text>
-        <Text style={{ fontSize: hp("4"), color: '#0B7F42', fontFamily: "Poppins-SemiBold" }}>
+        <Text style={{fontFamily: 'Poppins-Medium'}}>Availale Balance</Text>
+        <Text
+          style={{
+            fontSize: hp('4'),
+            color: '#0B7F42',
+            fontFamily: 'Poppins-SemiBold',
+          }}>
           0.7544 ETH
         </Text>
-        <Text style={{ fontFamily: "Poppins-medium" }}>$26,648.60</Text>
+        <Text style={{fontFamily: 'Poppins-medium'}}>$26,648.60</Text>
       </View>
 
       <View style={styles.view2}>
-
-        <Card style={{
-          width: wp('90%'),
-          height: hp("60%"),
-          alignSelf: 'center',
-          borderRadius: 21,
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: 0 },
-          shadowOpacity: .5,
-          elevation: 5,
-        }}>
-
+        <Card
+          style={{
+            width: wp('90%'),
+            height: hp('60%'),
+            alignSelf: 'center',
+            borderRadius: 21,
+            shadowColor: '#000',
+            shadowOffset: {width: 0, height: 0},
+            shadowOpacity: 0.5,
+            elevation: 5,
+          }}>
           <Card
             style={{
               borderRadius: 8,
@@ -48,14 +54,15 @@ export default function SendEth() {
               height: 74,
               width: wp('85%'),
               marginTop: 15,
-
             }}>
-            <Text style={{ left: 13, top: 7, fontFamily: "Poppins-Regular" }}>How much you want to send?</Text>
+            <Text style={{left: 13, top: 7, fontFamily: 'Poppins-Regular'}}>
+              How much you want to send?
+            </Text>
           </Card>
           <Card
             style={{
               borderRadius: 8,
-              height: hp("10%"),
+              height: hp('10%'),
               marginTop: -40,
 
               borderWidth: 0.5,
@@ -63,25 +70,22 @@ export default function SendEth() {
               width: wp('85%'),
               alignSelf: 'center',
             }}>
-            <Text style={{ left: 13, top: 7, fontFamily: "poppins-Regular" }}>
+            <Text style={{left: 13, top: 7, fontFamily: 'poppins-Regular'}}>
               Your Amount
             </Text>
 
-            <View style={{ flexDirection: 'row', top: 3 }}>
+            <View style={{flexDirection: 'row', top: 3}}>
               <TextInput
                 style={{
-
                   left: 13,
                   top: 7,
                   fontWeight: 'bold',
                   fontSize: 20,
                   textContentType: 'number',
-                  width: wp("80%"),
+                  width: wp('80%'),
                 }}
                 placeholder="$000.0"
-                keyboardType="decimal-pad">
-
-              </TextInput>
+                keyboardType="decimal-pad"></TextInput>
               <Picker
                 // selectedValue={selectedValue}
                 style={{
@@ -91,19 +95,17 @@ export default function SendEth() {
                   fontWeight: 'bold',
                   left: '256%',
                 }}
-              // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
               >
                 <Picker.Item label="USD" value="usd" />
                 <Picker.Item label="ETH" value="eth" />
 
                 <Picker.Item label="ETH" value="ETH" />
               </Picker>
-
-
             </View>
           </Card>
 
-          <Text style={{ top: 10, left: 24 }}>=7424.898ETH</Text>
+          <Text style={{top: 10, left: 24}}>=7424.898ETH</Text>
 
           {/* </LinearGradient> */}
 
@@ -120,7 +122,7 @@ export default function SendEth() {
               width: '95%',
               marginTop: 42,
             }}>
-            <Text style={{ left: 13, top: 7 }}>Wallet Address to Send</Text>
+            <Text style={{left: 13, top: 7}}>Wallet Address to Send</Text>
           </Card>
           <Card
             style={{
@@ -133,9 +135,9 @@ export default function SendEth() {
               width: '95%',
               alignSelf: 'center',
             }}>
-            <View style={{ flexDirection: 'row', top: 3 }}>
+            <View style={{flexDirection: 'row', top: 3}}>
               <TextInput
-                style={{ left: 13, top: 7, fontWeight: 'bold', fontSize: 20 }}
+                style={{left: 13, top: 7, fontWeight: 'bold', fontSize: 20}}
                 placeholder="adasdn4531ads15a1d3w1aw1d"></TextInput>
               {/* <TextInputMask   placeholder='$00.00' onChangeText={(formatted, extracted) => {
     console.log(formatted) // +1 (123) 456-78-90
@@ -160,20 +162,27 @@ export default function SendEth() {
                 height: 54,
                 justifyContent: 'center',
               }}>
-              <Text
-                style={{
-                  color: 'white',
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  alignSelf: 'center',
-                  justifyContent: 'center',
-                }}>
-                NEXT
-              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('walletHome')}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    alignSelf: 'center',
+                    justifyContent: 'center',
+                  }}>
+                  NEXT
+                </Text>
+              </TouchableOpacity>
             </Card>
           </Card>
         </Card>
       </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
@@ -181,20 +190,16 @@ export default function SendEth() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-
+    
   },
   view1: {
-    flex: .5,
-    justifyContent: "center",
-    alignItems: "center",
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   view2: {
     flex: 3,
 
-    width: wp("100")
+    width: wp('100'),
   },
-
-
 });

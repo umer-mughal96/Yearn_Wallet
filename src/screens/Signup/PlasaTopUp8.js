@@ -22,7 +22,7 @@ export default function PlasmaTopUp8({navigation}) {
         }}>
         <Ticksvgscreen />
         <Text style={{fontSize:22,fontWeight:"bold",textAlign:"center"}}>Your transaction is processed Successfully!</Text>
-        <DarkButton name="Go to home" />
+        <DarkButton name="Go to home"  onPress={()=> navigation.navigate("walletHome")} />
         
         
       </View>

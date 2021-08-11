@@ -54,10 +54,10 @@ export default function ConfirmEmail({navigation}) {
     let data = {
       email,
     };
-    dispatch(sendEmailForCode(data, navigation));
-    navigation.navigate('verifyEmail');
+    // dispatch(sendEmailForCode(data, navigation));
+    navigation.navigate('createMobile');
   };
-
+  
   return (
     <View style={styles.container}>
       <StatusBar

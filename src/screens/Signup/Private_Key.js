@@ -18,6 +18,7 @@ import {
 import {Yearn_logo} from '../../svgs/Yearn_logo';
 import Ticksvgscreen from '../../svgs/ticksvg';
 import { BitSvg, CopySvg, ShareSvg } from '../../svgs/Refferral';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Private_Key({navigation}) {
   return (
@@ -127,6 +128,9 @@ export default function Private_Key({navigation}) {
           </Text>
         </View>
       </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }

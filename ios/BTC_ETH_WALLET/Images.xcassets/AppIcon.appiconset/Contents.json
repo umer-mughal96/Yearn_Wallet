@@ -1,55 +1,82 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-40.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-60.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-58.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-87.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-80.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-120.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-121.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-180.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "Icon-1024.png",
+>>>>>>> efc9a0e44dc4117efed8704609f8c38f7d0884b9
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

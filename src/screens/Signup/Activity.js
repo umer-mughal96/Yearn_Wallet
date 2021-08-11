@@ -7,7 +7,8 @@ import {
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Card} from 'react-native-shadow-cards';
 
-import Ticksvgscreen from "../../svgs/ticksvg"
+import Ticksvgscreen from '../../svgs/ticksvg';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Activity({navigation}) {
   return (
@@ -45,22 +46,26 @@ export default function Activity({navigation}) {
           </View>
         </Card>
       </View>
-
+     <View style={{justifyContent:"center",alignItems:"center",flex:1}}>
       <View style={styles.view3}>
-      <Ticksvgscreen/>
+        <Ticksvgscreen />
 
         <Text style={styles.svgText1}>
           Integrations with other contacts, apps and devices will appear here!
         </Text>
       </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     width: wp('100%'),
   },
   view1: {
@@ -94,7 +99,7 @@ const styles = StyleSheet.create({
     width: wp('80%'),
   },
   svgText1: {
-      paddingTop:hp("2"),
+    paddingTop: hp('2'),
     fontSize: hp('2.0%'),
     textAlign: 'center',
     width: wp('70%'),

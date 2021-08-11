@@ -17,12 +17,16 @@ import Svg, {
   Circle,
 } from 'react-native-svg';
 import { AccountSvg, AppSettingSvg, BtcCircleSvg, EthCircleSvg, HelpAndSupSvg, LogOutSvg, ReportBugSvg, RerferralSvg, SecuritySvg, YficCircleSvg } from '../../svgs/Profile';
+import Private_Key from './Private_Key';
+import Footer from '../../components/reusable/Footer/Footer';
 
 
 
 export default function SettingScreen({navigation}) {
   return (
     <View style={styles.container}>
+    <View style={{justifyContent: 'center',
+    alignItems: 'center',flex:4}}>
       <View style={styles.view1}>
         <Text
           style={{
@@ -31,13 +35,13 @@ export default function SettingScreen({navigation}) {
             paddingTop: 5,
             fontFamily: 'Poppins-Bold',
           }}>
-          Private Key
+          
         </Text>
         <Text style={{fontFamily: 'Poppins-Regular'}}>Tap any to show key</Text>
       </View>
 
       <View style={styles.view2}>
-        <View
+        {/* <View
           style={{
             justifyContent: 'center',
             alignItems: 'center',
@@ -53,7 +57,7 @@ export default function SettingScreen({navigation}) {
           <Text style={{paddingTop: 10, fontFamily: 'Poppins-Medium',fontSize:17}}>
             YFIC
           </Text>
-        </View>
+        </View> */}
         <View 
           style={{
             justifyContent: 'center',
@@ -81,7 +85,7 @@ export default function SettingScreen({navigation}) {
             elevation: 5,
             borderRadius: 20,
           }}>
-          <TouchableOpacity onPress={()=>navigation.navigate("ETHPrivate_Key")}>
+          <TouchableOpacity onPress={()=>navigation.navigate("ETH_Private_Key")}>
           <EthCircleSvg  />
           </TouchableOpacity>
           <Text style={{paddingTop: 10, fontFamily: 'Poppins-Medium',fontSize:17}}>
@@ -93,7 +97,7 @@ export default function SettingScreen({navigation}) {
       <View style={styles.view3}>
         <Card cornerRadius={14} style={styles.card}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("AccountDetails2")}
+            onPress={() => navigation.navigate("accountDetails")}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
@@ -213,20 +217,23 @@ export default function SettingScreen({navigation}) {
               <Text style={styles.svgText}>Log Out</Text>
               
             </View>
-          </TouchableOpacity>
           
+            </TouchableOpacity>
             <Icon name="chevron-forward-sharp" color="#000000" size={18} />
-          
+            
         </Card>
       </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    
     width: wp('100%'),
   },
   view1: {
@@ -238,7 +245,7 @@ const styles = StyleSheet.create({
     height: wp('20%'),
   },
   view2: {
-    flex: 1.9,
+    flex: 2.5,
     flexDirection: 'row',
     marginTop:hp("1%"),
     justifyContent: 'space-around',

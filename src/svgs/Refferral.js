@@ -162,3 +162,39 @@ export function ReferralCodeSvg() {
       </View>
     );
   }
+  export function TopUpGiftSvg() {
+    return (
+      <View>
+      <Svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+  <G id="Group_292" data-name="Group 292" transform="translate(-28 -205)">
+    <Circle id="Ellipse_22" data-name="Ellipse 22" cx="21.5" cy="21.5" r="21.5" transform="translate(28 205)" fill="#0b7f42"/>
+    <G id="Icon_feather-gift" data-name="Icon feather-gift" transform="translate(36.83 213.83)">
+      <Path id="Path_170" data-name="Path 170" d="M21.472,18v9.67H6V18" transform="translate(-1.066 -5.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <Path id="Path_171" data-name="Path 171" d="M3,10.5H22.34v4.835H3Z" transform="translate(0 -2.665)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <Path id="Path_172" data-name="Path 172" d="M18,25V10.5" transform="translate(-5.33 -2.665)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <Path id="Path_173" data-name="Path 173" d="M14.269,7.835H9.917A2.417,2.417,0,0,1,9.917,3C13.3,3,14.269,7.835,14.269,7.835Z" transform="translate(-1.599)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <Path id="Path_174" data-name="Path 174" d="M18,7.835h4.351a2.417,2.417,0,1,0,0-4.835C18.967,3,18,7.835,18,7.835Z" transform="translate(-5.33)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </G>
+  </G>
+</Svg>
+
+</View>
+    );}
+export function WalletStatsSvg() {
+    return (
+      <View>
+      <Svg xmlns="http://www.w3.org/2000/svg" width="33" height="44" viewBox="0 0 63 63">
+  <G id="Group_161" data-name="Group 161" transform="translate(-238.819 -243.5)">
+    <G id="Icon_feather-plus-circle" data-name="Icon feather-plus-circle" transform="translate(240.319 245)">
+      <Path id="Path_41" data-name="Path 41" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" transform="translate(-3 -3)" fill="none" stroke="#0b7f42" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </G>
+    <Path id="Path_65" data-name="Path 65" d="M-509.6,727.792a24.38,24.38,0,0,1,24.349,24.415,24.384,24.384,0,0,1-24.4,24.3,24.376,24.376,0,0,1-24.318-24.385A24.377,24.377,0,0,1-509.6,727.792Zm-10.625,23.262a.831.831,0,0,0,.124.116q5.1,2.64,10.206,5.266a.8.8,0,0,0,.61-.019c.647-.3,1.274-.638,1.907-.965l8.41-4.349-10.643-17.738Zm21.693,5.866-.075-.082c-.179.087-.361.17-.538.262-3.306,1.714-6.615,3.42-9.911,5.153a1.068,1.068,0,0,1-1.124,0c-3.269-1.7-6.548-3.371-9.826-5.051-.2-.1-.407-.191-.611-.287l-.057.1,11.062,13.932Z" transform="translate(779.928 -477.151)" fill="#0b7f42"/>
+  </G>
+</Svg>
+
+
+
+
+      </View>
+    );
+  }
