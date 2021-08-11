@@ -30,7 +30,9 @@ import BalanceCarousel from '../../components/reusable/Carousel/Carousel';
 
 export const DefiSvg = ({ navigation }) => {
   return (
-    <View style={{ position: "absolute", top: Platform.OS == "ios" ? hp("-13.5") : hp("-14"), right: 0, left: Platform.OS == "ios" ? hp("19.9") : hp("22.4"), width: wp("20%") }}>
+    <View style={{ position: "absolute", top: Platform.OS == "ios" ? hp("-13.5") : hp("-14"), right: 0, left: Platform.OS == "ios" ? hp("19.9") : hp("23.1"), width: wp("20%"), }}>
+    <TouchableOpacity onPress={()=>navigation.navigate("exchange")}>
+   
       <Svg xmlns="http://www.w3.org/2000/svg" width="55.237" height="55.237" viewBox="0 0 55.237 55.237">
         <G id="Group_295" data-name="Group 295" transform="translate(-179.382 -776)">
           <Circle id="Ellipse_10" data-name="Ellipse 10" cx="27.618" cy="27.618" r="27.618" transform="translate(179.382 776)" fill="#0b7f42" />
@@ -42,6 +44,8 @@ export const DefiSvg = ({ navigation }) => {
           </G>
         </G>
       </Svg>
+      
+    </TouchableOpacity>
     </View>
   );
 };
@@ -65,7 +69,7 @@ export const UsersSvg = ({ navigation }) => {
               data-name="Path 37"
               d="M18.951,29.044V26.863A4.363,4.363,0,0,0,14.588,22.5H5.863A4.363,4.363,0,0,0,1.5,26.863v2.181"
               transform="translate(0 -4.912)"
-              fill="none"
+              fill="#fff"
               stroke="#fff"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -76,7 +80,7 @@ export const UsersSvg = ({ navigation }) => {
               data-name="Path 38"
               d="M16.225,8.863A4.363,4.363,0,1,1,11.863,4.5,4.363,4.363,0,0,1,16.225,8.863Z"
               transform="translate(-1.637 0)"
-              fill="none"
+              fill="#fff"
               stroke="#fff"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -87,7 +91,7 @@ export const UsersSvg = ({ navigation }) => {
               data-name="Path 39"
               d="M33.272,29.1V26.916A4.363,4.363,0,0,0,30,22.7"
               transform="translate(-7.777 -4.965)"
-              fill="none"
+              fill="#fff"
               stroke="#fff"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -98,7 +102,7 @@ export const UsersSvg = ({ navigation }) => {
               data-name="Path 40"
               d="M24,4.695a4.363,4.363,0,0,1,0,8.453"
               transform="translate(-6.14 -0.053)"
-              fill="none"
+              fill="#fff"
               stroke="#fff"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -112,9 +116,10 @@ export const UsersSvg = ({ navigation }) => {
   );
 };
 
-export const WalletSvg = () => {
+export const WalletSvg = ({navigation}) => {
   return (
     <View style={{ width: wp("20%") }}>
+    <TouchableOpacity onPress={() => navigation.navigate("walletHome")}>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width="24.316"
@@ -130,6 +135,7 @@ export const WalletSvg = () => {
         />
       </Svg>
       <Text style={styles.bottomNavText}>Wallet</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -298,45 +304,45 @@ export default function WalletHome({ navigation }) {
   const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/a1bbc7b88cb54b16993c14bf231bbce9"))
 
 
-  useEffect(async () => {
+  // useEffect(async () => {
 
-    if (eth) {
-      // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ eth", eth)
-      // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ btc", btc)
-      web3.eth.getBalance(eth.address, function (err, result) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log(web3.utils.fromWei(result, "ether") + " E")
-          setEthereumBalance(result)
-        }
-      })
-    }
-
-
-    const abi = [
-      {
-        constant: true,
-        inputs: [{ name: "_owner", type: "address" }],
-        name: "balanceOf",
-        outputs: [{ name: "balance", type: "uint256" }],
-        type: "function",
-      }
-    ]
-    const contractAddress = "0x9CF4679c67BEE8dA2D6F58c64592fFf6beE79330"
-    const contract = new web3.eth.Contract(abi, contractAddress);
-    async function getBalance() {
-      const result = await contract.methods.balanceOf(eth.address).call(); // 29803630997051883414242659
-      const format = web3.utils.fromWei(result); // 29803630.997051883414242659
-      setYficBalance(format)
-
-    }
-    const b = await getBalance();
+  //   if (eth) {
+  //     // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ eth", eth)
+  //     // console.log("🚀 ~ file: WalletHome.js ~ line 297 ~ WalletHome ~ btc", btc)
+  //     web3.eth.getBalance(eth.address, function (err, result) {
+  //       if (err) {
+  //         console.log(err)
+  //       } else {
+  //         console.log(web3.utils.fromWei(result, "ether") + " E")
+  //         setEthereumBalance(result)
+  //       }
+  //     })
+  //   }
 
 
+  //   const abi = [
+  //     {
+  //       constant: true,
+  //       inputs: [{ name: "_owner", type: "address" }],
+  //       name: "balanceOf",
+  //       outputs: [{ name: "balance", type: "uint256" }],
+  //       type: "function",
+  //     }
+  //   ]
+  //   const contractAddress = "0x9CF4679c67BEE8dA2D6F58c64592fFf6beE79330"
+  //   const contract = new web3.eth.Contract(abi, contractAddress);
+  //   async function getBalance() {
+  //     const result = await contract.methods.balanceOf(eth.address).call(); // 29803630997051883414242659
+  //     const format = web3.utils.fromWei(result); // 29803630.997051883414242659
+  //     setYficBalance(format)
+
+  //   }
+  //   const b = await getBalance();
 
 
-  }, [eth])
+
+
+  // }, [eth])
 
 
 
@@ -389,8 +395,8 @@ export default function WalletHome({ navigation }) {
                   <Text style={{ color: 'white', marginLeft: 15 }} >YFIC</Text>
                 </View>
                 <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$ {yficBalance}</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$1000</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+14.22%</Text>
                 </View>
               </LinearGradient>
             </Card>
@@ -403,8 +409,8 @@ export default function WalletHome({ navigation }) {
                   <Text style={{ color: 'white', marginLeft: 15 }} >ETH</Text>
                 </View>
                 <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$ {ethBalance}</Text>
-                  <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>$100</Text>
+                  <Text style={{ color: 'white', fontWeight: 'bold' }}>-8.22%</Text>
                 </View>
               </LinearGradient>
             </Card>
@@ -418,8 +424,8 @@ export default function WalletHome({ navigation }) {
                     <Text style={{ color: 'white', marginLeft: 15 }} >BTC</Text>
                   </View>
                   <View style={{ flex: 1, alignContent: 'center', justifyContent: 'center' }}>
-                    <Text style={{ color: 'white', fontWeight: 'bold' }}>$ 0</Text>
-                    <Text style={{ color: 'white', fontWeight: 'bold' }}>+8.22%</Text>
+                    <Text style={{ color: 'white', fontWeight: 'bold' }}>$1100</Text>
+                    <Text style={{ color: 'white', fontWeight: 'bold' }}>+5.22%</Text>
                   </View>
                 </LinearGradient>
               </Card>

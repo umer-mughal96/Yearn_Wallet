@@ -68,7 +68,9 @@ export default function Signin({navigation}) {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={()=>navigation.navigate("createPasscode")}
+          >
           <View style={{flexDirection: 'row'}}>
             <Text style={styles.signupText}>Signup</Text>
             <Icon name="right" color="#000000" size={18} />

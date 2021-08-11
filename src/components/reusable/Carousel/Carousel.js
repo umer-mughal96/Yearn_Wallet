@@ -23,15 +23,15 @@ export default class BalanceCarousel extends React.Component {
             activeIndex: 0,
             carouselItems: [
                 {
-                    balance: `$ 0`,
+                    balance: `$1000`,
                     text: "YFIC",
                 },
                 {
-                    balance: `$ 0`,
+                    balance: `$100`,
                     text: "ETH",
                 },
                 {
-                    balance: `$ 0`,
+                    balance: `$100`,
                     text: "BTC",
                 },
 

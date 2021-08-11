@@ -4,90 +4,144 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  Picker,
-  TouchableOpacity,
+  Image,
 } from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Ticksvgscreen from '../../svgs/ticksvg';
+import {Dropdown} from 'react-native-element-dropdown';
 import DarkButton from '../../components/reusable/Button/DarkButton';
-import {Card} from 'react-native-shadow-cards';
-import Color from 'color';
-// import { Picker } from '@react-native-picker/picker';
+import Footer from '../../components/reusable/Footer/Footer';
+import {useState} from 'react';
+
 
 export default function Exchange({navigation}) {
+  const [dropdown, setDropdown] = useState(null);
+  const [seletedObject, setSelectedObject] = useState('');
+
+  const [dropdown2, setDropdown2] = useState([]);
+  const [seletedObject2, setSelectedObject2] = useState('');
+  // console.log(dropdown2)
+  const data = [
+    {
+      label: 'BTC',
+      value: '1',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png',
+    },
+    {
+      label: 'ETH',
+      value: '2',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png',
+    },
+    {
+      label: 'YFIC',
+      value: '3',
+      url: 'https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/YFIC3.jpeg',
+    },
+  ];
+
+  const _renderItem = item => {
+    return (
+      <View style={styles.item}>
+        <Text style={styles.textItem}>{item.label}</Text>
+        <Image style={styles.icon} source={{uri: item.url}} />
+      </View>
+    );
+  };
+  const _renderItem2 = item2 => {
+    return (
+      <View style={styles.item}>
+        <Text style={styles.textItem}>{item2.label}</Text>
+        <Image style={styles.icon} source={{uri: item2.url}} />
+      </View>
+    );
+  };
+  
+
+  const onValueChangeHandler = obj => {
+    setSelectedObject(obj);
+    setDropdown(obj.value);
+  };
+  const onValueChangeHandler2 = obj => {
+    setSelectedObject2(obj);
+    setDropdown2(obj.value);
+  };
   return (
     <View style={styles.container}>
-      <View style={styles.view1}>
-        <View style={styles.view2}>
-          <View
-            style={{
-              flexDirection: 'column',
-            }}>
-            <Text style={styles.text1}>to</Text>
-            <TextInput
-              style={styles.inputtext1}
-              placeholder="00.00"
-              placeholderTextColor="grey"
-              keyboardType="decimal-pad"></TextInput>
+      <View style={{justifyContent: 'center', alignItems: 'center', flex: 4}}>
+        <View style={styles.view1}>
+          <View style={styles.view2}>
+            <View
+              style={{
+                flexDirection: 'column',
+              }}>
+              <Text style={styles.text1}>From</Text>
+              <TextInput
+                style={styles.inputtext1}
+                placeholder="00.00"
+                placeholderTextColor="grey"
+                keyboardType="decimal-pad"></TextInput>
+            </View>
+
+            <Dropdown
+              style={styles.dropdown}
+              containerStyle={styles.shadow}
+              data={data}
+              labelField="label"
+              valueField="value"
+              label="Dropdown"
+              placeholder ="Select"
+              value={dropdown}
+              maxHeight={130}
+              onChange={onValueChangeHandler}
+              renderItem={item => _renderItem(item)}
+              textError="Error"
+              renderLeftIcon={() => (
+                <Image style={styles.icon} source={{uri: seletedObject?.url}} />
+              )}
+            />
           </View>
-          {/* <View style={{
-        color:'black'
-    }} > */}
-          <Picker
-            // selectedValue={selectedValue}
-            style={styles.picker1}
-            // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-          >
-            <Picker.Item label="USD" value="usd" />
-            <Picker.Item label="ETH" value="eth" />
 
-            <Picker.Item label="BTC" value="btc" />
-          </Picker>
+          <View style={styles.view2}>
+            <View
+              style={{
+                flexDirection: 'column',
+              }}>
+              <Text style={styles.text1}>To</Text>
+              <TextInput
+                style={styles.inputtext1}
+                placeholder="00.00"
+                placeholderTextColor="grey"
+                keyboardType="decimal-pad"></TextInput>
+            </View>
 
-          {/* </View> */}
-        </View>
-
-        <View style={styles.view2}>
-          <View
-            style={{
-              flexDirection: 'column',
-            }}>
-            <Text style={styles.text1}>to</Text>
-            <TextInput
-              style={styles.inputtext1}
-              placeholder="00.00"
-              placeholderTextColor="grey"
-              keyboardType="decimal-pad"></TextInput>
+            <Dropdown
+              style={styles.dropdown}
+              containerStyle={styles.shadow}
+              data={data}
+              labelField="label"
+              valueField="value"
+              label="Dropdown2"
+              placeholder="Select"
+              value={dropdown2}
+              maxHeight={130}
+              onChange={onValueChangeHandler2}
+              renderItem={item2 => _renderItem2(item2)}
+              textError="Error"
+              renderLeftIcon={() => (
+                <Image style={styles.icon} source={{uri: seletedObject2?.url}} />
+              )}
+            />
           </View>
-          {/* <View style={{
-        color:'black'
-    }} > */}
-          <Picker
-            // selectedValue={selectedValue}
-            style={styles.picker1}
-            // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-          >
-            <Picker.Item label="USD" value="usd" />
-            <Picker.Item label="ETH" value="eth" />
 
-            <Picker.Item label="BTC" value="btc" />
-          </Picker>
-
-          {/* </View> */}
+          <DarkButton
+            name="Next"
+            onPress={() => navigation.navigate('exchangeverify')}></DarkButton>
         </View>
-
-        <TouchableOpacity
-          style={styles.signup}
-          onPress={() => navigation.navigate('exchangeverify')}>
-          {/* <DarkButton name="Next" /> */}
-
-          <Card style={styles.card1}>
-            <Text style={styles.text5}>Next</Text>
-          </Card>
-        </TouchableOpacity>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+        <Footer navigation={navigation} />
       </View>
     </View>
   );
@@ -96,8 +150,11 @@ export default function Exchange({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  },
+  icon: {
+    marginRight: 5,
+    width: 18,
+    height: 18,
   },
   view1: {
     justifyContent: 'center',
@@ -109,7 +166,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   view2: {
-    borderRadius: hp(1),
+    borderRadius: hp(2),
     borderWidth: hp(0.05),
     borderColor: 'black',
     height: hp(9),
@@ -118,35 +175,33 @@ const styles = StyleSheet.create({
     marginBottom: hp(2),
     flexDirection: 'row',
   },
+  item: {
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  textItem: {
+    flex: 1,
+    fontSize: 16,
+    width: wp(30),
+  },
   text1: {
-    color: 'grey',
     marginTop: hp(1),
-    textDecorationColor: 'grey',
-    fontFamily: 'Poppins-Bold',
+
+    fontFamily: 'Poppins-Regular',
     marginLeft: hp(0.4),
   },
   inputtext1: {
     color: 'black',
     height: hp(7),
-    width: hp(20),
+    width: hp(15),
     marginTop: hp(-1.6),
     textDecorationColor: 'black',
     fontFamily: 'Poppins-Bold',
   },
-  picker1: {
-    height: hp(10),
-    width: hp(45),
-    fontSize: 18,
-    fontFamily: 'Poppins-Bold',
-    color: 'green',
-  },
-  card1: {
-    width: wp(60),
-    height: hp(6),
-    backgroundColor: 'green',
-    justifyContent: 'center',
-    borderRadius: hp(2),
-  },
+  
   text5: {
     fontFamily: 'Poppins-Bold',
     color: 'white',
@@ -159,5 +214,22 @@ const styles = StyleSheet.create({
     height: 40,
     textAlign: 'center',
     fontFamily: 'Poppins-Regular',
+  },
+  dropdown: {
+    marginTop: 20,
+    width: hp(12),
+    marginLeft: 15,
+   
+  },
+  shadow: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 2,
+    
   },
 });

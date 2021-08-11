@@ -14,7 +14,7 @@ import ConfirmMobile from '../screens/Signup/ConfirmMobile';
 import MobileVerifyToken from '../screens/Signup/MobileVerifyToken';
 import AfterMobileVerify from '../screens/Signup/AfterMobileVerify';
 import RecoverySeed from '../screens/Signup/RecoverySeed';
-import WalletHome from '../screens/Wallet/WalletHome';
+import WalletHome, { WalletSvg } from '../screens/Wallet/WalletHome';
 import DeFi from '../screens/Wallet/DeFi';
 import ReferralScreen from '../screens/Signup/ReferralScreen';
 import RestoreScreen from '../screens/Signup/RestoreScreen';
@@ -46,13 +46,15 @@ import RecieveBtc from '../screens/Signup/RecieveBtc';
 import EtheriumDetail from '../screens/Signup/EheriumDetail';
 import RecieveEth from '../screens/Signup/RecieveEth';
 import SendEth from '../screens/Signup/SendEth';
-import Private_Key from '../screens/Signup/Private_Key';
+
 import ETH_Private_Key from '../screens/Signup/ETH_Private_key';
 import YETH_Private_Key from '../screens/Signup/YFIC_Private_Key';
 import RecoverySeedSinUp from '../../RecoverySeedSinUp';
 import Exchange from '../screens/Wallet/Exchange';
 import Exhange_Verify from '../screens/Wallet/Exchage_Verify';
 import Exhange_Done from '../screens/Wallet/Exchange_Done';
+import Private_Key from '../screens/Signup/Private_Key';
+import WalletSats from '../screens/Wallet/WalletStats';
 
 
 
@@ -766,6 +768,78 @@ export default function Navigation() {
         }}
         name="sendEth"
         component={SendEth}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="RecoverySeedSinUp"
+        component={RecoverySeedSinUp}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="Private_Key"
+        component={Private_Key}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="ETH_Private_Key"
+        component={ETH_Private_Key}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Send',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="WalletSats"
+        component={WalletSats}
       />
     </Stack.Navigator>
 

@@ -75,12 +75,11 @@ export default function MobileVerifyToken({navigation}) {
                   shadowColor: '#000',
                   shadowOffset: {width: 0, height: 2},
                   shadowOpacity: 0.5,
-
                   elevation: 5,
                 }
           }
-          onChangeText={onCodeChangeHandler}
-          value={confirmationCode}
+          // onChangeText={onCodeChangeHandler}
+          // value={confirmationCode}
           placeholder="000-0000-00"
           
         />
@@ -90,8 +89,8 @@ export default function MobileVerifyToken({navigation}) {
       <View style={styles.buttonsWrapper}>
         <DarkButton   
           name="Next"
-          onPress={validateConfirmationCodeHandler}
-          disabled={!codeValidate}
+          // onPress={validateConfirmationCodeHandler}
+          // disabled={!codeValidate}
         />
         <TouchableOpacity style={{
             marginTop: 20,

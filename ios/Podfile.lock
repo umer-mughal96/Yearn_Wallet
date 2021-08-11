@@ -213,6 +213,8 @@ PODS:
     - React-Core
   - react-native-camera/RN (4.0.1):
     - React-Core
+  - react-native-element-dropdown (1.2.1):
+    - React
   - react-native-get-random-values (1.7.0):
     - React-Core
   - react-native-randombytes (3.6.1):
@@ -355,6 +357,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-camera (from `../node_modules/react-native-camera`)
+  - react-native-element-dropdown (from `../node_modules/react-native-element-dropdown`)
   - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
   - react-native-randombytes (from `../node_modules/react-native-randombytes`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -422,6 +425,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-camera:
     :path: "../node_modules/react-native-camera"
+  react-native-element-dropdown:
+    :path: "../node_modules/react-native-element-dropdown"
   react-native-get-random-values:
     :path: "../node_modules/react-native-get-random-values"
   react-native-randombytes:
@@ -496,6 +501,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
   react-native-camera: 11166fe7e3a673493c152f52966e8ab1c5cdcacc
+  react-native-element-dropdown: 6bb6cfebb4b10878d6f5de502ae9c56fbc1f107c
   react-native-get-random-values: 237bffb1c7e05fb142092681531810a29ba53015
   react-native-randombytes: 421f1c7d48c0af8dbcd471b0324393ebf8fe7846
   react-native-safe-area-context: 61c8c484a3a9e7d1fda19f7b1794b35bbfd2262a

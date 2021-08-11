@@ -8,10 +8,13 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Card } from 'react-native-shadow-cards';
 import { Switch } from 'react-native-elements';
 import DarkButton from '../../components/reusable/Button/DarkButton';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function CustodianInfo({ navigation }) {
   return (
     <View style={styles.container}>
+    <View style={{ justifyContent: 'center',
+    alignItems: 'center',flex:2}}>
       <View style={styles.view1}>
         <Text
           style={{
@@ -69,14 +72,17 @@ export default function CustodianInfo({ navigation }) {
       </Text>
         <DarkButton name="Next" onPress={() => navigation.navigate("Confirmation")} />
       </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+   
     width: wp('100%'),
   },
   view1: {

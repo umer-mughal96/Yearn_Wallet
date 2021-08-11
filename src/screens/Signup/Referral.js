@@ -6,8 +6,9 @@ import {
 import {Card} from 'react-native-shadow-cards';
 import {Text, TouchableOpacity, View} from 'react-native';
 import { DollerSvg, ReferralCodeSvg, ShareSvg, UserSvg } from '../../svgs/Refferral';
+import Footer from '../../components/reusable/Footer/Footer';
 
-export default function Referral() {
+export default function Referral({navigation}) {
   return (
     <View
       style={{
@@ -201,6 +202,9 @@ export default function Referral() {
             </Card>
         </View>
       </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }

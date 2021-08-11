@@ -9,18 +9,17 @@ import {Card} from 'react-native-shadow-cards';
 import {Switch} from 'react-native-elements';
 import DarkButton from '../../components/reusable/Button/DarkButton';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Currency({navigation}) {
   return (
     <View style={styles.container}>
+    <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
       <View style={styles.view1}>
-      <View style={{marginRight:wp("60%")}}>
-      <Text style={{fontFamily:"Poppins-Light"}}>
-      Change Currency
-      </Text>
-      </View>
-      <Card cornerRadius={12} style={styles.card}>
-      
+        <View style={{marginRight: wp('60%')}}>
+          <Text style={{fontFamily: 'Poppins-Light'}}>Change Currency</Text>
+        </View>
+        <Card cornerRadius={12} style={styles.card}>
           <TouchableOpacity
             onPress={() => alert('asdasd')}
             style={{
@@ -28,33 +27,36 @@ export default function Currency({navigation}) {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            
-
             <Text style={styles.svgText}>$USD</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => alert('Your Currency is $USD')}>
             <Icon name="chevron-forward-sharp" color="#000000" size={18} />
           </TouchableOpacity>
         </Card>
-        <View style={{marginRight:wp("30%"),padding:20}}>
-      <Text style={{fontFamily:"Poppins-Light"}}>
-      Your Current Selected Currency is
-      </Text>
+        <View style={{marginRight: wp('30%'), padding: 20}}>
+          <Text style={{fontFamily: 'Poppins-Light'}}>
+            Your Current Selected Currency is
+          </Text>
+        </View>
       </View>
-      </View>
-      
-
+</View>
       <View style={styles.view3}>
-        <DarkButton name="Update" onPress={() => navigation.navigate("AppSetting")}/>
+        <DarkButton
+          name="Update"
+          onPress={() => navigation.navigate('AppSetting')}
+        />
       </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     width: wp('100%'),
   },
   view1: {
@@ -67,10 +69,8 @@ const styles = StyleSheet.create({
   view2: {
     flex: 1,
     width: wp('100%'),
-    justifyContent: "center",
+    justifyContent: 'center',
     alignItems: 'center',
-   
-
   },
   card: {
     padding: 10,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 320,
-    margin:5,
+    margin: 5,
     padding: 15,
     backgroundColor: 'white',
     borderRadius: 10,

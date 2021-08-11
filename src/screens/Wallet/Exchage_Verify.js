@@ -20,10 +20,12 @@ import Sendbtc from '../Signup/Sendbtc';
 import {RecieveDownSvg, SendUpSvg} from '../../svgs/BtcDetail';
 import {BitcoinSvg} from '../../svgs/Yearn_logo';
 import Btn from '../../components/reusable/Button/LightButton';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Exhange_Verify({navigation}) {
   return (
     <View style={styles.container}>
+    <View style={{ justifyContent: 'center', alignItems: 'center',flex:3}}>
       <View style={styles.View1}>
         <Text style={styles.text1}>
           You requested to exchange following tokens
@@ -58,12 +60,16 @@ export default function Exhange_Verify({navigation}) {
           disabled={false}
         />
       </View>
+      </View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Footer navigation={navigation} />
+        </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  container: {flex: 1},
 
   View1: {
     justifyContent: 'flex-end',
