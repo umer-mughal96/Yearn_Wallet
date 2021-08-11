@@ -2,6 +2,8 @@ package com.btc_eth_wallet;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.bitgo.randombytes.BuildConfig;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.bitgo.randombytes.RandomBytesPackage;
@@ -25,7 +27,6 @@ import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
-import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
