@@ -33,47 +33,40 @@ export default function AccountDetails({navigation}) {
         </View>
         <View style={styles.view2}>
           <Card cornerRadius={12} style={styles.card}>
-            <TouchableOpacity
-              
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+           
               <Text style={styles.svgText}>+999-222-46433</Text>
-            </TouchableOpacity>
+            
 
-            <TouchableOpacity >
+            
               <Switch
-                trackColor={{false: 'white', true: 'white'}}
-                thumbColor={isEnabled ? '#0B7F42' : '#f4f3f4'}
-                ios_backgroundColor="white"
-                onValueChange={toggleSwitch}
-                value={isEnabled}
-                style={{borderWidth: 0.2, borderColor: '#0B7F42'}}
-              />
-            </TouchableOpacity>
+              trackColor={{false: 'white', true: 'white'}}
+              thumbColor={isEnabled ? '#0B7F42' : '#f4f3f4'}
+              ios_backgroundColor="white"
+              onValueChange={toggleSwitch}
+              value={isEnabled}
+              
+              style={{borderWidth: 0.2, borderColor: '#0B7F42'}}
+              backgroundInactive={'#f0f0f0'}
+              circleSize={28}
+            />
+            
           </Card>
           <Card cornerRadius={12} style={styles.card}>
-            <TouchableOpacity
-              
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+           
               <Text style={styles.svgText}>youremail@gmail.com</Text>
-            </TouchableOpacity>
-            <TouchableOpacity >
+           
+          
               <Switch
-                trackColor={{false: '#767577', true: 'white'}}
-                thumbColor={isEnabled1 ? '#0B7F42' : '#f4f3f4'}
-                ios_backgroundColor="white"
-                onValueChange={toggleSwitch1}
-                value={isEnabled1}
-                style={{borderWidth: 0.2, borderColor: '#0B7F42'}}
-              />
-            </TouchableOpacity>
+              trackColor={{false: 'white', true: 'white'}}
+              thumbColor={isEnabled1 ? '#0B7F42' : '#f4f3f4'}
+              ios_backgroundColor="white"
+              onValueChange={toggleSwitch1}
+              value={isEnabled1}
+              style={{borderWidth: 0.2, borderColor: '#0B7F42'}}
+              backgroundInactive={'#f0f0f0'}
+              circleSize={28}
+            />
+           
           </Card>
         </View>
       </View>

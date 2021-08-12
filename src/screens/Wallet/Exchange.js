@@ -14,6 +14,7 @@ import {Dropdown} from 'react-native-element-dropdown';
 import DarkButton from '../../components/reusable/Button/DarkButton';
 import Footer from '../../components/reusable/Footer/Footer';
 import {useState} from 'react';
+import { ExchangeSvg, LogOutSvg } from '../../svgs/Profile';
 
 
 export default function Exchange({navigation}) {
@@ -77,6 +78,7 @@ export default function Exchange({navigation}) {
                 flexDirection: 'column',
               }}>
               <Text style={styles.text1}>From</Text>
+              
               <TextInput
                 style={styles.inputtext1}
                 placeholder="00.00"
@@ -102,7 +104,8 @@ export default function Exchange({navigation}) {
               )}
             />
           </View>
-
+          <ExchangeSvg/>
+         
           <View style={styles.view2}>
             <View
               style={{
@@ -174,6 +177,7 @@ const styles = StyleSheet.create({
     paddingLeft: hp(1),
     marginBottom: hp(2),
     flexDirection: 'row',
+    marginTop:hp(1)
   },
   item: {
     paddingVertical: 10,

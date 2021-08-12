@@ -60,19 +60,17 @@ export default function Private_Key({navigation}) {
           </Text>
           <Text
             style={{
-              fontSize: hp('1.5%'),
+              // fontSize: hp('1.5%'),
+              fontFamily:"Poppins-Regular"
             }}>
             ASDF5S4F456FA
           </Text>
         </Card>
 
-        {/* <Card>
-
-</Card> */}
       </View>
       <View
         style={{
-          flex: 1.5,
+          flex: .5,
           alignItems: 'center',
         }}>
         <View
@@ -86,7 +84,7 @@ export default function Private_Key({navigation}) {
             style={{
               backgroundColor: 'white',
               width: wp('25%'),
-              height: hp('11%'),
+              // height: hp('11%'),
               borderRadius: 15,
               alignItems: 'center',
               justifyContent: 'center',

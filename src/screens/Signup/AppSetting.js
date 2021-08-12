@@ -18,61 +18,62 @@ import Footer from '../../components/reusable/Footer/Footer';
 export default function AppSetting({navigation}) {
   return (
     <View style={styles.container}>
-    <View style={{ justifyContent: 'center',
-    alignItems: 'center',flex:4}}>
-      <View style={styles.view1}>
-        <Card cornerRadius={12} style={styles.card}>
-          <TouchableOpacity
+      <View style={{justifyContent: 'center', alignItems: 'center', flex: 4}}>
+        <View style={styles.view1}>
+          
+            <Card cornerRadius={12} style={styles.card}>
+            <TouchableOpacity
             onPress={() => navigation.navigate('Currency')}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <CurrencySvg />
+              <CurrencySvg />
 
-            <Text style={styles.TextView}>Currency</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={{flexDirection: 'row'}}>
-            <Text style={{fontFamily: 'Poppins-Medium'}}>$USD</Text>
-            <Icon name="chevron-forward-sharp" color="#000000" size={18} />
-          </TouchableOpacity>
-        </Card>
-        <Card cornerRadius={12} style={styles.card}>
-          <TouchableOpacity
+              <Text style={styles.TextView}>Currency</Text>
+
+              <View style={{flexDirection: 'row', marginLeft: wp('49%')}}>
+                <Text style={{fontFamily: 'Poppins-Medium'}}>$USD</Text>
+                <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+              </View>
+              </TouchableOpacity>
+            </Card>
+          
+
+         
+            <Card cornerRadius={12} style={styles.card}>
+            <TouchableOpacity
             onPress={() => navigation.navigate('Activity')}
             style={{
               flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <NotificationsSvg />
-            <Text style={styles.TextView}>Notifications</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Activity')}>
-            <Icon name="chevron-forward-sharp" color="#000000" size={18} />
-          </TouchableOpacity>
-        </Card>
-        <Card cornerRadius={12} style={styles.card}>
-          <TouchableOpacity
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <TokenVisibilitySvg />
-            <Text style={styles.TextView}>Token visibility</Text>
-          </TouchableOpacity>
+              <NotificationsSvg />
+              <Text style={styles.TextView}>Notifications</Text>
 
-          <TouchableOpacity onPress={() => alert('Token')}>
-            <Icon name="chevron-forward-sharp" color="#000000" size={18} />
-          </TouchableOpacity>
-        </Card>
-      </View>
+              <View style={{marginLeft: wp('50%')}}>
+                <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+              </View>
+              </TouchableOpacity>
+            </Card>
+          
+          <Card cornerRadius={12} style={styles.card}>
+            <TouchableOpacity
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <TokenVisibilitySvg />
+              <Text style={styles.TextView}>Token visibility</Text>
+              <Icon name="chevron-forward-sharp" color="#000000" size={18} style={{marginLeft: wp('45%')}} />
+            </TouchableOpacity>
+          </Card>
+        </View>
 
-      <View style={styles.view2}>
-        <Text>Navigation</Text>
-      </View>
+     
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
         <Footer navigation={navigation} />
@@ -83,7 +84,7 @@ export default function AppSetting({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   
+
     width: wp('100%'),
   },
   view1: {
@@ -104,10 +105,10 @@ const styles = StyleSheet.create({
     padding: 10,
     flexDirection: 'row',
     marginTop: 10,
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     alignItems: 'center',
     width: wp('95%'),
-    height: hp('7%'),
+   
   },
   TextView: {
     fontSize: 15,
