@@ -86,59 +86,59 @@ export default function Home2({ navigation }) {
 
               {/* </LinearGradient> */}
             </Card>
-                <TouchableOpacity onPress={() => navigation.navigate("sendBtc")}>
-                 <Card
-              style={{
-                alignContent: 'center',
-                alignItems: 'center',
-                width: '94%',
-                height: 88,
-                marginLeft: 10,
-                marginRight: 10,
-                marginBottom: 8,
-                flexDirection: 'row',
-                borderRadius: 12,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 2 },
-                shadowOpacity: 1,
-                elevation: 15,
-              }}>
-              {/* <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}> */}
-              <View style={{ marginLeft: 10 }}>
-                <RecieveDownSvg width={50} height={50} />
-              </View>
-
-              {/* <Send_logo></Send_logo> */}
-              {/* <Yearn_logo width={63} height={63} /> */}
-              <View
+            <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("sendBtc")}>
+              <Card
                 style={{
-                  flex: 3,
                   alignContent: 'center',
-                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '94%',
+                  height: 88,
+                  marginLeft: 10,
+                  marginRight: 10,
+                  marginBottom: 8,
+                  flexDirection: 'row',
+                  borderRadius: 12,
+                  shadowColor: '#000',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 1,
+                  elevation: 15,
                 }}>
-                <Text
-                  style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16, marginLeft: 7 }}>
-                  Recieve Bitcoin
-                </Text>
-                <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
-              </View>
+                {/* <LinearGradient colors={['#0B7F42', '#001A0A']} style={{ width: '100%', height: '100%', padding: 10, borderRadius: 12, flex: 1, flexDirection: 'row' }}> */}
+                <View style={{ marginLeft: 10 }}>
+                  <RecieveDownSvg width={50} height={50} />
+                </View>
 
-              <View
-                style={{
-                  flex: 1.5,
-                  alignContent: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Text style={{ color: 'red', fontWeight: 'bold' }}>
-                  -0.75 BTC
-                </Text>
-                <Text style={{ color: 'black', fontWeight: 'normal' }}>
-                  13 June 2021
-                </Text>
-              </View>
-            </Card>
-                </TouchableOpacity>
-           
+                {/* <Send_logo></Send_logo> */}
+                {/* <Yearn_logo width={63} height={63} /> */}
+                <View
+                  style={{
+                    flex: 3,
+                    alignContent: 'center',
+                    justifyContent: 'center',
+                  }}>
+                  <Text
+                    style={{ color: '#0A7C40', fontWeight: 'bold', fontSize: 16, marginLeft: 7 }}>
+                    Recieve Bitcoin
+                  </Text>
+                  <Text style={{ color: '#202020', marginLeft: 15 }}>0.7 BTC</Text>
+                </View>
+
+                <View
+                  style={{
+                    flex: 1.5,
+                    alignContent: 'center',
+                    justifyContent: 'center',
+                  }}>
+                  <Text style={{ color: 'red', fontWeight: 'bold' }}>
+                    -0.75 BTC
+                  </Text>
+                  <Text style={{ color: 'black', fontWeight: 'normal' }}>
+                    13 June 2021
+                  </Text>
+                </View>
+              </Card>
+            </TouchableOpacity>
+
 
 
           </View>
@@ -154,58 +154,58 @@ export default function Home2({ navigation }) {
             justifyContent: 'center',
             marginBottom: 45,
           }}>
-            <TouchableOpacity onPress={() => navigation.navigate("Sendbtc")}>
-          <Card
-            style={{
-              width: heightPercentageToDP(20),
-              height: 65,
-              borderRadius: 12,
-              backgroundColor: 'white',
-              flexDirection: 'row',
-              padding: 10,
-              alignItems: 'center',
-            }}>
-            <SendUpSvg width={39} height={39} />
-            <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 10 }}>Send</Text>
-          </Card>
-          </TouchableOpacity>
-
-          
-          <TouchableOpacity onPress={() => navigation.navigate("recieveBtc")}>
-          <Card
-            style={{
-              width: heightPercentageToDP(20),
-              height: 65,
-              borderRadius: 12,
-              backgroundColor: 'white',
-              marginLeft: 7,
-              flexDirection: 'row',
-              alignContent: 'center',
-              alignItems: 'center',
-            }}>
-            <LinearGradient
-              colors={['#0B7F42', '#001A0A']}
+          <TouchableOpacity onPress={() => navigation.navigate("Sendbtc")}>
+            <Card
               style={{
-                width: '100%',
-                height: '100%',
-                padding: 10,
+                width: heightPercentageToDP(20),
+                height: 65,
                 borderRadius: 12,
-                flex: 1,
+                backgroundColor: 'white',
                 flexDirection: 'row',
+                padding: 10,
                 alignItems: 'center',
               }}>
-              <RecieveDownSvg width={39} height={39} />
-              <Text
+              <SendUpSvg width={39} height={39} />
+              <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 10 }}>Send</Text>
+            </Card>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity onPress={() => navigation.navigate("recieveBtc")}>
+            <Card
+              style={{
+                width: heightPercentageToDP(20),
+                height: 65,
+                borderRadius: 12,
+                backgroundColor: 'white',
+                marginLeft: 7,
+                flexDirection: 'row',
+                alignContent: 'center',
+                alignItems: 'center',
+              }}>
+              <LinearGradient
+                colors={['#0B7F42', '#001A0A']}
                 style={{
-                  fontWeight: 'bold',
-                  fontSize: 18,
-                  marginLeft: 10,
-                  color: 'white',
+                  width: '100%',
+                  height: '100%',
+                  padding: 10,
+                  borderRadius: 12,
+                  flex: 1,
+                  flexDirection: 'row',
+                  alignItems: 'center',
                 }}>
-                Recieve
-              </Text>
-            </LinearGradient>
-          </Card>
+                <RecieveDownSvg width={39} height={39} />
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: 18,
+                    marginLeft: 10,
+                    color: 'white',
+                  }}>
+                  Recieve
+                </Text>
+              </LinearGradient>
+            </Card>
 
           </TouchableOpacity>
         </View>

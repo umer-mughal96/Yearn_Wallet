@@ -106,7 +106,7 @@ export default function ({ navigation }) {
           </View>
           <LightButton
             name="Login"
-            onPress={() => navigation.navigate("WalletSats")}
+            onPress={() => navigation.navigate("Signin")}
           />
           <TouchableOpacity
             style={styles.signup}
