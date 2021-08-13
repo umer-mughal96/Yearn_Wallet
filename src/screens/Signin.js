@@ -5,7 +5,6 @@ import {
   StatusBar,
   Text,
   View,
-  TextInput,
   TouchableOpacity,
 } from 'react-native';
 import DarkButton from '../components/reusable/Button/DarkButton';

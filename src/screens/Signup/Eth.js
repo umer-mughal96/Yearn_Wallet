@@ -143,25 +143,25 @@ export default function Home2({ navigation }) {
         <View
           style={{
             flex: 2,
-            backgroundColor: '#00000000',
+            // backgroundColor: '#00000000',
             flexDirection: 'row',
             alignContent: 'center',
             alignItems: 'center',
             justifyContent: 'center',
-            marginBottom: 45,
+            // marginBottom: 45,
           }}>
           <Card
             style={{
-              width: '40%',
-              height: 65,
-              borderRadius: 12,
+              // width: '40%',
+              // height: 65,
+              // borderRadius: 12,
               backgroundColor: 'white',
               flexDirection: 'row',
               padding: 10,
               alignItems: 'center',
             }}>
             <SendUpSvg width={39} height={39} />
-            <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 10 }}>Send</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 10 }}>Sendjnjn</Text>
           </Card>
 
           <Card

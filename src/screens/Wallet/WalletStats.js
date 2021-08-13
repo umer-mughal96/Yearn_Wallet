@@ -43,7 +43,7 @@ export default function WalletSats({navigation}) {
           }}>
           <View
             style={{
-              padding: 9,
+              padding: 8,
               width: wp('90'),
               flexDirection: 'row',
             }}>
@@ -184,9 +184,6 @@ export default function WalletSats({navigation}) {
             />
           </View>
         </View>
-        {/* <View style={{flex: 10}}>
-                <DarkButton name="Home" />
-              </View> */}
       </View>
       <View style={{flex: 0.4, justifyContent: 'center', alignItems: 'center'}}>
         <DarkButton name="Home" />
@@ -202,14 +199,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   view1: {
-    flex: 2.2,
-    height: hp('35'),
+    flex: 2.4,
+    // height: hp('35'),
     justifyContent: 'center',
     alignItems: 'center',
   },
   view2: {
-    flex: 2,
-    height: hp('35'),
+    flex: 2.4,
+    // height: hp('35'),
     alignItems: 'center',
     justifyContent: 'center',
   },

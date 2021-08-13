@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
 import Landing from '../screens/Landing';
 import Signin from '../screens/Signin';
 import Signup from '../screens/Signup/Signup';
@@ -14,7 +14,7 @@ import ConfirmMobile from '../screens/Signup/ConfirmMobile';
 import MobileVerifyToken from '../screens/Signup/MobileVerifyToken';
 import AfterMobileVerify from '../screens/Signup/AfterMobileVerify';
 import RecoverySeed from '../screens/Signup/RecoverySeed';
-import WalletHome, { WalletSvg } from '../screens/Wallet/WalletHome';
+import WalletHome, {WalletSvg} from '../screens/Wallet/WalletHome';
 import DeFi from '../screens/Wallet/DeFi';
 import ReferralScreen from '../screens/Signup/ReferralScreen';
 import RestoreScreen from '../screens/Signup/RestoreScreen';
@@ -22,7 +22,7 @@ import RecoveryRestore from '../screens/Signup/RecoveryRestore';
 import ProceedScreen from '../screens/Signup/ProceedScreen';
 import PlasmaTopUp from '../screens/Signup/PlasmaTopUp5';
 import PlasmaTopUp8 from '../screens/Signup/PlasaTopUp8';
-import PlasmaPay1 from "../screens/Signup/PlasmaPay"
+import PlasmaPay1 from '../screens/Signup/PlasmaPay';
 import PlasmaTopup2 from '../screens/Signup/PlasmaTopUp2';
 import Capture from '../screens/Wallet/Capture';
 import ProfileScreen from '../screens/Signup/SettingScreen';
@@ -59,28 +59,31 @@ import ImageCarousel from '../components/reusable/Carousel/ImageCarousel';
 import Gallery from '../screens/Signup/Gallery';
 
 
+import TransactionConfromPass from '../screens/Signup/TransactionConfirmPass';
+import TransactionConfirmPass2 from '../screens/Signup/TransactionConfirmPass';
+import TransactionSuccess from '../screens/Signup/TransactionSuccess';
 
 export default function Navigation() {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
         name="Landing"
         component={Landing}
       />
       <Stack.Screen
-        options={{ headerShown: true, title: '' }}
+        options={{headerShown: true, title: ''}}
         name="restoreScreen"
         component={RestoreScreen}
       />
       <Stack.Screen
-        options={{ headerShown: true, title: '' }}
+        options={{headerShown: true, title: ''}}
         name="proceedScreen"
         component={ProceedScreen}
       />
       <Stack.Screen
-        options={{ headerShown: true, title: '' }}
+        options={{headerShown: true, title: ''}}
         name="recoveryRestore"
         component={RecoveryRestore}
       />
@@ -100,7 +103,17 @@ export default function Navigation() {
       />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen
-        options={{ headerShown: false }}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: 'white',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+         
+        }}
         name="Signin"
         component={Signin}
       />
@@ -300,7 +313,7 @@ export default function Navigation() {
         component={PlasmaTopUp}
       />
 
-<Stack.Screen
+      <Stack.Screen
         options={{
           title: 'Exchange',
           headerStyle: {
@@ -318,7 +331,7 @@ export default function Navigation() {
         component={Exchange}
       />
 
-<Stack.Screen
+      <Stack.Screen
         options={{
           title: 'Exchange Verify',
           headerStyle: {
@@ -335,7 +348,7 @@ export default function Navigation() {
         name="exchangeverify"
         component={Exhange_Verify}
       />
-<Stack.Screen
+      <Stack.Screen
         options={{
           title: 'Exchange Done',
           headerStyle: {
@@ -352,7 +365,6 @@ export default function Navigation() {
         name="exchangedone"
         component={Exhange_Done}
       />
-
 
       <Stack.Screen
         options={{
@@ -737,8 +749,8 @@ export default function Navigation() {
       />
       <Stack.Screen
         options={{
-          title:'Activity',
-          
+          title: 'Activity',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -771,7 +783,7 @@ export default function Navigation() {
         name="ethDetail"
         component={EtheriumDetail}
       />
-       <Stack.Screen
+      <Stack.Screen
         options={{
           title: 'Recieve',
 
@@ -879,10 +891,43 @@ export default function Navigation() {
         name="WalletSats"
         component={WalletSats}
       />
+      <Stack.Screen
+        options={{
+          title: 'Confirmation',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="TransactionConfromPass"
+        component={TransactionConfromPass}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Confirmation',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="TransactionSuccess"
+        component={TransactionSuccess}
+      />
+    
     </Stack.Navigator>
-
-
   );
 }
-
-

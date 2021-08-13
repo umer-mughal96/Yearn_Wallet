@@ -28,7 +28,7 @@ export default function Security({navigation}) {
   const toggleSwitch1 = () => setIsEnabled1(previousState => !previousState);
   return (
     <View style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 9}}>
+      <View style={{justifyContent: 'center', alignItems: 'center', flex: 10}}>
         <View style={styles.view1}>
           <Card cornerRadius={12} style={styles.card}>
             <TouchableOpacity
@@ -61,15 +61,10 @@ export default function Security({navigation}) {
             </TouchableOpacity>
           </Card>
           <Card cornerRadius={12} style={styles.card}>
-            <TouchableOpacity
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+           <View style={{justifyContent:"center",alignItems:"center",flexDirection:"row"}}>
               <LoginFaceIdSvg />
               <Text style={styles.textview}>Login with Face ID</Text>
-            </TouchableOpacity>
+          </View>
 
             <Switch
               trackColor={{false: 'white', true: 'white'}}
@@ -84,16 +79,10 @@ export default function Security({navigation}) {
             />
           </Card>
           <Card cornerRadius={12} style={styles.card}>
-            <TouchableOpacity
-              // onPress={() => alert('asdasd')}
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+            <View style={{justifyContent:"center",alignItems:"center",flexDirection:"row"}}>
               <LoginFingerPrintSvg />
               <Text style={styles.textview}>Login With Fingerprint</Text>
-            </TouchableOpacity>
+              </View>
 
             <Switch
               trackColor={{false: 'white', true: 'white'}}
@@ -140,14 +129,14 @@ const styles = StyleSheet.create({
     width: wp('100%'),
   },
   view1: {
-    flex: 0.4,
+    flex: .6,
 
     width: wp('100%'),
     justifyContent: 'center',
     alignItems: 'center',
   },
   view2: {
-    flex: 1,
+    flex: .5,
     width: wp('100%'),
     justifyContent: 'center',
     alignItems: 'center',
@@ -159,7 +148,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: wp('95%'),
-    height: hp('7%'),
+    
   },
   textview: {
     fontSize: hp('2.0%'),

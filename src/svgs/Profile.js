@@ -83,8 +83,8 @@ export function BtcCircleSvg() {
     <View>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
-        width="63"
-        height="63"
+        width="45"
+        height="45"
         viewBox="0 0 63 63">
         <G
           id="Group_210"
@@ -137,7 +137,6 @@ export function BtcCircleSvg() {
     </View>
   );
 }
-
 
 export function BtcCircleSvgSmall() {
   return (
@@ -199,14 +198,13 @@ export function BtcCircleSvgSmall() {
   );
 }
 
-
 export function EthCircleSvg() {
   return (
     <View>
       <Svg
         xmlns="http://www.w3.org/2000/svg"
-        width="63"
-        height="63"
+        width="45"
+        height="45"
         viewBox="0 0 63 63">
         <G
           id="Group_161"
@@ -240,9 +238,6 @@ export function EthCircleSvg() {
     </View>
   );
 }
-
-
-
 
 export function EthCircleSvgSmall() {
   return (
@@ -284,9 +279,6 @@ export function EthCircleSvgSmall() {
     </View>
   );
 }
-
-
-
 
 export function AccountSvg() {
   return (
@@ -411,8 +403,6 @@ export function RerferralSvg() {
   );
 }
 
-
-
 export function EthCircleSvgSmall1() {
   return (
     <View>
@@ -453,7 +443,6 @@ export function EthCircleSvgSmall1() {
     </View>
   );
 }
-
 
 export function HelpAndSupSvg() {
   return (
@@ -519,14 +508,51 @@ export function ReportBugSvg() {
 export function LogOutSvg() {
   return (
     <View>
-      <Svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
-  <G id="Group_293" data-name="Group 293" transform="translate(-28 -779)">
-    <G id="Group_91" data-name="Group 91" transform="translate(0 239)">
-      <Circle id="Ellipse_24" data-name="Ellipse 24" cx="21.5" cy="21.5" r="21.5" transform="translate(28 540)" fill="#0b7f42"/>
-    </G>
-    <Path id="Icon_open-account-logout" data-name="Icon open-account-logout" d="M6.464,0V2.155h8.619V12.929H6.464v2.155H17.238V0ZM4.31,4.31,0,7.542l4.31,3.232V8.619h8.619V6.464H4.31Z" transform="translate(38.281 792.959)" fill="#fff"/>
-  </G>
-</Svg>
+      <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="43"
+        height="43"
+        viewBox="0 0 43 43">
+        <G id="Group_293" data-name="Group 293" transform="translate(-28 -779)">
+          <G id="Group_91" data-name="Group 91" transform="translate(0 239)">
+            <Circle
+              id="Ellipse_24"
+              data-name="Ellipse 24"
+              cx="21.5"
+              cy="21.5"
+              r="21.5"
+              transform="translate(28 540)"
+              fill="#0b7f42"
+            />
+          </G>
+          <Path
+            id="Icon_open-account-logout"
+            data-name="Icon open-account-logout"
+            d="M6.464,0V2.155h8.619V12.929H6.464v2.155H17.238V0ZM4.31,4.31,0,7.542l4.31,3.232V8.619h8.619V6.464H4.31Z"
+            transform="translate(38.281 792.959)"
+            fill="#fff"
+          />
+        </G>
+      </Svg>
+    </View>
+  );
+}
+export function ExchangeSvg() {
+  return (
+    <View>
+      <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="19.443"
+        height="19.949"
+        viewBox="0 0 19.443 19.949">
+        <Path
+          id="Icon_awesome-arrow-left"
+          data-name="Icon awesome-arrow-left"
+          d="M11.464,20.788l-.988.988a1.064,1.064,0,0,1-1.509,0L.31,13.126a1.064,1.064,0,0,1,0-1.509L8.966,2.961a1.064,1.064,0,0,1,1.509,0l.988.988a1.07,1.07,0,0,1-.018,1.527L6.081,10.588h12.8a1.066,1.066,0,0,1,1.069,1.069v1.425a1.066,1.066,0,0,1-1.069,1.069H6.081l5.365,5.111A1.062,1.062,0,0,1,11.464,20.788Z"
+          transform="translate(-2.647 19.945) rotate(-90)"
+          fill="#000"
+        />
+      </Svg>
     </View>
   );
 }

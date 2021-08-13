@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import {Yearn_logo} from '../../svgs/Yearn_logo';
 import Ticksvgscreen from '../../svgs/ticksvg';
-import { CopySvg, ETHSvg, ShareSvg } from '../../svgs/Refferral';
+import {CopySvg, ETHSvg, ShareSvg} from '../../svgs/Refferral';
 import Footer from '../../components/reusable/Footer/Footer';
 
 export default function ETH_Private_Key({navigation}) {
@@ -38,15 +38,15 @@ export default function ETH_Private_Key({navigation}) {
             width: wp('60%'),
             height: hp('30%'),
 
-            elevation: 15,
+            elevation: 5,
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <ETHSvg/>
+          <ETHSvg />
           <Text
             style={{
               fontSize: hp('2%'),
-              fontFamily:"Poppins-Medium"
+              fontFamily: 'Poppins-Medium',
             }}>
             ETH
           </Text>
@@ -54,25 +54,22 @@ export default function ETH_Private_Key({navigation}) {
             style={{
               fontSize: hp('3%'),
               color: '#0a7c40',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Medium',
             }}>
             Private Key
           </Text>
           <Text
             style={{
               fontSize: hp('1.5%'),
+              fontFamily: 'Poppins-Medium',
             }}>
             ASDF5S4F456FA
           </Text>
         </Card>
-
-        {/* <Card>
-
-</Card> */}
       </View>
       <View
         style={{
-          flex: 1.5,
+          flex: 0.5,
           alignItems: 'center',
         }}>
         <View
@@ -86,13 +83,13 @@ export default function ETH_Private_Key({navigation}) {
             style={{
               backgroundColor: 'white',
               width: wp('25%'),
-              height: hp('11%'),
+
               borderRadius: 15,
               alignItems: 'center',
               justifyContent: 'center',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
-            <CopySvg/>
+            <CopySvg />
             <Text>Copy</Text>
           </Card>
           <Card
@@ -103,9 +100,9 @@ export default function ETH_Private_Key({navigation}) {
               borderRadius: 15,
               alignItems: 'center',
               justifyContent: 'center',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
-            <ShareSvg/>
+            <ShareSvg />
             <Text>Share</Text>
           </Card>
         </View>
@@ -122,15 +119,15 @@ export default function ETH_Private_Key({navigation}) {
               textAlign: 'center',
               textAlignVertical: 'center',
               fontSize: hp('1.5'),
-              fontFamily:"Poppins-Light"
+              fontFamily: 'Poppins-Light',
             }}>
             Your country of residence is based on the Region setting of iPhone
           </Text>
         </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
-          <Footer navigation={navigation} />
-        </View>
+        <Footer navigation={navigation} />
+      </View>
     </View>
   );
 }

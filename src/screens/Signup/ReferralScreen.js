@@ -82,7 +82,7 @@ export default function ReferralScreen({navigation}) {
         <View style={styles.buttonsWrapper}>
           <DarkButton
             name="Contine"
-            onPress={() => navigation.navigate('walletHome')}
+            onPress={() => navigation.navigate('createPasscode')}
               // disabled={!refcorrect}
           />
         </View>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   refWrapper: {
-    flex: 2,
+    flex: 1,
     marginTop: 150,
     justifyContent: 'center',
     alignItems: 'center',
@@ -125,13 +125,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     
-    marginBottom: '38.5%',
+    // marginBottom: '38.5%',
   },
 
   textcenter: {
     alignItems: 'center',
     fontFamily: 'Poppins-SemiBold',
-    marginTop: 20,
+    // marginTop: 20,
     textAlign:"center"
   },
 });
