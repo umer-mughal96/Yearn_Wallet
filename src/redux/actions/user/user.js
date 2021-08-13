@@ -48,7 +48,7 @@ export const registerUser = (navigation, data) => async dispatch => {
     console.log(res.data);
     if (res.status == 201) {
       dispatch({ type: constants.REGISTER_USER_SUCCESS });
-      dispatch({ type: constants.RESET_USER_STATE});
+      dispatch({ type: constants.RESET_USER_STATE });
       navigation.navigate('Signin');
     }
     navigation.navigate('Signin');
@@ -59,4 +59,24 @@ export const registerUser = (navigation, data) => async dispatch => {
       payload: err.response.data.error,
     });
   }
+};
+
+
+
+export const captureImage = (navigation, url) => async (dispatch) => {
+  try {
+
+    console.log("object")
+
+
+
+    dispatch({ type: 'ADD_IMAGE', payload : url  });
+
+  navigation.navigate('gallery');
+} catch (err) {
+  dispatch({
+    type: constants.REGISTER_USER_FAIL,
+    payload: err.response.data.error,
+  });
+}
 };

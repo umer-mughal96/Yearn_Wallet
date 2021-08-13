@@ -6,6 +6,7 @@ const iniitialState = {
   mobileCodeSent: false,
   mobileCode: null,
   loading: false,
+  url: []
 };
 
 export const User = (state = iniitialState, action) => {
@@ -16,6 +17,12 @@ export const User = (state = iniitialState, action) => {
         ...state,
         loading: true,
       };
+    case 'ADD_IMAGE':
+      return {
+        ...state,
+        loading: false,
+        url: [{ url: payload }, ...state.url]
+      }
     case constants.EMAIL_CODE_SUCCESS:
       return {
         ...state,

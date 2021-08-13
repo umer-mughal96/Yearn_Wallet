@@ -205,6 +205,8 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
+  - react-native-blur (0.8.0):
+    - React
   - react-native-camera (4.0.1):
     - React-Core
     - react-native-camera/RCT (= 4.0.1)
@@ -333,6 +335,8 @@ PODS:
     - React
   - RNVectorIcons (8.1.0):
     - React-Core
+  - SajjadBlurOverlay (1.0.0):
+    - React
   - TcpSockets (3.3.2):
     - React
   - Yoga (1.14.0)
@@ -356,6 +360,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
   - react-native-camera (from `../node_modules/react-native-camera`)
   - react-native-element-dropdown (from `../node_modules/react-native-element-dropdown`)
   - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
@@ -383,6 +388,7 @@ DEPENDENCIES:
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - SajjadBlurOverlay (from `../node_modules/react-native-blur-overlay/ios`)
   - TcpSockets (from `../node_modules/react-native-tcp`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -423,6 +429,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-blur:
+    :path: "../node_modules/@react-native-community/blur"
   react-native-camera:
     :path: "../node_modules/react-native-camera"
   react-native-element-dropdown:
@@ -477,6 +485,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
+  SajjadBlurOverlay:
+    :path: "../node_modules/react-native-blur-overlay/ios"
   TcpSockets:
     :path: "../node_modules/react-native-tcp"
   Yoga:
@@ -500,6 +510,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
+  react-native-blur: cad4d93b364f91e7b7931b3fa935455487e5c33c
   react-native-camera: 11166fe7e3a673493c152f52966e8ab1c5cdcacc
   react-native-element-dropdown: 6bb6cfebb4b10878d6f5de502ae9c56fbc1f107c
   react-native-get-random-values: 237bffb1c7e05fb142092681531810a29ba53015
@@ -527,6 +538,7 @@ SPEC CHECKSUMS:
   RNScreens: 01ab149b5dd5c27f5ff26741b1d2bdf2cee1af35
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
+  SajjadBlurOverlay: 4366a3417954b7d4a8a70682e0c43959ff76a3cb
   TcpSockets: 14306fb79f9750ea7d2ddd02d8bed182abb01797
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
 

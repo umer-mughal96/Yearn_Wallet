@@ -6,6 +6,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Footer from '../../components/reusable/Footer/Footer';
+import ShareModal from '../../components/reusable/Modal/ShareModal';
 
 export default function PlasmaTopUp({navigation}) {
   return (
@@ -61,7 +62,8 @@ export default function PlasmaTopUp({navigation}) {
               placeholder="ecbuebcubeucb"></TextInput>
           </View>
 
-          <DarkButton name="Next"  onPress={()=> navigation.navigate("plasma8")}/>
+          <DarkButton name="Next"  onPress={()=> navigation.navigate("capture")}/>
+          {/* <ShareModal/> */}
         </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>

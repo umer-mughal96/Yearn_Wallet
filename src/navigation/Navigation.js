@@ -24,7 +24,7 @@ import PlasmaTopUp from '../screens/Signup/PlasmaTopUp5';
 import PlasmaTopUp8 from '../screens/Signup/PlasaTopUp8';
 import PlasmaPay1 from "../screens/Signup/PlasmaPay"
 import PlasmaTopup2 from '../screens/Signup/PlasmaTopUp2';
-import Camera from '../screens/Wallet/Capture';
+import Capture from '../screens/Wallet/Capture';
 import ProfileScreen from '../screens/Signup/SettingScreen';
 import AppSetting from '../screens/Signup/AppSetting';
 import AccountDetails from '../screens/Signup/AccountDetails';
@@ -55,6 +55,8 @@ import Exhange_Verify from '../screens/Wallet/Exchage_Verify';
 import Exhange_Done from '../screens/Wallet/Exchange_Done';
 import Private_Key from '../screens/Signup/Private_Key';
 import WalletSats from '../screens/Wallet/WalletStats';
+import ImageCarousel from '../components/reusable/Carousel/ImageCarousel';
+import Gallery from '../screens/Signup/Gallery';
 
 
 
@@ -678,6 +680,42 @@ export default function Navigation() {
         }}
         name="SecurityConfirmPass"
         component={SecurityConfirmPass}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Capture',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="capture"
+        component={Capture}
+      />
+         <Stack.Screen
+        options={{
+          title: 'Gallery',
+
+          headerStyle: {
+            backgroundColor: 'white',
+            borderRadius: 15,
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontFamily: 'Poppins-Medium',
+            margin: 80,
+            fontSize: 18,
+          },
+        }}
+        name="gallery"
+        component={Gallery}
       />
       <Stack.Screen
         options={{

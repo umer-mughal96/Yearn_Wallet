@@ -30,10 +30,10 @@ import BalanceCarousel from '../../components/reusable/Carousel/Carousel';
 
 export const DefiSvg = ({ navigation }) => {
   return (
-    <View style={{ position: "absolute",  alignSelf : "center" ,}}>
+    <View style={{ position: "absolute", alignSelf: "center", bottom: hp("7") }}>
       <TouchableOpacity onPress={() => navigation.navigate("exchange")}>
 
-        <Svg xmlns="http://www.w3.org/2000/svg" width="55.237" height="180.237" viewBox="0 0 55.237 55.237">
+        <Svg xmlns="http://www.w3.org/2000/svg" width="55.237" height="43.237" viewBox="0 0 55.237 55.237">
           <G id="Group_295" data-name="Group 295" transform="translate(-179.382 -776)">
             <Circle id="Ellipse_10" data-name="Ellipse 10" cx="27.618" cy="27.618" r="27.618" transform="translate(179.382 776)" fill="#0b7f42" />
             <G id="Group_225" data-name="Group 225" transform="translate(39.314 467.036)">
