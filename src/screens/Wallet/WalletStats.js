@@ -31,7 +31,7 @@ export default function WalletSats({navigation}) {
       },
     ],
   };
-  return (
+  return (   
     <View style={{flex: 1}}>
       <View style={styles.view1}>
         <View

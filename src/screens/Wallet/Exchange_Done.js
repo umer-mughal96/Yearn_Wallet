@@ -11,34 +11,43 @@ import Footer from '../../components/reusable/Footer/Footer';
 export default function Exhange_Done({navigation}) {
   return (
     <View style={{flex: 1}}>
-    <View style={{flex:4, justifyContent: 'center', alignItems: 'center'}}>
       <View
         style={{
+          flex: 4,
           justifyContent: 'center',
           alignItems: 'center',
-          width: wp('80%'),
-          height: hp('40%'),
-          backgroundColor: 'white',
-          elevation: 5,
-          borderRadius: 20,
+          backgroundColor: '#FFFFFF',
         }}>
-        <Ticksvgscreen />
-        <Text
+        <View
           style={{
-            fontSize: 18,
-            fontFamily:"Poppins-SemiBold",
-            textAlign: 'center',
-            marginTop: hp(1),
-            marginBottom: hp(1),
-            width:wp("60%")
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: wp('80%'),
+            height: hp('40%'),
+            backgroundColor: '#FFFFFF',
+            shadowColor: '#000',
+            shadowOffset: {width: 0, height: 0},
+            shadowOpacity: 0.3,
+            elevation: 4,
+            borderRadius: 20,
           }}>
-          Your request has been processed successfully
-        </Text>
-        <DarkButton
-          name="Go to home"
-          onPress={() => navigation.navigate('walletHome')}
-        />
-      </View>
+          <Ticksvgscreen />
+          <Text
+            style={{
+              fontSize: 18,
+              fontFamily: 'Poppins-SemiBold',
+              textAlign: 'center',
+              marginTop: hp(1),
+              marginBottom: hp(1),
+              width: wp('60%'),
+            }}>
+            Your request has been processed successfully
+          </Text>
+          <DarkButton
+            name="Go to home"
+            onPress={() => navigation.navigate('walletHome')}
+          />
+        </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
         <Footer navigation={navigation} />

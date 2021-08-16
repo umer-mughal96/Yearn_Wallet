@@ -4,20 +4,8 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {Card} from 'react-native-shadow-cards';
-import {
-  Image,
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  TextInput,
-  Text,
-  TouchableOpacity,
-  View,
-  Picker,
-} from 'react-native';
-import {Yearn_logo} from '../../svgs/Yearn_logo';
-import Ticksvgscreen from '../../svgs/ticksvg';
-import { BitSvg, CopySvg, ShareSvg } from '../../svgs/Refferral';
+import {Text, View} from 'react-native';
+import {BitSvg, CopySvg, ShareSvg} from '../../svgs/Refferral';
 import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Private_Key({navigation}) {
@@ -25,6 +13,7 @@ export default function Private_Key({navigation}) {
     <View
       style={{
         flex: 1,
+        backgroundColor: '#FFFFFF',
       }}>
       <View
         style={{
@@ -42,11 +31,11 @@ export default function Private_Key({navigation}) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <BitSvg/>
+          <BitSvg />
           <Text
             style={{
               fontSize: hp('2%'),
-              fontFamily:"Poppins-Medium"
+              fontFamily: 'Poppins-Medium',
             }}>
             BTC
           </Text>
@@ -54,23 +43,22 @@ export default function Private_Key({navigation}) {
             style={{
               fontSize: hp('3%'),
               color: '#0a7c40',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
             Private Key
           </Text>
           <Text
             style={{
               // fontSize: hp('1.5%'),
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
             ASDF5S4F456FA
           </Text>
         </Card>
-
       </View>
       <View
         style={{
-          flex: .5,
+          flex: 0.5,
           alignItems: 'center',
         }}>
         <View
@@ -88,9 +76,9 @@ export default function Private_Key({navigation}) {
               borderRadius: 15,
               alignItems: 'center',
               justifyContent: 'center',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
-            <CopySvg/>
+            <CopySvg />
             <Text>Copy</Text>
           </Card>
           <Card
@@ -101,9 +89,9 @@ export default function Private_Key({navigation}) {
               borderRadius: 15,
               alignItems: 'center',
               justifyContent: 'center',
-              fontFamily:"Poppins-Regular"
+              fontFamily: 'Poppins-Regular',
             }}>
-            <ShareSvg/>
+            <ShareSvg />
             <Text>Share</Text>
           </Card>
         </View>
@@ -120,15 +108,15 @@ export default function Private_Key({navigation}) {
               textAlign: 'center',
               textAlignVertical: 'center',
               fontSize: hp('1.5'),
-              fontFamily:"Poppins-Light"
+              fontFamily: 'Poppins-Light',
             }}>
             Your country of residence is based on the Region setting of iPhone
           </Text>
         </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
-          <Footer navigation={navigation} />
-        </View>
+        <Footer navigation={navigation} />
+      </View>
     </View>
   );
 }

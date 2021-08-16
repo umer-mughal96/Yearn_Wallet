@@ -1,4 +1,6 @@
 rootProject.name = 'BTC_ETH_WALLET'
+include ':react-native-randombytes'
+project(':react-native-randombytes').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-randombytes/android')
 include ':react-native-blur-overlay'
 project(':react-native-blur-overlay').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-blur-overlay/android')
 include ':react-native-randombytes'

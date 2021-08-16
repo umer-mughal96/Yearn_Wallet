@@ -153,6 +153,7 @@ android {
             storePassword 'asdasd'
             keyAlias 'my-key-alias'
             keyPassword 'asdasd'
+            
         }
     }
     buildTypes {

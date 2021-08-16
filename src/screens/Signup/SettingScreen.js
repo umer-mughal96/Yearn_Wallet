@@ -19,13 +19,12 @@ import {
   SecuritySvg,
   YficCircleSvg,
 } from '../../svgs/Profile';
-
 import Footer from '../../components/reusable/Footer/Footer';
 
 export default function SettingScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+      <View style={{justifyContent: 'center', alignItems: 'center', flex: 0.6}}>
         <View style={styles.view1}>
           <Text
             style={{
@@ -41,67 +40,68 @@ export default function SettingScreen({navigation}) {
         </View>
 
         <View style={styles.view2}>
-       
           <Card
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              width: wp('24%'),
-              height: hp('12%'),
-              backgroundColor: 'white',
+              width: wp('27%'),
+              height: hp('11.5%'),
               borderRadius: 20,
               shadowColor: '#000',
-            shadowOffset: {width: 0, height: 0},
-            shadowOpacity: 0.5,
-            elevation: 5,
-            }}> 
+              shadowOffset: {width: 0, height: 0},
+              shadowOpacity: 0.5,
+              elevation: 5,
+            }}>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Private_Key')}
-             
-              >
-            
+              onPress={() => navigation.navigate('Private_Key')}>
               <BtcCircleSvg />
-            
-            <Text
-              style={{
-                paddingTop: 10,
-                fontFamily: 'Poppins-Medium',
-                fontSize: 17,
-              }}>
-              BTC
-            </Text>
+
+              <Text
+                style={{
+                  paddingTop: 10,
+                  fontFamily: 'Poppins-Medium',
+                  fontSize: 17,
+                  marginLeft: 5,
+                }}>
+                BTC
+              </Text>
             </TouchableOpacity>
           </Card>
-          
 
           <Card
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              width: wp('24%'),
-              height: hp('12%'),
-              backgroundColor: 'white',
-              elevation: 5,
+              width: wp('27%'),
+              height: hp('11.5%'),
+
+              shadowColor: '#000',
+              shadowOffset: {width: 0, height: 0},
+              shadowOpacity: 0.5,
+              elevation: 15,
               borderRadius: 20,
             }}>
             <TouchableOpacity
               onPress={() => navigation.navigate('ETH_Private_Key')}>
               <EthCircleSvg />
-           
-            <Text
-              style={{
-                paddingTop: 10,
-                fontFamily: 'Poppins-Medium',
-                fontSize: 17,
-              }}>
-              ETH
-            </Text>
+
+              <Text
+                style={{
+                  paddingTop: 10,
+                  fontFamily: 'Poppins-Medium',
+                  fontSize: 17,
+                  marginLeft: 5,
+                }}>
+                ETH
+              </Text>
             </TouchableOpacity>
           </Card>
         </View>
 
         <View style={styles.view3}>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
               onPress={() => navigation.navigate('accountDetails')}
               style={{
@@ -114,12 +114,18 @@ export default function SettingScreen({navigation}) {
                 <Text style={styles.svgText}>Account Details</Text>
                 <Text style={styles.svgText12}>Token exchange</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('asdasd')}>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '33%'}}
+              />
             </TouchableOpacity>
           </Card>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
               onPress={() => navigation.navigate('Security')}
               style={{
@@ -134,13 +140,19 @@ export default function SettingScreen({navigation}) {
                   Daily limit, Passcode, Fingerprint/FaceID
                 </Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('asdasd')}>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '12%'}}
+              />
             </TouchableOpacity>
           </Card>
 
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
               onPress={() => navigation.navigate('AppSetting')}
               style={{
@@ -155,12 +167,18 @@ export default function SettingScreen({navigation}) {
                   Tokens, currency, notifications
                 </Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '28%'}}
+              />
             </TouchableOpacity>
           </Card>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
               onPress={() => navigation.navigate('Referral')}
               style={{
@@ -173,14 +191,20 @@ export default function SettingScreen({navigation}) {
                 <Text style={styles.svgText}>Referrals Earnings</Text>
                 <Text style={styles.svgText12}>you all referral earnings</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('asdasd')}>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '27%'}}
+              />
             </TouchableOpacity>
           </Card>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
-              onPress={() => alert('asdasd')}
+              onPress={() => alert('Help & Support')}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -190,14 +214,20 @@ export default function SettingScreen({navigation}) {
               <View style={styles.TextView}>
                 <Text style={styles.svgText}>Help & Support</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('asdasd')}>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '35%'}}
+              />
             </TouchableOpacity>
           </Card>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
-              onPress={() => alert('asdasd')}
+              onPress={() => alert('Bug reported')}
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -207,12 +237,18 @@ export default function SettingScreen({navigation}) {
               <View style={styles.TextView}>
                 <Text style={styles.svgText}>Report a Bug</Text>
               </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('asdasd')}>
-              <Icon name="chevron-forward-sharp" color="#000000" size={18} />
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '41%'}}
+              />
             </TouchableOpacity>
           </Card>
-          <Card cornerRadius={14} style={styles.card}>
+          <Card
+            cornerRadius={14}
+            style={Platform.OS === 'ios' ? styles.card : styles.Andrcard}>
             <TouchableOpacity
               onPress={() => navigation.navigate('Landing')}
               style={{
@@ -224,8 +260,14 @@ export default function SettingScreen({navigation}) {
               <View style={styles.TextView}>
                 <Text style={styles.svgText}>Log Out</Text>
               </View>
+
+              <Icon
+                name="chevron-forward-sharp"
+                color="#000000"
+                size={18}
+                style={{marginLeft: '56%'}}
+              />
             </TouchableOpacity>
-            <Icon name="chevron-forward-sharp" color="#000000" size={18} />
           </Card>
         </View>
       </View>
@@ -238,53 +280,57 @@ export default function SettingScreen({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
-    // width: wp('100%'),
+    backgroundColor: '#FFFFFF',
   },
   view1: {
-    flex: 0.4,
-   
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    // backgroundColor:"red"
   },
   view2: {
-    // flex: 0.7,
+    flex: 1.7,
     flexDirection: 'row',
     marginTop: hp('1%'),
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     width: wp('100%'),
-    // height: wp('20%'),
   },
   view3: {
-    flex: 1.5,
+    flex: 1.3,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    // width: wp('80%'),
-    // height: hp('10%'),
   },
+
   card: {
-    padding: 8,
+    padding: 7,
     flexDirection: 'row',
-    marginTop: 4,
-    justifyContent: 'space-between',
+    marginTop: 5,
     alignItems: 'center',
-    // width: wp('90%'),
-    // height: hp('6.5%'),
+
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.5,
+    elevation: 10,
+    // backgroundColor:"red"
   },
-  headerText: {
-    fontFamily: 'Poppins-Medium',
-  },
-  cardText: {
-    fontFamily: 'Poppins-Medium',
+  Andrcard: {
+    padding: 3.5,
+    flexDirection: 'row',
+    marginTop: 4.5,
+    alignItems: 'center',
+
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.5,
+    elevation: 10,
   },
   svgText12: {
     fontFamily: 'Poppins-Light',
-    fontSize: 14,
+    fontSize: 12,
   },
   svgText: {
     fontSize: 20,
-
     fontFamily: 'Poppins-Medium',
   },
   TextView: {

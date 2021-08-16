@@ -113,7 +113,7 @@ export default function Security({navigation}) {
         </View>
 
         <View style={styles.view3}>
-          <DarkButton name="Update" />
+          <DarkButton name="Update" onPress={()=>navigation.navigate("userProfile")} />
         </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>

@@ -25,51 +25,51 @@ import Footer from '../../components/reusable/Footer/Footer';
 export default function Exhange_Verify({navigation}) {
   return (
     <View style={styles.container}>
-    <View style={{ justifyContent: 'center', alignItems: 'center',flex:3}}>
-      <View style={styles.View1}>
-        <Text style={styles.text1}>
-          You requested to exchange following tokens
-        </Text>
+      <View style={{justifyContent: 'center', alignItems: 'center', flex: 3}}>
+        <View style={styles.View1}>
+          <Text style={styles.text1}>
+            You requested to exchange following tokens
+          </Text>
 
-        <View style={styles.View2}>
-          <Text style={styles.text2}>0.0034316</Text>
+          <View style={styles.View2}>
+            <Text style={styles.text2}>0.0034316</Text>
 
-          <BtcCircleSvgSmall/>
-          <Text style={styles.text2}>BTC</Text>
+            <BtcCircleSvgSmall />
+            <Text style={styles.text2}>BTC</Text>
+          </View>
+
+          <Text style={styles.text4}>to</Text>
+
+          <View style={styles.View2}>
+            <Text style={styles.text2}>0.0034316</Text>
+            <EthCircleSvgSmall />
+            <Text style={styles.text2}>ETH</Text>
+          </View>
         </View>
 
-        <Text style={styles.text4}>to</Text>
+        <View style={styles.view4}>
+          <DarkButton
+            name="Exchange"
+            onPress={() => navigation.navigate('exchangedone')}
+            disabled={false}
+          />
 
-        <View style={styles.View2}>
-          <Text style={styles.text2}>0.0034316</Text>
-          <EthCircleSvgSmall/>
-          <Text style={styles.text2}>ETH</Text>
+          <Btn
+            name="Back"
+            onPress={() => navigation.navigate('exchange')}
+            disabled={false}
+          />
         </View>
-      </View>
-
-      <View style={styles.view4}>
-        <DarkButton
-          name="Exchange"
-          onPress={() => navigation.navigate('exchangedone')}
-          disabled={false}
-        />
-
-        <Btn
-          name="Back"
-          onPress={() => navigation.navigate('exchange')}
-          disabled={false}
-        />
-      </View>
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
-          <Footer navigation={navigation} />
-        </View>
+        <Footer navigation={navigation} />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {flex: 1, backgroundColor: '#FFFFFF'},
 
   View1: {
     justifyContent: 'flex-end',
@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     height: hp('50%'),
     flex: 2.2,
     marginBottom: hp(5),
+
     //   elevation:5,
     //   borderRadius:20,
   },
@@ -91,6 +92,7 @@ const styles = StyleSheet.create({
   text1: {
     fontFamily: 'Poppins-SemiBold',
     textAlign: 'center',
+    fontSize: 15,
   },
   text2: {
     fontFamily: 'Poppins-Bold',

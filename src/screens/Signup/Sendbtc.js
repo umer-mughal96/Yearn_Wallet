@@ -1,181 +1,143 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Picker,
-  TouchableOpacity
-} from 'react-native';
+import {StyleSheet, Text, View, TextInput} from 'react-native';
 import {Card} from 'react-native-shadow-cards';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-
+import DarkButton from '../../components/reusable/Button/DarkButton';
+import Footer from '../../components/reusable/Footer/Footer';
 
 export default function Sendbtc({navigation}) {
   return (
     <View style={styles.container}>
-
       <View style={styles.view1}>
-        <Text style={{fontFamily:"Poppins-Medium"}}>Availale Balance</Text>
-        <Text style={{fontSize:hp("4"), color: '#0B7F42',fontFamily:"Poppins-SemiBold"}}>
+        <Text style={{fontFamily: 'Poppins-Medium'}}>Availale Balance</Text>
+        <Text
+          style={{
+            fontSize: hp('3.5'),
+            color: '#0B7F42',
+            fontFamily: 'Poppins-SemiBold',
+          }}>
           0.7544 BTC
         </Text>
-        <Text style={{fontFamily:"Poppins-medium"}}>$26,648.60</Text>
+        <Text style={{fontFamily: 'Poppins-medium'}}>$26,648.60</Text>
       </View>
 
       <View style={styles.view2}>
-        
-        <Card style={{
+        <Card
+          style={{
             width: wp('90%'),
-            height: hp("60%"),
-            alignSelf: 'center',  
+            height: hp('50%'),
+            alignSelf: 'center',
             borderRadius: 21,
             shadowColor: '#000',
             shadowOffset: {width: 0, height: 0},
-            shadowOpacity: .5,
+            shadowOpacity: 0.5,
             elevation: 5,
           }}>
-
           <Card
             style={{
               borderRadius: 8,
-              borderWidth: 1,
-              borderWidth: 0.5,
+              borderWidth: 0.2,
               borderColor: '#0B7F42',
               alignSelf: 'center',
               height: 74,
               width: wp('85%'),
               marginTop: 15,
-              
             }}>
-            <Text style={{left: 13, top: 7,fontFamily:"Poppins-Regular"}}>How much you want to send?</Text>
+            <Text style={{left: 13, top: 7, fontFamily: 'Poppins-Regular'}}>
+              How much you want to send?
+            </Text>
           </Card>
           <Card
             style={{
               borderRadius: 8,
-              height: hp("10%"),
+              height: hp('10%'),
               marginTop: -40,
-
-              borderWidth: 0.5,
+              borderWidth: 0.2,
               borderColor: '#0B7F42',
               width: wp('85%'),
               alignSelf: 'center',
             }}>
-            <Text style={{left: 13, top: 7, fontFamily:"poppins-Regular"}}>
+            <Text style={{left: 13, top: 7, fontFamily: 'poppins-Regular'}}>
               Your Amount
             </Text>
 
             <View style={{flexDirection: 'row', top: 3}}>
               <TextInput
                 style={{
-                  
                   left: 13,
                   top: 7,
                   fontWeight: 'bold',
                   fontSize: 20,
                   textContentType: 'number',
-                  width:wp("80%"),
+                  width: wp('80%'),
                 }}
-                placeholder="$000.0"
-                keyboardType="decimal-pad">
-                 
-                </TextInput>
-                <Picker
-                // selectedValue={selectedValue}
-                style={{
-                  height: 50,
-                  width: 100,
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  left: '256%',
-                }}
-                // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-              >
-                <Picker.Item label="USD" value="usd" />
-                <Picker.Item label="ETH" value="eth" />
-
-                <Picker.Item label="BTC" value="btc" />
-              </Picker>
-
-              
+                placeholder="$00.0"
+                keyboardType="decimal-pad"></TextInput>
             </View>
           </Card>
 
-          <Text style={{top: 10, left: 24}}>=7424.898BTC</Text>
-
-          {/* </LinearGradient> */}
+          <Text
+            style={{
+              top: 10,
+              left: 24,
+              fontFamily: 'Poppins-Regular',
+              opacity: 0.3,
+            }}>
+            =7424.898BTC
+          </Text>
 
           <Card
             style={{
               borderRadius: 8,
               borderWidth: 1,
-              borderColor: 'red',
+              // borderColor: 'red',
 
-              borderWidth: 0.5,
+              borderWidth: 0.3,
               borderColor: '#0B7F42',
               alignSelf: 'center',
               height: 74,
               width: '95%',
               marginTop: 42,
             }}>
-            <Text style={{left: 13, top: 7}}>Wallet Address to Send</Text>
+            <Text style={{left: 13, top: 7, fontFamily: 'Poppins-Regular'}}>
+              Wallet Address to Send
+            </Text>
           </Card>
           <Card
             style={{
               borderRadius: 8,
               height: 78,
               marginTop: -40,
-
-              borderWidth: 0.5,
+              borderWidth: 0.3,
               borderColor: '#0B7F42',
               width: '95%',
               alignSelf: 'center',
             }}>
-            <View style={{flexDirection: 'row', top: 3}}>
+            <View>
               <TextInput
-                style={{left: 13, top: 7, fontWeight: 'bold', fontSize: 20}}
-                placeholder="adasdn4531ads15a1d3w1aw1d"></TextInput>
-              {/* <TextInputMask   placeholder='$00.00' onChangeText={(formatted, extracted) => {
-    console.log(formatted) // +1 (123) 456-78-90
-    console.log(extracted) // 1234567890
-  }}
-     
-     textContentType="postalCode" 
-
-     mask={"$"}
-  >
-
-  </TextInputMask> */}
+                style={{fontFamily: 'Poppins-Regular', fontSize: 14}}
+                placeholder="adasdn4531ads15a1d3w1"></TextInput>
             </View>
-
-            <Card
-              style={{
-                top: 75,
-                backgroundColor: '#0B7F42',
-                borderRadius: 16,
-                width: '95%',
-                alignSelf: 'center',
-                height: 54,
-                justifyContent: 'center',
-              }}>
-              <TouchableOpacity onPress={()=>navigation.navigate("walletHome")}>
-              <Text
-                style={{
-                  color: 'white',
-                  fontSize: 18,
-                  fontWeight: 'bold',
-                  alignSelf: 'center',
-                  justifyContent: 'center',
-                }}>
-                NEXT
-              </Text>
-              </TouchableOpacity>
-            </Card>
           </Card>
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              marginTop: hp('6'),
+            }}>
+            <DarkButton
+              name="Next"
+              onPress={() => navigation.navigate('TransactionConfromPass')}
+            />
+          </View>
         </Card>
+      </View>
+
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
+        <Footer navigation={navigation} />
       </View>
     </View>
   );
@@ -184,20 +146,14 @@ export default function Sendbtc({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent:"center",
-    alignItems:"center",
-    
+    backgroundColor: '#FFFFFF',
   },
-  view1:{
-    flex:.5,
-    justifyContent:"center",
-    alignItems:"center",
+  view1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  view2:{
-    flex:3,
-    
-    width:wp("100")
+  view2: {
+    flex: 3,
   },
- 
-  
 });
