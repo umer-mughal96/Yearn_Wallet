@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Landing from '../screens/Landing';
 import Signin from '../screens/Signin';
@@ -13,56 +12,49 @@ import CreateMobile from '../screens/Signup/CreateMobile';
 import ConfirmMobile from '../screens/Signup/ConfirmMobile';
 import MobileVerifyToken from '../screens/Signup/MobileVerifyToken';
 import AfterMobileVerify from '../screens/Signup/AfterMobileVerify';
-import RecoverySeed from '../screens/Signup/RecoverySeed';
-import WalletHome, {WalletSvg} from '../screens/Wallet/WalletHome';
-import DeFi from '../screens/Wallet/DeFi';
-import ReferralScreen from '../screens/Signup/ReferralScreen';
+import WalletHome from '../screens/Wallet/WalletHome';
+import Dex from '../screens/Wallet/Dex';
+import ReferralScreen from '../screens/ReferralScreen';
 import RestoreScreen from '../screens/Signup/RestoreScreen';
 import RecoveryRestore from '../screens/Signup/RecoveryRestore';
 import ProceedScreen from '../screens/Signup/ProceedScreen';
-import PlasmaTopUp from '../screens/Signup/PlasmaTopUp5';
-import PlasmaTopUp8 from '../screens/Signup/PlasaTopUp8';
-import PlasmaPay1 from '../screens/Signup/PlasmaPay';
-import PlasmaTopup2 from '../screens/Signup/PlasmaTopUp2';
-import Capture from '../screens/Wallet/Capture';
-import ProfileScreen from '../screens/Signup/SettingScreen';
-import AppSetting from '../screens/Signup/AppSetting';
-import AccountDetails from '../screens/Signup/AccountDetails';
-import Home2 from '../screens/Signup/Home2';
-import TopUP from '../screens/Signup/TopUp';
-import AccountDetails2 from '../screens/Signup/AccountDetails2';
-import Currency from '../screens/Signup/Currency';
-import Security from '../screens/Signup/Security';
-import CustodianInfo from '../screens/Signup/CustodianInfo';
-import Confirmation from '../screens/Signup/Confirmation';
-import Activity from '../screens/Signup/Activity';
-import ProfileSetting from '../screens/Signup/ProfileSetting1';
-import Sendbtc from '../screens/Signup/Sendbtc';
-import SettingScreen from '../screens/Signup/SettingScreen';
-import SecurityChangePass from '../screens/Signup/SecurityChangePass';
-import SecurityConfirmPass from '../screens/Signup/SecurityConfirmPass';
-import Referral from '../screens/Signup/Referral';
-import RecieveBtc from '../screens/Signup/RecieveBtc';
-import EtheriumDetail from '../screens/Signup/EheriumDetail';
-import RecieveEth from '../screens/Signup/RecieveEth';
-import SendEth from '../screens/Signup/SendEth';
-
-import ETH_Private_Key from '../screens/Signup/ETH_Private_key';
-import YETH_Private_Key from '../screens/Signup/YFIC_Private_Key';
+import CustodianInfo from '../screens/Wallet/Profile/Security/AddCustodian/CustodianInfo';
+import EtheriumDetail from '../screens/Wallet/Ethenium/EheriumDetail';
+import RecieveEth from '../screens/Wallet/Ethenium/RecieveEth';
+import SendEth from '../screens/Wallet/Ethenium/SendEth';
 import RecoverySeedSinUp from '../../RecoverySeedSinUp';
-import Exchange from '../screens/Wallet/Exchange';
-import Exhange_Verify from '../screens/Wallet/Exchage_Verify';
-import Exhange_Done from '../screens/Wallet/Exchange_Done';
-import Private_Key from '../screens/Signup/Private_Key';
-import WalletSats from '../screens/Wallet/WalletStats';
-import ImageCarousel from '../components/reusable/Carousel/ImageCarousel';
-import Gallery from '../screens/Signup/Gallery';
-
-
-import TransactionConfromPass from '../screens/Signup/TransactionConfirmPass';
-import TransactionConfirmPass2 from '../screens/Signup/TransactionConfirmPass';
-import TransactionSuccess from '../screens/Signup/TransactionSuccess';
-
+import WalletSats from '../screens/Wallet/YearnCash/WalletStats';
+import CustodianConfirmation from '../screens/Wallet/Profile/Security/AddCustodian/CustodianConfirmation';
+import TransactionSuccess from '../screens/Wallet/Ethenium/TransactionSuccess';
+import TransactionConfirmPass from '../screens/Wallet/Ethenium/TransactionConfirmPass';
+import Sendbtc from '../screens/Wallet/BitCoin/Sendbtc';
+import RecieveBtc from '../screens/Wallet/BitCoin/RecieveBtc';
+import RecoverySeed from '../screens/Wallet/Profile/Security/ChangeRecoverySeed/RecoverySeed';
+import AppSetting from '../screens/Wallet/Profile/AppSetting/AppSetting';
+import Security from '../screens/Wallet/Profile/Security/Security';
+import Currency from '../screens/Wallet/Profile/AppSetting/Currency/Currency';
+import Referral from '../screens/Wallet/Profile/RefferalEarnings/Referral';
+import ETHPrivateKey from '../screens/Wallet/Profile/ETHPrivateKey/ETHPrivatekey';
+import Exchange from '../screens/Wallet/Exchange/Exchange';
+import Exhange_Verify from '../screens/Wallet/Exchange/Exchage_Verify';
+import Exhange_Done from '../screens/Wallet/Exchange/Exchange_Done';
+import UserDetails from '../screens/Wallet/Profile/AccountDetails/UserDetails';
+import ConfirmUserDetails from '../screens/Wallet/Profile/AccountDetails/ConfirmUserDetails';
+import Notifications from '../screens/Wallet/Activity/Notifications';
+import SecurityChangePass from '../screens/Wallet/Profile/Security/ChangePasscode/SecurityChangePass';
+import SecurityConfirmPass from '../screens/Wallet/Profile/Security/ChangePasscode/SecurityConfirmPass';
+import Private_Key from '../screens/Wallet/Profile/BTCPrivateKey/BTCPrivateKey';
+import BitCoin from '../screens/Wallet/BitCoin/BitCoin';
+import Contacts from '../screens/Wallet/Contacts/Contacts';
+import ProfileSetting from '../screens/Wallet/Profile/ProfileSetting';
+import TopUP from '../screens/TopUp/TopUP';
+import PlasmaTopup2 from '../screens/TopUp/PlasmaTopUp2';
+import Capture from '../screens/TopUp/Capture';
+import GiftCardInfo from '../screens/TopUp/GiftCardInfo';
+import PlasmaTopUp8 from '../screens/TopUp/PlasaTopUp8';
+import PlasmaPay1 from '../screens/TopUp/PlasmaPay1';
+import Gallery from '../screens/TopUp/Gallery';
+import BTCPrivateKey from '../screens/Wallet/Profile/BTCPrivateKey/BTCPrivateKey';
 export default function Navigation() {
   const Stack = createStackNavigator();
   return (
@@ -112,7 +104,6 @@ export default function Navigation() {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-         
         }}
         name="Signin"
         component={Signin}
@@ -267,19 +258,13 @@ export default function Navigation() {
           },
           headerTintColor: 'black',
           headerBackTitleVisible: false,
-
-          // headerTitleStyle: {
-          //   fontFamily: 'Poppins-Medium',
-          //   margin: 80,
-          //   fontSize: 18,
-          // },
         }}
         name="walletHome"
         component={WalletHome}
       />
       <Stack.Screen
         options={{
-          title: 'De-Fi',
+          title: 'Dex',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -291,26 +276,31 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="defi"
-        component={DeFi}
+        name="dex"
+        component={Dex}
       />
 
       <Stack.Screen
         options={{
           title: 'Gift Card Topup',
+          headerTintColor: 'black',
+
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
           },
-          headerTintColor: 'black',
+
           headerTitleStyle: {
             fontFamily: 'Poppins-Medium',
             margin: 80,
             fontSize: 18,
           },
         }}
-        name="plasma5"
-        component={PlasmaTopUp}
+        tabBarOptions={{
+          keyboardHidesTabBar: false,
+        }}
+        name="GiftCardInfo"
+        component={GiftCardInfo}
       />
 
       <Stack.Screen
@@ -431,8 +421,8 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="Profile"
-        component={ProfileScreen}
+        name="Contacts"
+        component={Contacts}
       />
       <Stack.Screen
         options={{
@@ -466,8 +456,8 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="accountDetails"
-        component={AccountDetails}
+        name="UserDetails"
+        component={UserDetails}
       />
       <Stack.Screen
         options={{
@@ -483,12 +473,12 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="home2"
-        component={Home2}
+        name="BitCoin"
+        component={BitCoin}
       />
       <Stack.Screen
         options={{
-          title: 'Account Details',
+          title: 'TopUP',
           headerStyle: {
             backgroundColor: 'white',
             borderRadius: 15,
@@ -517,8 +507,8 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="AccountDetails2"
-        component={AccountDetails2}
+        name="ConfirmUserDetails"
+        component={ConfirmUserDetails}
       />
       <Stack.Screen
         options={{
@@ -587,7 +577,7 @@ export default function Navigation() {
           },
         }}
         name="Confirmation"
-        component={Confirmation}
+        component={CustodianConfirmation}
       />
       <Stack.Screen
         options={{
@@ -603,8 +593,8 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="Activity"
-        component={Activity}
+        name="Notifications"
+        component={Notifications}
       />
       <Stack.Screen
         options={{
@@ -623,23 +613,7 @@ export default function Navigation() {
         name="ProfileSetting"
         component={ProfileSetting}
       />
-      <Stack.Screen
-        options={{
-          title: 'Profile',
-          headerStyle: {
-            backgroundColor: 'white',
-            borderRadius: 15,
-          },
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontFamily: 'Poppins-Medium',
-            margin: 80,
-            fontSize: 18,
-          },
-        }}
-        name="userProfile"
-        component={SettingScreen}
-      />
+
       <Stack.Screen
         options={{
           title: 'Activity',
@@ -711,7 +685,7 @@ export default function Navigation() {
         name="capture"
         component={Capture}
       />
-         <Stack.Screen
+      <Stack.Screen
         options={{
           title: 'Gallery',
 
@@ -852,8 +826,8 @@ export default function Navigation() {
             fontSize: 18,
           },
         }}
-        name="Private_Key"
-        component={Private_Key}
+        name="BTCPrivateKey"
+        component={BTCPrivateKey}
       />
       <Stack.Screen
         options={{
@@ -871,7 +845,7 @@ export default function Navigation() {
           },
         }}
         name="ETH_Private_Key"
-        component={ETH_Private_Key}
+        component={ETHPrivateKey}
       />
       <Stack.Screen
         options={{
@@ -907,7 +881,7 @@ export default function Navigation() {
           },
         }}
         name="TransactionConfromPass"
-        component={TransactionConfromPass}
+        component={TransactionConfirmPass}
       />
       <Stack.Screen
         options={{
@@ -927,7 +901,6 @@ export default function Navigation() {
         name="TransactionSuccess"
         component={TransactionSuccess}
       />
-    
     </Stack.Navigator>
   );
 }

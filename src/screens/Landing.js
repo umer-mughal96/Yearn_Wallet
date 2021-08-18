@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {
   Button,
   StatusBar,
@@ -7,45 +7,37 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import { colors } from '../config/colors';
+import {colors} from '../config/colors';
 import LightButton from '../components/reusable/Button/LightButton';
-import { useDispatch, useSelector } from 'react-redux';
-import { userLogout } from '../redux/actions/auth/auth';
+import {useDispatch, useSelector} from 'react-redux';
+import {userLogout} from '../redux/actions/auth/auth';
 import LinearGradient from 'react-native-linear-gradient';
-import {LandingLogo} from '../svgs/LandingLogo'
-import "../../global"
-import Web3 from 'web3'
-import * as bitcoin from "bitcoinjs-lib"
-import { createBTCWallet } from '../redux/actions/btc/btc';
-import { createETHWallet } from '../redux/actions/eth/eth';
+import {LandingLogo} from '../svgs/LandingSvg';
+import '../../global';
+import Web3 from 'web3';
+import * as bitcoin from 'bitcoinjs-lib';
+import {createBTCWallet} from '../redux/actions/btc/btc';
+import {createETHWallet} from '../redux/actions/eth/eth';
 
-
-export default function ({ navigation }) {
-  const { token } = useSelector(state => state.Auth);
+export default function ({navigation}) {
+  const {token} = useSelector(state => state.Auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(userLogout());
   }, []);
 
-
-
   // const createWallett = async () => {
 
   //   try {
 
-
   //     //GENERATE BITCOIN ADDRESS
-
-
 
   //     const keyPair = await bitcoin.ECPair.makeRandom();
   //     console.log("🚀 ~ file: App.js ~ line 28 ~ useEffect ~ keyPair", keyPair)
   //     const wallet = await bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
   //     console.log("🚀 ~ file: App.js ~ line 27 ~ useEffect ~ address", wallet)
   //     dispatch(createBTCWallet(wallet))
-
-
 
   //     // GET ETHERIUMM BALANCE BY PUBLIC KEY
 
@@ -59,13 +51,11 @@ export default function ({ navigation }) {
   //     //   }
   //     // })
 
-
   //     let acc = web3.eth.accounts.create("00000000000000000000000000000000");
   //     console.log("🚀 ~ file: Landing.js ~ line 64 ~ createWallett ~ acc", acc)
   //     dispatch(createETHWallet(acc))
 
   //     navigation.navigate("walletHome")
-
 
   //   } catch (error) {
   //     console.log("🚀 ~ file: Landing.js ~ line 31 ~ createWallett ~ error", error)
@@ -86,12 +76,9 @@ export default function ({ navigation }) {
         />
 
         <View style={styles.svgWraper}>
-
           <LandingLogo></LandingLogo>
-        
-          {/* <Text   id='Yearn_Cash' data-name="Yearn Cash" transform="translate(121.5 511)" fill='#EEF0FF' font-size="39" font-family="Poppins-Semibold, Poppins" font-weight="600" >Yearn Cash</Text> */}
 
-          <Text style={{ color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins' }}>
+          <Text style={{color: '#EEF0FF', fontSize: 29, fontFamily: 'Poppins'}}>
             yEARN Wallet
           </Text>
         </View>
@@ -106,11 +93,11 @@ export default function ({ navigation }) {
           </View>
           <LightButton
             name="Login"
-            onPress={() => navigation.navigate("Signin")}
+            onPress={() => navigation.navigate('Signin')}
           />
           <TouchableOpacity
             style={styles.signup}
-            onPress={() => navigation.navigate('createPasscode')} >
+            onPress={() => navigation.navigate('createPasscode')}>
             <Text style={styles.signupText}>Signup</Text>
           </TouchableOpacity>
         </View>
