@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Platform} from 'react-native';
 import DarkButton from '../../components/reusable/Button/DarkButton';
-import Ticksvgscreen from '../../svgs/ticksvg';
+import Ticksvgscreen from '../../svgs/TickSvg';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
