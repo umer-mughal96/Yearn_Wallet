@@ -9,7 +9,7 @@ import Svg, {
   Circle,
 } from 'react-native-svg';
 
-export default function Ticksvgscreen() {
+export default function Ticksvgscreen({navigation}) {
   return (
     <View>
       <Svg

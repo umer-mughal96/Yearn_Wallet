@@ -31,6 +31,7 @@ import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
+import com.bitgo.randombytes.RandomBytesPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -52,7 +53,6 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-          new SajjadBlurOverlayPackage()
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
