@@ -18,8 +18,8 @@ import {
 
 //import BlurView to make the Blur Background
 import {BlurView} from '@react-native-community/blur';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
-import Referral from '../../../screens/Signup/Referral';
+import {heightPercentageToDP} from 'react-native-responsive-screen';
+import Referral from '../../../screens/Profile/RefferalEarnings/Referral';
 
 const ShareModaal = () => {
   const [showBlur, setShowBlur] = useState(false);
@@ -38,7 +38,7 @@ const ShareModaal = () => {
       <View
         style={{
           flexDirection: 'column',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
         }}>
         {viewRef && (
           <BlurView
@@ -59,15 +59,9 @@ const ShareModaal = () => {
             justifyContent: 'flex-end',
             paddingBottom: 32,
           }}>
-          <Text
-            style={[
-              styles.textStyle,
-              {color: tintColor[0]
-            }]}>
-              Blur component
+          <Text style={[styles.textStyle, {color: tintColor[0]}]}>
+            Blur component
           </Text>
-        
-          
         </View>
       </View>
     );
@@ -75,9 +69,8 @@ const ShareModaal = () => {
 
   return (
     <View style={styles.container}>
-     <Referral/>
+      <Referral />
       {showBlur ? renderBlurView() : null}
-      
     </View>
   );
 };
@@ -90,8 +83,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    position : 'absolute',
-    height : heightPercentageToDP(100)
+    position: 'absolute',
+    height: heightPercentageToDP(100),
   },
   imageStyle: {
     position: 'absolute',
