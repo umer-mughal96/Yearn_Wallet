@@ -1,17 +1,15 @@
 import React from 'react';
 import {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-
+import {View} from 'react-native';
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
-import { useDispatch } from 'react-redux';
-import { userCreatePasscode } from '../../../redux/actions/auth/auth';
-
+import {useDispatch} from 'react-redux';
+import {userCreatePasscode} from '../../../redux/actions/auth/auth';
 
 export default function Input(props) {
   const [code, setCode] = useState('');
   let pinInput = React.createRef();
   const dispatch = useDispatch();
-  
+
   const _checkCode = code => {
     if (code == '123456') {
       pinInput.current.shake().then(() => setCode(''));
@@ -33,20 +31,9 @@ export default function Input(props) {
     }
   };
 
-  // const generateMnemonic = async () => {
-  //   try {
-  //     const mnemonic = bip39.generateMnemonic();
-  //     // => 'seed sock milk update focus rotate barely fade car face mechanic mercy'
-
-  //     bip39.mnemonicToSeed('basket actual').then(console.log);
-  //   } catch (e) {
-  //     return false;
-  //   }
-  // };
-
   const saveData = async code => {
     try {
-      dispatch(userCreatePasscode(code))
+      dispatch(userCreatePasscode(code));
       props.isSucessfullyCreate(true);
     } catch (e) {
       alert('Failed to save the data to the storage');

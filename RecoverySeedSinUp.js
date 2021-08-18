@@ -10,9 +10,6 @@ export default function RecoverySeedSinUp({navigation}) {
   const [recoverySeed] = useState('');
   const dispatch = useDispatch();
 
-
-  
-
   return (
     <View style={styles.container}>
       <StatusBar
@@ -35,7 +32,6 @@ export default function RecoverySeedSinUp({navigation}) {
                   shadowColor: '#000',
                   shadowOffset: {width: 0, height: 2},
                   shadowOpacity: 0.5,
-
                   elevation: 5,
                 }
           }
