@@ -5,10 +5,10 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "node api.js && react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "dev": "react-native run-android && react-native start"
+    "dev": "node api.js && react-native run-android && react-native start"
   },
   "dependencies": {
     "@ethersproject/shims": "^5.4.0",
